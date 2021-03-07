@@ -1,0 +1,49 @@
+h>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>VBAT unity gain buffer function Disabled (default)</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>VBAT unity gain buffer function Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>SYS_PORCTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>SYS_PORCTL</displayName>
+          <description>Power-On-reset Controller Register</description>
+          <addressOffset>0x24</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFF0000</resetMask>
+          <fields>
+            <field>
+              <name>POROFF</name>
+              <description>Power-on Reset Enable Bit (Write Protect)\nWhen powered on, the POR circuit generates a reset signal to reset the whole chip function, but noise on the power may cause the POR active again. User can disable internal POR circuit to avoid unpredictable noise to cause chip reset by writing 0x5AA5 to this field.\nThe POR function will be active again when  this field is set to another value or chip is reset by other reset source, including:\nnRESET, Watchdog, LVR reset, BOD reset, ICE reset command and the software-chip reset function.\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>SYS_VREFCTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>SYS_VREFCTL</displayName>
+          <description>VREF Control Register</description>
+          <addressOffset>0x28</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>VREFCTL</name>
+              <description>VREF Control Bits (Write Protect)\nNote1: This bit is write protected. Refer to the SYS_REGLCTL register.\nNote2: Connecting a 1uF capacitor to AVSS will make internal refere

@@ -1,0 +1,106 @@
+able Control (Write Protect)\nWDT up counter will keep going no matter CPU is held by ICE or not.\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>ICE debug mode acknowledgement affects WDT counting</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>ICE debug mode acknowledgement Disabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>WDT_ALTCTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>WDT_ALTCTL</displayName>
+          <description>WDT Alternative Control Register</description>
+          <addressOffset>0x4</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>RSTDSEL</name>
+              <description>WDT Reset Delay Selection (Write Protect)\nWhen WDT time-out happened, user has a time named WDT Reset Delay Period to clear WDT counter by setting RSTCNT (WDT_CTL[0]) to prevent WDT time-out reset happened. User can select a suitable setting of RSTDSEL for different WDT Reset Delay Period.\nNote1: This bit is write protected. Refer to the SYS_REGLCTL register.\nNote2: This register will be reset to 0 if WDT time-out reset happened.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>WDT Reset Delay Period is 1026 * WDT_CLK</description>
+                    <value>#00</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>WDT Reset Delay Period is 130 * WDT_CLK</description>
+                    <value>#01</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>WDT Reset Delay Period is 18 * WDT_CLK</description>
+                    <value>#10</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>WDT Reset Delay Period is 3 * WDT_CLK</description>
+                    <value>#11</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>WWDT</name>
+      <description>WWDT Register Map</description>
+      <groupName>WWDT</groupName>
+      <baseAddress>0x40040100</baseAddress>
+      <!-- the first addressBlock is occupied by registers. The second block is reserved -> no access permission -->
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x10</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+       <register>
+          <name>WWDT_RLDCNT</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>WWDT_RLDCNT</displayName>
+          <description>WWDT Reload Counter Register</description>
+          <addressOffset>0x0</addressOffset>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>RLDCNT</name>
+              <description>WWDT Reload Counter Register\nWriting 0x00005AA5 to this register will reload the WWDT counter value to 0x3F.\nNote: User can only write WWDT_RLDCNT register to reload WWDT counter value when current WWDT counter value between 0 and CMPDAT (WWDT_CTL[21:16]). If user writes WWDT_RLDCNT when current WWDT counter value is larger than CMPDAT, WWDT reset signal will be generated immediately.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>WWDT_CTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>WWDT_CTL</displayName>
+          <description>WWDT Control Register</description>
+          <addressOffset>0x4</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x003F0800</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>WWDTEN</name>
+              <description>WWDT Enable Control Bit\nSet this bit to enable WWDT counter counting.</description>

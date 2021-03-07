@@ -1,0 +1,24 @@
+rial Interface Controller 0 (USIC)
+  */
+
+typedef struct {                                    /*!< (@ 0x48000008) USIC Structure                                         */
+  __I  uint32_t  ID;                                /*!< (@ 0x48000008) Module Identification Register                         */
+} USIC_GLOBAL_TypeDef;
+
+
+/* ================================================================================ */
+/* ================               USIC_CH [USIC0_CH0]              ================ */
+/* ================================================================================ */
+
+
+/**
+  * @brief Universal Serial Interface Controller 0 (USIC_CH)
+  */
+
+typedef struct {                                    /*!< (@ 0x48000000) USIC_CH Structure                                      */
+  __I  uint32_t  RESERVED0;
+  __I  uint32_t  CCFG;                              /*!< (@ 0x48000004) Channel Configuration Register                         */
+  __I  uint32_t  RESERVED1;
+  __IO uint32_t  KSCFG;                             /*!< (@ 0x4800000C) Kernel State Configuration Register                    */
+  __IO uint32_t  FDR;                               /*!< (@ 0x48000010) Fractional Divider Register                            */
+  __IO uint3
