@@ -1,0 +1,212 @@
+Quartus II
+Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+ADD8_Disp
+# storage
+db|hw5.(0).cnf
+db|hw5.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+add8_disp.v
+795be9ccd42e90aa1348351e739798
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+ADD8
+# storage
+db|hw5.(1).cnf
+db|hw5.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+add8_disp.v
+795be9ccd42e90aa1348351e739798
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+ADD8:u0
+}
+# macro_sequence
+
+# end
+# entity
+ADD4
+# storage
+db|hw5.(2).cnf
+db|hw5.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+add8_disp.v
+795be9ccd42e90aa1348351e739798
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+ADD8:u0|ADD4:u0
+ADD8:u0|ADD4:u1
+}
+# macro_sequence
+
+# end
+# entity
+FADD
+# storage
+db|hw5.(3).cnf
+db|hw5.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+add8_disp.v
+795be9ccd42e90aa1348351e739798
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+ADD8:u0|ADD4:u0|FADD:u0
+ADD8:u0|ADD4:u0|FADD:u1
+ADD8:u0|ADD4:u0|FADD:u2
+ADD8:u0|ADD4:u0|FADD:u3
+ADD8:u0|ADD4:u1|FADD:u0
+ADD8:u0|ADD4:u1|FADD:u1
+ADD8:u0|ADD4:u1|FADD:u2
+ADD8:u0|ADD4:u1|FADD:u3
+}
+# macro_sequence
+
+# end
+# entity
+_7Seg
+# storage
+db|hw5.(4).cnf
+db|hw5.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+add8_disp.v
+795be9ccd42e90aa1348351e739798
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+_7Seg:u1
+_7Seg:u2
+}
+# macro_sequence
+
+# end
+# complete
+

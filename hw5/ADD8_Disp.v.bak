@@ -1,0 +1,59 @@
+ON_OVERRIDE_Msk)
+
+/**
+ *  @brief    Enable PS2CLK and PS2DATA pins Override.
+ *
+ *  @param    None
+ *
+ *  @return   None
+ *
+ *  @details  TO enable the override control of PS2CLK and PS2DATA pins.
+ */
+#define PS2_ENABLE_OVERRIDE() (PS2->PS2CON |= PS2_PS2CON_OVERRIDE_Msk)
+
+/**
+ *  @brief    This function is used to Get Indicates which data byte in transmit data shift register
+ *
+ *  @param    None
+ *
+ *  @return   The indicates which data byte in transmit data shift register.
+ *
+ *  @details  To get a indication which a data byte in the data shift register.
+ */
+#define PS2_GET_TX_BYTE_INDEX() ((PS2->PS2STATUS & PS2_PS2STATUS_BYTEIDX_Msk) >> PS2_PS2STATUS_BYTEIDX_Pos)
+
+/**
+ *  @brief    This function is used to set PS2DATA Pin low.
+ *
+ *  @param    None
+ *
+ *  @return   None
+ *
+ *  @details  To control the PS2DATA pin state to low.
+ */
+#define PS2_SET_DATA_LOW() (PS2->PS2CON &= ~PS2_PS2CON_FPS2DAT_Msk)
+
+/**
+ *  @brief    This function is used to set PS2DATA Pin high
+ *
+ *  @param    None
+ *
+ *  @return   None
+ *
+ *  @details  To control the PS2DATA pin state to high.
+ */
+#define PS2_SET_DATA_HIGH() (PS2->PS2CON |= PS2_PS2CON_FPS2DAT_Msk)
+
+/**
+ *  @brief    This function is used to set PS2CLK Pin low.
+ *
+ *  @param    None
+ *
+ *  @return   None
+ *
+ *  @details  To control the PS2CLK pin state to low.
+ */
+#define PS2_SET_CLK_LOW() (PS2->PS2CON &= ~PS2_PS2CON_FPS2CLK_Msk)
+
+/**
+ *  @brief    This function is used to set PS2

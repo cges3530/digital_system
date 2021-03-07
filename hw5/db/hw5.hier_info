@@ -1,0 +1,238 @@
+|ADD8_Disp
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+cin => cin.IN1
+led1[6] <= _7Seg:u1.port1
+led1[5] <= _7Seg:u1.port1
+led1[4] <= _7Seg:u1.port1
+led1[3] <= _7Seg:u1.port1
+led1[2] <= _7Seg:u1.port1
+led1[1] <= _7Seg:u1.port1
+led1[0] <= _7Seg:u1.port1
+led2[6] <= _7Seg:u2.port1
+led2[5] <= _7Seg:u2.port1
+led2[4] <= _7Seg:u2.port1
+led2[3] <= _7Seg:u2.port1
+led2[2] <= _7Seg:u2.port1
+led2[1] <= _7Seg:u2.port1
+led2[0] <= _7Seg:u2.port1
+cout <= ADD8:u0.port4
+
+
+|ADD8_Disp|ADD8:u0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+cin => cin.IN1
+s[0] <= ADD4:u0.port3
+s[1] <= ADD4:u0.port3
+s[2] <= ADD4:u0.port3
+s[3] <= ADD4:u0.port3
+s[4] <= ADD4:u1.port3
+s[5] <= ADD4:u1.port3
+s[6] <= ADD4:u1.port3
+s[7] <= ADD4:u1.port3
+cout <= ADD4:u1.port4
+
+
+|ADD8_Disp|ADD8:u0|ADD4:u0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+s[0] <= FADD:u0.port3
+s[1] <= FADD:u1.port3
+s[2] <= FADD:u2.port3
+s[3] <= FADD:u3.port3
+cout <= FADD:u3.port4
+
+
+|ADD8_Disp|ADD8:u0|ADD4:u0|FADD:u0
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ADD8_Disp|ADD8:u0|ADD4:u0|FADD:u1
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ADD8_Disp|ADD8:u0|ADD4:u0|FADD:u2
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ADD8_Disp|ADD8:u0|ADD4:u0|FADD:u3
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ADD8_Disp|ADD8:u0|ADD4:u1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+s[0] <= FADD:u0.port3
+s[1] <= FADD:u1.port3
+s[2] <= FADD:u2.port3
+s[3] <= FADD:u3.port3
+cout <= FADD:u3.port4
+
+
+|ADD8_Disp|ADD8:u0|ADD4:u1|FADD:u0
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ADD8_Disp|ADD8:u0|ADD4:u1|FADD:u1
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ADD8_Disp|ADD8:u0|ADD4:u1|FADD:u2
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ADD8_Disp|ADD8:u0|ADD4:u1|FADD:u3
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ADD8_Disp|_7Seg:u1
+S[0] => Decoder0.IN3
+S[1] => Decoder0.IN2
+S[2] => Decoder0.IN1
+S[3] => Decoder0.IN0
+led[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ADD8_Disp|_7Seg:u2
+S[0] => Decoder0.IN3
+S[1] => Decoder0.IN2
+S[2] => Decoder0.IN1
+S[3] => Decoder0.IN0
+led[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
