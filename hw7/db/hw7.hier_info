@@ -1,0 +1,119 @@
+|_4to16Dec
+w0 => w0.IN4
+w1 => w1.IN4
+w2 => w2.IN1
+w3 => w3.IN1
+en => en.IN1
+y0 <= _2to4Dec:u1.port3
+y1 <= _2to4Dec:u1.port4
+y2 <= _2to4Dec:u1.port5
+y3 <= _2to4Dec:u1.port6
+y4 <= _2to4Dec:u2.port3
+y5 <= _2to4Dec:u2.port4
+y6 <= _2to4Dec:u2.port5
+y7 <= _2to4Dec:u2.port6
+y8 <= _2to4Dec:u3.port3
+y9 <= _2to4Dec:u3.port4
+y10 <= _2to4Dec:u3.port5
+y11 <= _2to4Dec:u3.port6
+y12 <= _2to4Dec:u4.port3
+y13 <= _2to4Dec:u4.port4
+y14 <= _2to4Dec:u4.port5
+y15 <= _2to4Dec:u4.port6
+
+
+|_4to16Dec|_2to4Dec:u0
+s0 => y1.IN0
+s0 => y3.IN0
+s0 => y0.IN0
+s0 => y2.IN0
+s1 => y2.IN1
+s1 => y3.IN1
+s1 => y0.IN1
+s1 => y1.IN1
+ein => y0.IN1
+ein => y1.IN1
+ein => y2.IN1
+ein => y3.IN1
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= y3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_4to16Dec|_2to4Dec:u1
+s0 => y1.IN0
+s0 => y3.IN0
+s0 => y0.IN0
+s0 => y2.IN0
+s1 => y2.IN1
+s1 => y3.IN1
+s1 => y0.IN1
+s1 => y1.IN1
+ein => y0.IN1
+ein => y1.IN1
+ein => y2.IN1
+ein => y3.IN1
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= y3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_4to16Dec|_2to4Dec:u2
+s0 => y1.IN0
+s0 => y3.IN0
+s0 => y0.IN0
+s0 => y2.IN0
+s1 => y2.IN1
+s1 => y3.IN1
+s1 => y0.IN1
+s1 => y1.IN1
+ein => y0.IN1
+ein => y1.IN1
+ein => y2.IN1
+ein => y3.IN1
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= y3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_4to16Dec|_2to4Dec:u3
+s0 => y1.IN0
+s0 => y3.IN0
+s0 => y0.IN0
+s0 => y2.IN0
+s1 => y2.IN1
+s1 => y3.IN1
+s1 => y0.IN1
+s1 => y1.IN1
+ein => y0.IN1
+ein => y1.IN1
+ein => y2.IN1
+ein => y3.IN1
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= y3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_4to16Dec|_2to4Dec:u4
+s0 => y1.IN0
+s0 => y3.IN0
+s0 => y0.IN0
+s0 => y2.IN0
+s1 => y2.IN1
+s1 => y3.IN1
+s1 => y0.IN1
+s1 => y1.IN1
+ein => y0.IN1
+ein => y1.IN1
+ein => y2.IN1
+ein => y3.IN1
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= y3.DB_MAX_OUTPUT_PORT_TYPE
+
+

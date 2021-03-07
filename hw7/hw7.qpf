@@ -1,0 +1,21 @@
+ame>
+                    <description>Buffer error interrupt flag is generated in PDMA mode</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TXENDIF</name>
+              <description>Transmitter Empty Interrupt Flag (Read Only)\nThis bit is set when TX FIFO (UART_DAT) is empty and the STOP bit of the last byte has been transmitted (TXEMPTYF (UART_FIFOSTS[28]) is set). If TXENDIEN (UART_INTEN[22]) is enabled, the Transmitter Empty interrupt will be generated.\nNote: This bit is cleared automatically when TX FIFO is not empty or the last byte transmission has not completed.</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No transmitter empty interrupt flag is generated</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Transmitter empty interrupt fl

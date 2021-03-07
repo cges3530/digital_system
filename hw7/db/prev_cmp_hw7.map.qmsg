@@ -1,0 +1,99 @@
+     <value>#1001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>10</name>
+                    <description>PWM_CH0 up-count free CMPDAT point</description>
+                    <value>#1010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>11</name>
+                    <description>PWM_CH0 down-count free CMPDAT point</description>
+                    <value>#1011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>12</name>
+                    <description>PWM_CH2 up-count free CMPDAT point</description>
+                    <value>#1100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>13</name>
+                    <description>PWM_CH2 down-count free CMPDAT point</description>
+                    <value>#1101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>14</name>
+                    <description>PWM_CH4 up-count free CMPDAT point</description>
+                    <value>#1110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>15</name>
+                    <description>PWM_CH4 down-count free CMPDAT point</description>
+                    <value>#1111</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRGEN0</name>
+              <description>PWM_CH0 Trigger EADC Enable Bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_CH0 Trigger EADC Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_CH0 Trigger EADC Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRGSEL1</name>
+              <description>PWM_CH1 Trigger EADC Source Select</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_CH0 zero point</description>
+                    <value>#0000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_CH0 period point</description>
+                    <value>#0001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>PWM_CH0 zero or period point</description>
+                    <value>#0010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>PWM_CH0 up-count CMPDAT point</description>
+                    <value>#0011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>4</name>
+                    <description>PWM_CH0 down-count CMPDAT point</description>
+                    <value>#0100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>5</name>
+                    <description>PWM_CH1 zero point</description>
+                    <value>#0101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>6</name>
+                    <description>PWM_CH1 period point</description>
+                    <value>#0110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>7</name>
+                    <description>PWM_CH1 zero or period point</description>
+            

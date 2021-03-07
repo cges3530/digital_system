@@ -1,0 +1,44 @@
+           <name>0</name>
+                    <description>Modem status interrupt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Modem status interrupt Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXTOIEN</name>
+              <description>RX Time-out Interrupt Enable Bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>RX time-out interrupt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>RX time-out interrupt Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BUFERRIEN</name>
+              <description>Buffer Error Interrupt Enable Bit</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Buffer error interrupt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+             

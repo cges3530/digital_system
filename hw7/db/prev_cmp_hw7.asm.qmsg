@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd" >
+  <name>M481_v1</name>
+  <version>1.0</version>
+  <description>M481_v1 SVD file</description>
+  <!-- Bus Interface Properties -->
+  <!-- Cortex-M0 is byte addressable -->
+  <addressUnitBits>8</addressUnitBits>
+  <!-- the maximum data bit width accessible within a single transfer is 32bits -->
+  <width>32</width>
+
+  <!-- Register Default Properties -->
+  <!-- the size of the registers is set to a bit width of 32. This can be overruled for individual peripherals and/or registers -->
+  <size>32</size>
+  <!-- the access to all registers is set to be readable and writeable. This can be overruled for individual peripherals and/or registers -->
+  <access>read-write</access>
+  <!-- for demonstration purposes the resetValue for all registers of the device is set to be 0. This can be overruled within the description -->
+  <resetValue>0</resetValue>
+  <!-- the resetMask = 0 specifies that by default no register of this device has a defined reset value -->
+  <resetMask>0</resetMask>
+
+  <peripherals>
+    <peripheral>
+      <name>SYS</name>
+      <description>SYS Register Map</description>
+      <groupName>SYS</groupName>
+      <baseAddress>0x40000000</baseAddress>
+      <!-- the first addressBlock is occupied by registers. The second block is reserved -> no access permission -->
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x14</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x18</offset>
+        <size>0x8</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x24</offset>
+        <size>0x4C</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x80</offset>
+        <size>0x20</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0xC0</offset>
+        <size>0xC</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <
