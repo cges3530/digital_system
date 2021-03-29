@@ -1,0 +1,29 @@
+alues>
+                <enumeratedValue>
+                  <name>IEF_0</name>
+                  <description>Interrupt is disabled.</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IEF_1</name>
+                  <description>Interrupt is enabled.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>IER</name>
+              <description>Comparator Interrupt Enable Rising</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>IER_0</name>
+                  <description>Interrupt is disabled.</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IER_1</name>
+                  <description>Interrupt is enabled.</description>
+                  <value

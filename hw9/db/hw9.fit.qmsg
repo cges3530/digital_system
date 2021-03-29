@@ -1,0 +1,392 @@
+/description>
+							<bitRange>[25:16]</bitRange>
+						</field>
+						<field>
+							<name>BCD</name>
+							<description>Bypass pixel clock divider. Setting this to 1 bypasses the pixel clock divider logic. This is mainly used for TFT displays.</description>
+							<bitRange>[26:26]</bitRange>
+						</field>
+						<field>
+							<name>PCD_HI</name>
+							<description>Upper five bits of panel clock divisor. See description for PCD_LO, in bits [4:0] of this register.</description>
+							<bitRange>[31:27]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>LE</name>
+					<description>Line End Control register</description>
+					<addressOffset>0x00C</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>LED</name>
+							<description>Line-end delay. Controls Line-end signal delay from the rising-edge of the last panel clock, LCDDCLK. Program with number of LCDCLK clock periods minus 1.</description>
+							<bitRange>[6:0]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[15:7]</bitRange>
+						</field>
+						<field>
+							<name>LEE</name>
+							<description>LCD Line end enable. 0 = LCDLE disabled (held LOW). 1 = LCDLE signal active.</description>
+							<bitRange>[16:16]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:17]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>UPBASE</name>
+					<description>Upper Panel Frame Base Address register</description>
+					<addressOffset>0x010</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[2:0]</bitRange>
+						</field>
+						<field>
+							<name>LCDUPBASE</name>
+							<description>LCD upper panel base address. This is the start address of the upper panel frame data in memory and is doubleword aligned.</description>
+							<bitRange>[31:3]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>LPBASE</name>
+					<description>Lower Panel Frame Base Address register</description>
+					<addressOffset>0x014</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[2:0]</bitRange>
+						</field>
+						<field>
+							<name>LCDLPBASE</name>
+							<description>LCD lower panel base address. This is the start address of the lower panel frame data in memory and is doubleword aligned.</description>
+							<bitRange>[31:3]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CTRL</name>
+					<description>LCD Control register</description>
+					<addressOffset>0x018</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>LCDEN</name>
+							<description>LCD enable control bit. 0 = LCD disabled. Signals LCDLP, LCDDCLK, LCDFP, LCDENAB, and LCDLE are low. 1 = LCD enabled. Signals LCDLP, LCDDCLK, LCDFP, LCDENAB, and LCDLE are high. See LCD power-up and power-down sequence for details on LCD power sequencing.</description>
+							<bitRange>[0:0]</bitRange>
+						</field>
+						<field>
+							<name>LCDBPP</name>
+							<description>LCD bits per pixel: Selects the number of bits per LCD pixel: 000 = 1 bpp. 001 = 2 bpp. 010 = 4 bpp. 011 = 8 bpp. 100 = 16 bpp. 101 = 24 bpp (TFT panel only). 110 = 16 bpp, 5:6:5 mode. 111 = 12 bpp, 4:4:4 mode.</description>
+							<bitRange>[3:1]</bitRange>
+						</field>
+						<field>
+							<name>LCDBW</name>
+							<description>STN LCD monochrome/color selection. 0 = STN LCD is color. 1 = STN LCD is monochrome. This bit has no meaning in TFT mode.</description>
+							<bitRange>[4:4]</bitRange>
+						</field>
+						<field>
+							<name>LCDTFT</name>
+							<description>LCD panel TFT type selection. 0 = LCD is an STN display. Use gray scaler. 1 = LCD is a TFT display. Do not use gray scaler.</description>
+							<bitRange>[5:5]</bitRange>
+						</field>
+						<field>
+							<name>LCDMONO8</name>
+							<description>Monochrome LCD interface width. This bit controls whether a monochrome STN LCD uses a 4 or 8-bit parallel interface. It has no meaning in other modes and must be programmed to zero. 0 = monochrome LCD uses a 4-bit interface. 1 = monochrome LCD uses a 8-bit interface.</description>
+							<bitRange>[6:6]</bitRange>
+						</field>
+						<field>
+							<name>LCDDUAL</name>
+							<description>Single or Dual LCD panel selection. STN LCD interface is: 0 = single-panel. 1 = dual-panel.</description>
+							<bitRange>[7:7]</bitRange>
+						</field>
+						<field>
+							<name>BGR</name>
+							<description>Color format selection. 0 = RGB: normal output. 1 = BGR: red and blue swapped.</description>
+							<bitRange>[8:8]</bitRange>
+						</field>
+						<field>
+							<name>BEBO</name>
+							<description>Big-endian Byte Order. Controls byte ordering in memory: 0 = little-endian byte order. 1 = big-endian byte order.</description>
+							<bitRange>[9:9]</bitRange>
+						</field>
+						<field>
+							<name>BEPO</name>
+							<description>Big-Endian Pixel Ordering. Controls pixel ordering within a byte: 0 = little-endian ordering within a byte. 1 = big-endian pixel ordering within a byte. The BEPO bit selects between little and big-endian pixel packing for 1, 2, and 4 bpp display modes, it has no effect on 8 or 16 bpp pixel formats.  See Pixel serializer for more information on the data format.</description>
+							<bitRange>[10:10]</bitRange>
+						</field>
+						<field>
+							<name>LCDPWR</name>
+							<description>LCD power enable. 0 = power not gated through to LCD panel and LCDV[23:0] signals disabled, (held LOW). 1 = power gated through to LCD panel and LCDV[23:0] signals enabled, (active).  See LCD power-up and power-down sequence for details on LCD power sequencing.</description>
+							<bitRange>[11:11]</bitRange>
+						</field>
+						<field>
+							<name>LCDVCOMP</name>
+							<description>LCD Vertical Compare Interrupt. Generate VComp interrupt at: 00 = start of vertical synchronization. 01 = start of back porch. 10 = start of active video. 11 = start of front porch.</description>
+							<bitRange>[13:12]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[15:14]</bitRange>
+						</field>
+						<field>
+							<name>WATERMARK</name>
+							<description>LCD DMA FIFO watermark level. Controls when DMA requests are generated: 0 = An LCD DMA request is generated when either of the DMA FIFOs have four or more empty locations. 1 = An LCD DMA request is generated when either of the DMA FIFOs have eight or more empty locations.</description>
+							<bitRange>[16:16]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:17]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>INTMSK</name>
+					<description>Interrupt Mask register</description>
+					<addressOffset>0x01C</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[0:0]</bitRange>
+						</field>
+						<field>
+							<name>FUFIM</name>
+							<description>FIFO underflow interrupt enable. 0: The FIFO underflow interrupt is disabled. 1: Interrupt will be generated when the FIFO underflows.</description>
+							<bitRange>[1:1]</bitRange>
+						</field>
+						<field>
+							<name>LNBUIM</name>
+							<description>LCD next base address update interrupt enable. 0: The base address update interrupt is disabled. 1: Interrupt will be generated when the LCD base address registers have been updated from the next address registers.</description>
+							<bitRange>[2:2]</bitRange>
+						</field>
+						<field>
+							<name>VCOMPIM</name>
+							<description>Vertical compare interrupt enable. 0: The vertical compare time interrupt is disabled. 1: Interrupt will be generated when the vertical compare time (as defined by LcdVComp field in the CTRL register) is reached.</description>
+							<bitRange>[3:3]</bitRange>
+						</field>
+						<field>
+							<name>BERIM</name>
+							<description>AHB master error interrupt enable. 0: The AHB Master error interrupt is disabled. 1: Interrupt will be generated when an AHB Master error occurs.</description>
+							<bitRange>[4:4]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:5]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>INTRAW</name>
+					<description>Raw Interrupt Status register</description>
+					<addressOffset>0x020</addressOffset>
+					<access>read-only</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[0:0]</bitRange>
+						</field>
+						<field>
+							<name>FUFRIS</name>
+							<description>FIFO underflow raw interrupt status. Set when either the upper or lower DMA FIFOs have been read accessed when empty causing an underflow condition to occur. Generates an interrupt if the FUFIM bit in the INTMSK register is set.</description>
+							<bitRange>[1:1]</bitRange>
+						</field>
+						<field>
+							<name>LNBURIS</name>
+							<description>LCD next address base update raw interrupt status. Mode dependent. Set when the current base address registers have been successfully updated by the next address registers. Signifies that a new next address can be loaded if double buffering is in use. Generates an interrupt if the LNBUIM bit in the INTMSK register is set.</description>
+							<bitRange>[2:2]</bitRange>
+						</field>
+						<field>
+							<name>VCOMPRIS</name>
+							<description>Vertical compare raw interrupt status. Set when one of the four vertical regions is reached, as selected by the LcdVComp bits in the CTRL register. Generates an interrupt if the VCompIM bit in the INTMSK register is set.</description>
+							<bitRange>[3:3]</bitRange>
+						</field>
+						<field>
+							<name>BERRAW</name>
+							<description>AHB master bus error raw interrupt status. Set when the AHB master interface receives a bus error response from a slave. Generates an interrupt if the BERIM bit in the INTMSK register is set.</description>
+							<bitRange>[4:4]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:5]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>INTSTAT</name>
+					<description>Masked Interrupt Status register</description>
+					<addressOffset>0x024</addressOffset>
+					<access>read-only</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[0:0]</bitRange>
+						</field>
+						<field>
+							<name>FUFMIS</name>
+							<description>FIFO underflow masked interrupt status. Set when the both the FUFRIS bit in the INTRAW register and the FUFIM bit in the INTMSK register are set.</description>
+							<bitRange>[1:1]</bitRange>
+						</field>
+						<field>
+							<name>LNBUMIS</name>
+							<description>LCD next address base update masked interrupt status. Set when the both the LNBURIS bit in the INTRAW register and the LNBUIM bit in the INTMSK register are set.</description>
+							<bitRange>[2:2]</bitRange>
+						</field>
+						<field>
+							<name>VCOMPMIS</name>
+							<description>Vertical compare masked interrupt status. Set when the both the VCompRIS bit in the INTRAW register and the VCompIM bit in the INTMSK register are set.</description>
+							<bitRange>[3:3]</bitRange>
+						</field>
+						<field>
+							<name>BERMIS</name>
+							<description>AHB master bus error masked interrupt status. Set when the both the BERRAW bit in the INTRAW register and the BERIM bit in the INTMSK register are set.</description>
+							<bitRange>[4:4]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:5]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>INTCLR</name>
+					<description>Interrupt Clear register</description>
+					<addressOffset>0x028</addressOffset>
+					<access>write-only</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[0:0]</bitRange>
+						</field>
+						<field>
+							<name>FUFIC</name>
+							<description>FIFO underflow interrupt clear. Writing a 1 to this bit clears the FIFO underflow interrupt.</description>
+							<bitRange>[1:1]</bitRange>
+						</field>
+						<field>
+							<name>LNBUIC</name>
+							<description>LCD next address base update interrupt clear. Writing a 1 to this bit clears the LCD next address base update interrupt.</description>
+							<bitRange>[2:2]</bitRange>
+						</field>
+						<field>
+							<name>VCOMPIC</name>
+							<description>Vertical compare interrupt clear. Writing a 1 to this bit clears the vertical compare interrupt.</description>
+							<bitRange>[3:3]</bitRange>
+						</field>
+						<field>
+							<name>BERIC</name>
+							<description>AHB master error interrupt clear. Writing a 1 to this bit clears the AHB master error interrupt.</description>
+							<bitRange>[4:4]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:5]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>UPCURR</name>
+					<description>Upper Panel Current Address Value register</description>
+					<addressOffset>0x02C</addressOffset>
+					<access>read-only</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>LCDUPCURR</name>
+							<description>LCD Upper Panel Current Address. Contains the current LCD upper panel data DMA address.</description>
+							<bitRange>[31:0]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>LPCURR</name>
+					<description>Lower Panel Current Address Value register</description>
+					<addressOffset>0x030</addressOffset>
+					<access>read-only</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>LCDLPCURR</name>
+							<description>LCD Lower Panel Current Address. Contains the current LCD lower panel data DMA address.</description>
+							<bitRange>[31:0]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<dim>256</dim>
+					<dimIncrement>0x4</dimIncrement>
+					<dimIndex>0-255</dimIndex>
+					<name>PAL[%s]</name>
+
+					<description>256x16-bit Color Palette registers</description>
+
+					<addressOffset>0x200</addressOffset>
+
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>R04_0</name>
+							<description>Red palette data. For STN displays, only the four MSBs, bits [4:1], are used. For monochrome displays only the red palette data is used. All of the palette registers have the same bit fields.</description>
+							<bitRange>[4:0]</bitRange>
+						</field>
+						<field>
+							<name>G04_0</name>
+							<description>Green palette data.</description>
+							<bitRange>[9:5]</bitRange>
+						</field>
+						<field>
+							<name>B04_0</name>
+							<description>Blue palette data.</description>
+							<bitRange>[14:10]</bitRange>
+						</field>
+						<field>
+							<name>I0</name>
+							<description>Intensity / unused bit. Can be used as the LSB of the R, G, and B inputs to a 6:6:6 TFT display, doubling the number of colors to 64K, where each color has two different intensities.</description>
+							<bitRange>[15:15]</bitRange>
+						</field>
+						<field>
+							<name>R14_0</name>
+							<description>Red palette data. For STN displays, only the four MSB

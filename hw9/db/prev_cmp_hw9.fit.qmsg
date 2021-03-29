@@ -1,0 +1,279 @@
+	<bitRange>[31:0]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_HASHTABLE_LOW</name>												
+		<description>Hash table low register</description>												
+		<addressOffset>0x000C</addressOffset>												
+		<access>read-write</access>												
+		<resetValue>0x00000000</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>HTL</name>										
+				<description>Hash table low This field contains the upper 32 bits of Hash table.</description>										
+				<bitRange>[31:0]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_MII_ADDR</name>												
+		<description>MII address register</description>												
+		<addressOffset>0x0010</addressOffset>												
+		<access>read-write</access>												
+		<resetValue>0x00000000</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>GB</name>										
+				<description>MII busy This register field can be read by the application (Read), can be set to 1 by the application with a register write of 1 (Write Set), and is cleared to 0 by the core (Self Clear). The application cannot clear this type of field, and a register write of 0 to this bit has no effect on this field.  This bit should read a logic 0 before writing to this register and the MAC_MII_DATA register. This bit must also be set to 0 during a Write to this register. During a PHY register access, this bit will be set to 1 by the Application to indicate that a Read or Write access is in progress. The MAC_MII_DATA register should be kept valid until this bit is cleared by the MAC during a PHY Write operation. The MAC_MII_DATA register is invalid until this bit is cleared by the MAC during a PHY Read operation. This register should not be written to until this bit is cleared.</description>										
+				<bitRange>[0:0]</bitRange>										
+			</field>											
+			<field>											
+				<name>W</name>										
+				<description>MII write When set, this bit tells the PHY that this will be a Write operation using the MII Data register. If this bit is not set, this will be a Read operation, placing the data in the MII Data register.</description>										
+				<bitRange>[1:1]</bitRange>										
+			</field>											
+			<field>											
+				<name>CR</name>										
+				<description>CSR clock range The CSR Clock Range selection determines the frequency of the MDC clock. The suggested range of CLK_M3_ETHERNET frequency applicable for each value below (when Bit[5] = 0) ensures that the MDC clock is approximately between the frequency range 1.0 MHz - 2.5 MHz.  When bit 5 is set, you can achieve MDC clock of frequency higher than the IEEE 802.3 specified frequency limit of 2.5 MHz and program a clock divider of lower value. For example, when CLK_M3_ETHERNET is of frequency 100 MHz and you program these bits as 1010, then the resultant MDC clock will be of 12.5 MHz which is outside the limit of IEEE 802.3 specified range. Program the values given below only if the interfacing chips supports faster MDC clocks.  See Table 554 for bit values.</description>										
+				<bitRange>[5:2]</bitRange>										
+			</field>											
+			<field>											
+				<name>GR</name>										
+				<description>MII register These bits select the desired MII register in the selected PHY device.</description>										
+				<bitRange>[10:6]</bitRange>										
+			</field>											
+			<field>											
+				<name>PA</name>										
+				<description>Physical layer address This field tells which of the 32 possible PHY devices are being accessed.</description>										
+				<bitRange>[15:11]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[31:16]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_MII_DATA</name>												
+		<description>MII data register</description>												
+		<addressOffset>0x0014</addressOffset>												
+		<access>read-write</access>												
+		<resetValue>0x00000000</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>GD</name>										
+				<description>MII data This contains the 16-bit data value read from the PHY after a Management Read operation or the 16-bit data value to be written to the PHY before a Management Write operation.</description>										
+				<bitRange>[15:0]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[31:16]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_FLOW_CTRL</name>												
+		<description>Flow control register</description>												
+		<addressOffset>0x0018</addressOffset>												
+		<access>read-write</access>												
+		<resetValue>0x00000000</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>FCB</name>										
+				<description>Flow Control Busy/Backpressure Activate  This register field can be read by the application (Read), can be set to 1 by the application with a register write of 1 (Write Set), and is cleared to 0 by the core (Self Clear). The application cannot clear this type of field, and a register write of 0 to this bit has no effect on this field.  This bit initiates a Pause Control frame in Full-Duplex mode. In Full-Duplex mode, this bit should be read as 0 before writing to the Flow Control register. To initiate a Pause control frame, the Application must set this bit to 1. During a transfer of the Control Frame, this bit will continue to be set to signify that a frame transmission is in progress. After the completion of Pause control frame transmission, the MAC will reset this bit to 0. The Flow Control register should not be written to until this bit is cleared. In Half-Duplex mode, when this bit is set (and TFE is set), then backpressure is asserted by the MAC Core. During backpressure, when the MAC receives a new frame, the transmitter starts sending a JAM pattern resulting in a collision. This control register bit is logically ORed with the flow controller input signal for the backpressure function. When the MAC is configured to Full- Duplex mode, the BPA is automatically disabled.</description>										
+				<bitRange>[0:0]</bitRange>										
+			</field>											
+			<field>											
+				<name>TFE</name>										
+				<description>Transmit Flow Control Enable  In Full-Duplex mode, when this bit is set, the MAC enables the flow control operation to transmit Pause frames. When this bit is reset, the flow control operation in the MAC is disabled, and the MAC will not transmit any Pause frames. In Half-Duplex mode, when this bit is set, the MAC enables the back-pressure operation. When this bit is reset, the backpressure feature is disabled.</description>										
+				<bitRange>[1:1]</bitRange>										
+			</field>											
+			<field>											
+				<name>RFE</name>										
+				<description>Receive Flow Control Enable  When this bit is set, the MAC will decode the received Pause frame and disable its transmitter for a specified (Pause Time) time. When this bit is reset, the decode function of the Pause frame is disabled.</description>										
+				<bitRange>[2:2]</bitRange>										
+			</field>											
+			<field>											
+				<name>UP</name>										
+				<description>Unicast Pause Frame Detect  When this bit is set, the MAC will detect the Pause frames with the station's unicast address specified in MAC Address0 High Register and MAC Address0 Low Register, in addition to the detecting Pause frames with the unique multicast address. When this bit is reset, the MAC will detect only a Pause frame with the unique multicast address specified in the 802.3x standard.</description>										
+				<bitRange>[3:3]</bitRange>										
+			</field>											
+			<field>											
+				<name>PLT</name>										
+				<description>Pause Low Threshold  This field configures the threshold of the PAUSE timer at which the input flow control is checked for automatic retransmission of PAUSE Frame. The threshold values should be always less than the Pause Time configured in Bits[31:16]. For example, if PT = 0x100 (256 slot-times), and PLT = 01, then a second PAUSE frame is automatically transmitted if the flow control signal is asserted at 228 (256 - 28) slot-times after the first PAUSE frame is transmitted.</description>										
+				<bitRange>[5:4]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[6:6]</bitRange>										
+			</field>											
+			<field>											
+				<name>DZPQ</name>										
+				<description>Disable Zero-Quanta Pause  When set, this bit disables the automatic generation of Zero-Quanta Pause Control frames on the deassertion of the flow-control signal from the FIFO layer. When this bit is reset, normal operation with automatic Zero-Quanta Pause Control frame generation is enabled.</description>										
+				<bitRange>[7:7]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[15:8]</bitRange>										
+			</field>											
+			<field>											
+				<name>PT</name>										
+				<description>Pause time This field holds the value to be used in the Pause Time field in the transmit control frame. If the Pause Time bits is configured to be double-synchronized to the MII clock domain, then consecutive writes to this register should be performed only after at least 4 clock cycles in the destination clock domain.</description>										
+				<bitRange>[31:16]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_VLAN_TAG</name>												
+		<description>VLAN tag register</description>												
+		<addressOffset>0x001C</addressOffset>												
+		<access>read-write</access>												
+		<resetValue>0x00000000</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>VL</name>										
+				<description>VLAN Tag Identifier for Receive Frames  This contains the 802.1Q VLAN tag to identify VLAN frames, and is compared to the fifteenth and sixteenth bytes of the frames being received for VLAN frames. Bits[15:13] are the User Priority, Bit[12] is the Canonical Format Indicator (CFI) and bits[11:0] are the VLAN tag's VLAN Identifier (VID) field. When the ETV bit is set, only the VID (Bits[11:0]) is used for comparison.  If VL (VL[11:0] if ETV is set) is all zeros, the MAC does not check the fifteenth and sixteenth bytes for VLAN tag comparison, and declares all frames with a Type field value of 0x8100 to be VLAN frames.</description>										
+				<bitRange>[15:0]</bitRange>										
+			</field>											
+			<field>											
+				<name>ETV</name>										
+				<description>Enable 12-Bit VLAN Tag Comparison  When this bit is set, a 12-bit VLAN identifier, rather than the complete 16-bit VLAN tag, is used for comparison and filtering. Bits[11:0] of the VLAN tag are compared with the corresponding field in the received VLAN-tagged frame.  When this bit is reset, all 16 bits of the received VLAN frame's fifteenth and sixteenth bytes are used for comparison.</description>										
+				<bitRange>[16:16]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[31:17]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_DEBUG</name>												
+		<description>Debug register</description>												
+		<addressOffset>0x0024</addressOffset>												
+		<access>read-only</access>												
+		<resetValue>0x00000000</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>RXIDLESTAT</name>										
+				<description>When high, it indicates that the MAC MII receive protocol engine is actively receiving data and not in IDLE state.</description>										
+				<bitRange>[0:0]</bitRange>										
+			</field>											
+			<field>											
+				<name>FIFOSTAT0</name>										
+				<description>When high, it indicates the active state of the small FIFO Read and Write controllers respectively of the MAC receive Frame Controller module.</description>										
+				<bitRange>[2:1]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[3:3]</bitRange>										
+			</field>											
+			<field>											
+				<name>RXFIFOSTAT1</name>										
+				<description>When high, it indicates that the MTL RxFIFO Write Controller is active and transferring a received frame to the FIFO.</description>										
+				<bitRange>[4:4]</bitRange>										
+			</field>											
+			<field>											
+				<name>RXFIFOSTAT</name>										
+				<description>State of the RxFIFO read Controller:  00 = idle state 01 = reading frame data 10 = reading frame status (or Time stamp) 11 = flushing the frame data and status</description>										
+				<bitRange>[6:5]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[7:7]</bitRange>										
+			</field>											
+			<field>											
+				<name>RXFIFOLVL</name>										
+				<description>Status of the RxFIFO Fill-level  00 = RxFIFO Empty  01 = RxFIFO fill-level below flow-control de-activate threshold  10 = RxFIFO fill-level above flow-control activate threshold  11 = RxFIFO Full</description>										
+				<bitRange>[9:8]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[15:10]</bitRange>										
+			</field>											
+			<field>											
+				<name>TXIDLESTAT</name>										
+				<description>When high, it indicates that the MAC MII transmit protocol engine is actively transmitting data and not in IDLE state.</description>										
+				<bitRange>[16:16]</bitRange>										
+			</field>											
+			<field>											
+				<name>TXSTAT</name>										
+				<description>State of the MAC Transmit Frame Controller module:  00 = idle 01 = Waiting for Status of previous frame or IFG/backoff period to be over  10 = Generating and transmitting a PAUSE control frame (in full duplex mode)  11 = Transferring input frame for transmission</description>										
+				<bitRange>[18:17]</bitRange>										
+			</field>											
+			<field>											
+				<name>PAUSE</name>										
+				<description>When high, it indicates that the MAC transmitter is in PAUSE condition (in full-duplex only) and hence will not schedule any frame for transmission.</description>										
+				<bitRange>[19:19]</bitRange>										
+			</field>											
+			<field>											
+				<name>TXFIFOSTAT</name>										
+				<description>State of the TxFIFO read Controller  00 = idle state 01 = READ state (transferring data to MAC transmitter)  10 = Waiting for TxStatus from MAC transmitter  11 = Writing the received TxStatus or flushing the TxFIFO</description>										
+				<bitRange>[21:20]</bitRange>										
+			</field>											
+			<field>											
+				<name>TXFIFOSTAT1</name>										
+				<description>When high, it indicates that the TxFIFO Write Controller is active and transferring data to the TxFIFO.</description>										
+				<bitRange>[22:22]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[23:23]</bitRange>										
+			</field>											
+			<field>											
+				<name>TXFIFOLVL</name>										
+				<description>When high, it indicates that the TxFIFO is not empty and has some data left for transmission.</description>										
+				<bitRange>[24:24]</bitRange>										
+			</field>											
+			<field>											
+				<name>TXFIFOFULL</name>										
+				<description>When high, it indicates that the TxStatus FIFO is full and hence the controller will not be accepting any more frames for transmission.</description>										
+				<bitRange>[25:25]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[31:26]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_RWAKE_FRFLT</name>												
+		<description>Remote wake-up frame filter</description>												
+		<addressOffset>0x0028</addressOffset>												
+		<access>read-write</access>												
+		<resetValue>0x00000000</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>ADDR</name>										
+				<description>WKUPFMFILTER address</description>										
+				<bitRange>[31:0]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_PMT_CTRL_STAT</name>												
+		<description>PMT control and status</description>												
+		<addressOffset>0x002C</addressOffset>												
+		<access>read-write</access>												
+		<resetValue>0x00000000</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>PD</name>		

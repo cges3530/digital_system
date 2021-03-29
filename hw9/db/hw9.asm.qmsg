@@ -1,0 +1,36 @@
+
+          <targetInfo name="enc_index_interrupt flexspi_nor_debug"/>
+          <targetInfo name="enc_index_interrupt sdram_debug"/>
+          <targetInfo name="enc_index_interrupt release"/>
+          <targetInfo name="enc_index_interrupt flexspi_nor_release"/>
+          <targetInfo name="enc_index_interrupt sdram_release"/>
+        </targetInfos>
+      </component>
+      <component Cvendor="NXP" Cversion="2.2.2" Csub="common" Cgroup="SDK Drivers" Cclass="Device">
+        <package url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" schemaVersion="1.4" version="12.1.0" vendor="NXP" name="MIMXRT1064_DFP"/>
+        <targetInfos>
+          <targetInfo name="enc_index_interrupt debug"/>
+          <targetInfo name="enc_index_interrupt flexspi_nor_debug"/>
+          <targetInfo name="enc_index_interrupt sdram_debug"/>
+          <targetInfo name="enc_index_interrupt release"/>
+          <targetInfo name="enc_index_interrupt flexspi_nor_release"/>
+          <targetInfo name="enc_index_interrupt sdram_release"/>
+        </targetInfos>
+      </component>
+      <component Cvendor="NXP" Cversion="1.0.0" Csub="MIMXRT1064_header" Cgroup="CMSIS" Cclass="Device">
+        <package url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" schemaVersion="1.4" version="12.1.0" vendor="NXP" name="MIMXRT1064_DFP"/>
+        <targetInfos>
+          <targetInfo name="enc_index_interrupt debug"/>
+          <targetInfo name="enc_index_interrupt flexspi_nor_debug"/>
+          <targetInfo name="enc_index_interrupt sdram_debug"/>
+          <targetInfo name="enc_index_interrupt release"/>
+          <targetInfo name="enc_index_interrupt flexspi_nor_release"/>
+          <targetInfo name="enc_index_interrupt sdram_release"/>
+        </targetInfos>
+      </component>
+      <component Cvendor="NXP" Cversion="1.0.0" Csub="debug_console" Cgroup="SDK Utilities" Cclass="Device">
+        <package url="http://mcuxpresso.nxp.com/cmsis_pack/repo/" schemaVersion="1.4" version="12.1.0" vendor="NXP" name="MIMXRT1064_DFP"/>
+        <targetInfos>
+          <targetInfo name="enc_index_interrupt debug"/>
+          <targetInfo name="enc_index_interrupt flexspi_nor_debug"/>
+          <targetInfo n
