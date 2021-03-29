@@ -1,0 +1,98 @@
+ */
+#define MC_3                   (3*0x10u)      /* Timer A mode control: 3 - Up/Down */
+#define ID_0                   (0*0x40u)      /* Timer A input divider: 0 - /1 */
+#define ID_1                   (1*0x40u)      /* Timer A input divider: 1 - /2 */
+#define ID_2                   (2*0x40u)      /* Timer A input divider: 2 - /4 */
+#define ID_3                   (3*0x40u)      /* Timer A input divider: 3 - /8 */
+#define TASSEL_0               (0*0x100u)     /* Timer A clock source select: 0 - TACLK */
+#define TASSEL_1               (1*0x100u)     /* Timer A clock source select: 1 - ACLK  */
+#define TASSEL_2               (2*0x100u)     /* Timer A clock source select: 2 - SMCLK */
+#define TASSEL_3               (3*0x100u)     /* Timer A clock source select: 3 - INCLK */
+#define MC__STOP               (0*0x10u)      /* Timer A mode control: 0 - Stop */
+#define MC__UP                 (1*0x10u)      /* Timer A mode control: 1 - Up to CCR0 */
+#define MC__CONTINUOUS         (2*0x10u)      /* Timer A mode control: 2 - Continuous up */
+#define MC__CONTINOUS          (2*0x10u)      /* Legacy define */
+#define MC__UPDOWN             (3*0x10u)      /* Timer A mode control: 3 - Up/Down */
+#define ID__1                  (0*0x40u)      /* Timer A input divider: 0 - /1 */
+#define ID__2                  (1*0x40u)      /* Timer A input divider: 1 - /2 */
+#define ID__4                  (2*0x40u)      /* Timer A input divider: 2 - /4 */
+#define ID__8                  (3*0x40u)      /* Timer A input divider: 3 - /8 */
+#define TASSEL__TACLK          (0*0x100u)     /* Timer A clock source select: 0 - TACLK */
+#define TASSEL__ACLK           (1*0x100u)     /* Timer A clock source select: 1 - ACLK  */
+#define TASSEL__SMCLK          (2*0x100u)     /* Timer A clock source select: 2 - SMCLK */
+#define TASSEL__INCLK          (3*0x100u)     /* Timer A clock source select: 3 - INCLK */
+
+/* TAxCCTLx Control Bits */
+#define CM1                    (0x8000)       /* Capture mode 1 */
+#define CM0                    (0x4000)       /* Capture mode 0 */
+#define CCIS1                  (0x2000)       /* Capture input select 1 */
+#define CCIS0                  (0x1000)       /* Capture input select 0 */
+#define SCS                    (0x0800)       /* Capture sychronize */
+#define SCCI                   (0x0400)       /* Latched capture signal (read) */
+#define CAP                    (0x0100)       /* Capture mode: 1 /Compare mode : 0 */
+#define OUTMOD2                (0x0080)       /* Output mode 2 */
+#define OUTMOD1                (0x0040)       /* Output mode 1 */
+#define OUTMOD0                (0x0020)       /* Output mode 0 */
+#define CCIE                   (0x0010)       /* Capture/compare interrupt enable */
+#define CCI                    (0x0008)       /* Capture input signal (read) */
+#define OUT                    (0x0004)       /* PWM Output signal if output mode 0 */
+#define COV                    (0x0002)       /* Capture/compare overflow flag */
+#define CCIFG                  (0x0001)       /* Capture/compare interrupt flag */
+
+#define OUTMOD_0               (0*0x20u)      /* PWM output mode: 0 - output only */
+#define OUTMOD_1               (1*0x20u)      /* PWM output mode: 1 - set */
+#define OUTMOD_2               (2*0x20u)      /* PWM output mode: 2 - PWM toggle/reset */
+#define OUTMOD_3               (3*0x20u)      /* PWM output mode: 3 - PWM set/reset */
+#define OUTMOD_4               (4*0x20u)      /* PWM output mode: 4 - toggle */
+#define OUTMOD_5               (5*0x20u)      /* PWM output mode: 5 - Reset */
+#define OUTMOD_6               (6*0x20u)      /* PWM output mode: 6 - PWM toggle/set */
+#define OUTMOD_7               (7*0x20u)      /* PWM output mode: 7 - PWM reset/set */
+#define CCIS_0                 (0*0x1000u)    /* Capture input select: 0 - CCIxA */
+#define CCIS_1                 (1*0x1000u)    /* Capture input select: 1 - CCIxB */
+#define CCIS_2                 (2*0x1000u)    /* Capture input select: 2 - GND */
+#define CCIS_3                 (3*0x1000u)    /* Capture input select: 3 - Vcc */
+#define CM_0                   (0*0x4000u)    /* Capture mode: 0 - disabled */
+#define CM_1                   (1*0x4000u)    /* Capture mode: 1 - pos. edge */
+#define CM_2                   (2*0x4000u)    /* Capture mode: 1 - neg. edge */
+#define CM_3                   (3*0x4000u)    /* Capture mode: 1 - both edges */
+
+/* TAxEX0 Control Bits */
+#define TAIDEX0                (0x0001)       /* Timer A Input divider expansion Bit: 0 */
+#define TAIDEX1                (0x0002)       /* Timer A Input divider expansion Bit: 1 */
+#define TAIDEX2                (0x0004)       /* Timer A Input divider expansion Bit: 2 */
+
+#define TAIDEX_0               (0*0x0001u)    /* Timer A Input divider expansion : /1 */
+#define TAIDEX_1               (1*0x0001u)    /* Timer A Input divider expansion : /2 */
+#define TAIDEX_2               (2*0x0001u)    /* Timer A Input divider expansion : /3 */
+#define TAIDEX_3               (3*0x0001u)    /* Timer A Input divider expansion : /4 */
+#define TAIDEX_4               (4*0x0001u)    /* Timer A Input divider expansion : /5 */
+#define TAIDEX_5               (5*0x0001u)    /* Timer A Input divider expansion : /6 */
+#define TAIDEX_6               (6*0x0001u)    /* Timer A Input divider expansion : /7 */
+#define TAIDEX_7               (7*0x0001u)    /* Timer A Input divider expansion : /8 */
+
+#endif
+/************************************************************
+* Timerx_B7
+************************************************************/
+#ifdef  __MSP430_HAS_TxB7__            /* Definition to show that Module is available */
+
+#define OFS_TBxCTL             (0x0000)       /* Timerx_B7 Control */
+#define OFS_TBxCCTL0           (0x0002)       /* Timerx_B7 Capture/Compare Control 0 */
+#define OFS_TBxCCTL1           (0x0004)       /* Timerx_B7 Capture/Compare Control 1 */
+#define OFS_TBxCCTL2           (0x0006)       /* Timerx_B7 Capture/Compare Control 2 */
+#define OFS_TBxCCTL3           (0x0008)       /* Timerx_B7 Capture/Compare Control 3 */
+#define OFS_TBxCCTL4           (0x000A)       /* Timerx_B7 Capture/Compare Control 4 */
+#define OFS_TBxCCTL5           (0x000C)       /* Timerx_B7 Capture/Compare Control 5 */
+#define OFS_TBxCCTL6           (0x000E)       /* Timerx_B7 Capture/Compare Control 6 */
+#define OFS_TBxR               (0x0010)       /* Timerx_B7 */
+#define OFS_TBxCCR0            (0x0012)       /* Timerx_B7 Capture/Compare 0 */
+#define OFS_TBxCCR1            (0x0014)       /* Timerx_B7 Capture/Compare 1 */
+#define OFS_TBxCCR2            (0x0016)       /* Timerx_B7 Capture/Compare 2 */
+#define OFS_TBxCCR3            (0x0018)       /* Timerx_B7 Capture/Compare 3 */
+#define OFS_TBxCCR4            (0x001A)       /* Timerx_B7 Capture/Compare 4 */
+#define OFS_TBxCCR5            (0x001C)       /* Timerx_B7 Capture/Compare 5 */
+#define OFS_TBxCCR6            (0x001E)       /* Timerx_B7 Capture/Compare 6 */
+#define OFS_TBxIV              (0x002E)       /* Timerx_B7 Interrupt Vector Word */
+#define OFS_TBxEX0             (0x0020)       /* Timerx_B7 Expansion Register 0 */
+
+/* Bits are already defined within the Timer0_Ax 

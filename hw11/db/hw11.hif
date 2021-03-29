@@ -1,0 +1,335 @@
+Quartus II
+Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+SADD
+# storage
+db|hw11.(1).cnf
+db|hw11.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|计╰参|hw8|sadd.v
+ce3519a3c765de8ec789db9602d3d29
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+SADD:u0
+}
+# macro_sequence
+
+# end
+# entity
+CADD8
+# storage
+db|hw11.(2).cnf
+db|hw11.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|计╰参|hw8|cadd8.v
+20c98d3abdc1d17cda98a99cda6d1c74
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+SADD:u0|CADD8:v0
+}
+# macro_sequence
+
+# end
+# entity
+CADD4
+# storage
+db|hw11.(3).cnf
+db|hw11.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|计╰参|hw8|cadd4.v
+5b626c6fade5fd4c2c7d765b8b70397f
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+SADD:u0|CADD8:v0|CADD4:u0
+SADD:u0|CADD8:v0|CADD4:u1
+}
+# macro_sequence
+
+# end
+# entity
+D_latch
+# storage
+db|hw11.(6).cnf
+db|hw11.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|计╰参|hw10|d_latch.v
+38338865961c4d69ad066bc4ad3bcd
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+latch8:u1|_DFF:u0|D_latch:M
+latch8:u1|_DFF:u0|D_latch:S
+latch8:u1|_DFF:u1|D_latch:M
+latch8:u1|_DFF:u1|D_latch:S
+latch8:u1|_DFF:u2|D_latch:M
+latch8:u1|_DFF:u2|D_latch:S
+latch8:u1|_DFF:u3|D_latch:M
+latch8:u1|_DFF:u3|D_latch:S
+latch8:u1|_DFF:u4|D_latch:M
+latch8:u1|_DFF:u4|D_latch:S
+latch8:u1|_DFF:u5|D_latch:M
+latch8:u1|_DFF:u5|D_latch:S
+latch8:u1|_DFF:u6|D_latch:M
+latch8:u1|_DFF:u6|D_latch:S
+latch8:u1|_DFF:u7|D_latch:M
+latch8:u1|_DFF:u7|D_latch:S
+}
+# macro_sequence
+
+# end
+# entity
+_7Seg
+# storage
+db|hw11.(7).cnf
+db|hw11.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|计╰参|hw8|_7seg.v
+d36355fe2435de753e856c5ca8027
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+_7Seg:v1
+_7Seg:v2
+}
+# macro_sequence
+
+# end
+# entity
+_DFF
+# storage
+db|hw11.(5).cnf
+db|hw11.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|计╰参|hw10|_dff.v
+25c8c3e4acc1175bf460d485733fe5a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+latch8:u1|_DFF:u0
+latch8:u1|_DFF:u1
+latch8:u1|_DFF:u2
+latch8:u1|_DFF:u3
+latch8:u1|_DFF:u4
+latch8:u1|_DFF:u5
+latch8:u1|_DFF:u6
+latch8:u1|_DFF:u7
+}
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|hw11.(0).cnf
+db|hw11.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+counter.v
+6bfb1ce98351c9c08d6c2f64cf755
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+latch8
+# storage
+db|hw11.(4).cnf
+db|hw11.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+counter.v
+6bfb1ce98351c9c08d6c2f64cf755
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+latch8:u1
+}
+# macro_sequence
+
+# end
+# complete
+

@@ -1,0 +1,305 @@
+ter clock = HCLK/128</description>
+                    <value>#111</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRK0FCNT</name>
+              <description>Brake 0 Edge Detector Filter Count\nThe register bits control the Brake0 filter counter to count from 0 to BRK1FCNT.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRK0PINV</name>
+              <description>Brake 0 Pin Inverse</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The state of pin PWMx_BRAKE0 is passed to the negative edge detector</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The inversed state of pin PWMx_BRAKE10 is passed to the negative edge detector</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRK1NFEN</name>
+              <description>PWM Brake 1 Noise Filter Enable Bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Noise filter of PWM Brake 1 Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Noise filter of PWM Brake 1 Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRK1NFSEL</name>
+              <description>Brake 1 Edge Detector Filter Clock Selection</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>3</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Filter clock = HCLK</description>
+                    <value>#000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Filter clock = HCLK/2</description>
+                    <value>#001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>Filter clock = HCLK/4</description>
+                    <value>#010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>Filter clock = HCLK/8</description>
+                    <value>#011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>4</name>
+                    <description>Filter clock = HCLK/16</description>
+                    <value>#100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>5</name>
+                    <description>Filter clock = HCLK/32</description>
+                    <value>#101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>6</name>
+                    <description>Filter clock = HCLK/64</description>
+                    <value>#110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>7</name>
+                    <description>Filter clock = HCLK/128</description>
+                    <value>#111</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRK1FCNT</name>
+              <description>Brake 1 Edge Detector Filter Count\nThe register bits control the Brake1 filter counter to count from 0 to BRK1FCNT.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRK1PINV</name>
+              <description>Brake 1 Pin Inverse</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The state of pin PWMx_BRAKE1 is passed to the negative edge detector</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The inversed state of pin PWMx_BRAKE1 is passed to the negative edge detector</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BK0SRC</name>
+              <description>Brake 0 Pin Source Select\nFor PWM0 setting:</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Brake 0 pin source come from PWM0_BRAKE0.\nReserved</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Reserved.\nBrake 0 pin source come from PWM0_BRAKE0</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BK1SRC</name>
+              <description>Brake 1 Pin Source Select\nFor PWM0 setting:</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Brake 1 pin source come from PWM0_BRAKE1.\nBrake 1 pin source come from PWM1_BRAKE1</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Brake 1 pin source come from PWM1_BRAKE1.\nBrake 1 pin source come from PWM0_BRAKE1</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_FAILBRK</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_FAILBRK</displayName>
+          <description>PWM System Fail Brake Control Register</description>
+          <addressOffset>0xC4</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CSSBRKEN</name>
+              <description>Clock Security System Detection Trigger PWM Brake Function 0 Enable Bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Brake Function triggered by CSS detection Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Brake Function triggered by CSS detection Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BODBRKEN</name>
+              <description>Brown-out Detection Trigger PWM Brake Function 0 Enable Bit</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Brake Function triggered by BOD Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Brake Function triggered by BOD Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CORBRKEN</name>
+              <description>Core Lockup Detection Trigger PWM Brake Function 0 Enable Bit</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Brake Function triggered by Core lockup detection Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Brake Function triggered by Core lockup detection Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_BRKCTL0_1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_BRKCTL0_1</displayName>
+          <description>PWM Brake Edge Detect Control Register 0</description>
+          <addressOffset>0xC8</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>BRKP0EEN</name>
+              <description>PWMx_BRAKE0 Pin As Edge-detect Brake Source Enable Bit (Write Protect)\nNote: This register is write protected. Refer to SYS_REGLCTL register.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>BKP0 pin as edge-detect brake source Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>BKP0 pin as edge-detect brake source Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRKP1EEN</name>
+              <description>PWMx_BRAKE1 Pin As Edge-detect Brake Source Enable Bit (Write Protect)\nNote: This register is write protected. Refer to SYS_REGLCTL register.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>BKP1 pin as edge-detect brake source Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>BKP1 pin as edge-detect brake source Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SYSEBEN</name>
+              <description>System Fail As Edge-detect Brake Source Enable Bit (Write Protect)\nNote: This register is write protected. Refer to SYS_REGLCTL register.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>System Fail condition as edge-detect brake source Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>System Fail condition as edge-detect brake source Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRKP0LEN</name>
+              <description>BKP0 Pin As Level-detect Brake Source Enable Bit (Write Protect)\nNote: This register is write protected. Refer to S

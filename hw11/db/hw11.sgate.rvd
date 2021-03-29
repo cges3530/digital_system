@@ -1,0 +1,352 @@
+       <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPORD0_1</name>
+              <description>Capture Channel 0/1 Rising/Falling Order </description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_FCAPDAT0/1 is the first captured data to memory</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_RCAPDAT0/1 is the first captured data to memory</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CHSEL0_1</name>
+              <description>Select Channel 0/1 to Do PDMA Transfer </description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Channel0</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Channel1</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CHEN2_3</name>
+              <description>Channel 2/3 PDMA Enable Bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Channel 2/3 PDMA function Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Channel 2/3 PDMA function Enabled for the channel 2/3 captured data and transfer to memory</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPMOD2_3</name>
+              <description>Select PWM_RCAPDAT2/3 or PWM_FCAODAT2/3 to Do PDMA Transfer </description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Reserved.</description>
+                    <value>#00</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_RCAPDAT2/3</description>
+                    <value>#01</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>PWM_FCAPDAT2/3</description>
+                    <value>#10</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>Both PWM_RCAPDAT2/3 and PWM_FCAPDAT2/3</description>
+                    <value>#11</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPORD2_3</name>
+              <description>Capture Channel 2/3 Rising/Falling Order </description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_FCAPDAT2/3 is the first captured data to memory</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_RCAPDAT2/3 is the first captured data to memory</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CHSEL2_3</name>
+              <description>Select Channel 2/3 to Do PDMA Transfer </description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Channel2</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Channel3</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CHEN4_5</name>
+              <description>Channel 4/5 PDMA Enable Bit</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Channel 4/5 PDMA function Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Channel 4/5 PDMA function Enabled for the channel 4/5 captured data and transfer to memory</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPMOD4_5</name>
+              <description>Select PWM_RCAPDAT4/5 or PWM_FCAPDAT4/5 to Do PDMA Transfer </description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Reserved.</description>
+                    <value>#00</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_RCAPDAT4/5</description>
+                    <value>#01</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>PWM_FCAPDAT4/5</description>
+                    <value>#10</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>Both PWM_RCAPDAT4/5 and PWM_FCAPDAT4/5</description>
+                    <value>#11</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPORD4_5</name>
+              <description>Capture Channel 4/5 Rising/Falling Order </description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_FCAPDAT4/5 is the first captured data to memory</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_RCAPDAT4/5 is the first captured data to memory</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CHSEL4_5</name>
+              <description>Select Channel 4/5 to Do PDMA Transfer </description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Channel4</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Channel5</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_PDMACAP0_1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_PDMACAP0_1</displayName>
+          <description>PWM Capture Channel 01 PDMA Register</description>
+          <addressOffset>0x240</addressOffset>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CAPBUF</name>
+              <description>PWM Capture PDMA Register (Read Only)\nThis register is use as a buffer to transfer PWM capture rising or falling data to memory by PDMA.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+       </register>
+       <register derivedFrom="PWM_PDMACAP0_1">
+          <name>PWM_PDMACAP2_3</name>
+          <displayName>PWM_PDMACAP2_3</displayName>
+          <description>PWM Capture Channel 23 PDMA Register</description>
+          <addressOffset>0x244</addressOffset>
+       </register>
+       <register derivedFrom="PWM_PDMACAP0_1">
+          <name>PWM_PDMACAP4_5</name>
+          <displayName>PWM_PDMACAP4_5</displayName>
+          <description>PWM Capture Channel 45 PDMA Register</description>
+          <addressOffset>0x248</addressOffset>
+       </register>
+       <register>
+          <name>PWM_CAPIEN</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CAPIEN</displayName>
+          <description>PWM Capture Interrupt Enable Register</description>
+          <addressOffset>0x250</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CAPRIENn</name>
+              <description>PWM Capture Rising Latch Interrupt Enable Bit\nEach bit n controls the corresponding PWM channel n.\nNote: When Capture with PDMA operating, CINTENR corresponding channel CAPRIEN must be disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Capture rising edge latch interrupt Disabled</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Capture rising edge latch interrupt Enabled</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPFIENn</name>
+              <description>PWM Capture Falling Latch Interrupt Enable Bit\nEach bit n controls the corresponding PWM channel n.\nNote: When Capture with PDMA operating, CINTENR corresponding channel CAPFIEN must be disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Capture falling edge latch interrupt Disabled</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Capture falling edge latch interrupt Enabled</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_CAPIF</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CAPIF</displayName>
+          <description>PWM Capture Interrupt Flag Register</description>
+          <addressOffset>0x254</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CRLIFn</name>
+              <description>PWM Capture Rising Latch Interrupt Flag\nThis bit is writing 1 to clear. Each bit n controls the corresponding PWM channel n.\nNote: When Capture with PDMA operating, CIFR corresponding channel CRLIF will cleared by hardware after PDMA transfer data.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No capture rising latch condition happened</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Capture rising latch condition happened, this flag will be set to high</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CFLIFn</name>
+              <description>PWM Capture Falling Latch Interrupt Flag\nThis bit is writing 1 to clear. Each bit n controls the corresponding PWM channel n.\nNote: When Capture with PDMA operating, CIFR corresponding channel CFLIF will cleared by hardware after PDMA transfer data.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No capture falling latch condition happened</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Capture falling latch condition happened, this flag will be set to high</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_PBUF0</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_PBUF0</displayName>
+          <description>PWM PERIOD0 Buffer</description>
+          <addressOffset>0x304</addressOffset>
+          <access>read-only</access

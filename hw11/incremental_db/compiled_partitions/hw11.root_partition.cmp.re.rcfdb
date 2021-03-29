@@ -1,0 +1,94 @@
+           <description>System Fail condition as level-detect brake source Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRKAEVEN</name>
+              <description>PWM Brake Action Select for Even Channel (Write Protect)\nNote: This register is write protected. Refer to SYS_REGLCTL register.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM even channel level-detect brake function not affect channel output</description>
+                    <value>#00</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM even channel output tri-state when level-detect brake happened</description>
+                    <value>#01</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>PWM even channel output low level when level-detect brake happened</description>
+                    <value>#10</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>PWM even channel output high level when level-detect brake happened</description>
+                    <value>#11</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BRKAODD</name>
+              <description>PWM Brake Action Select for Odd Channel (Write Protect)\nNote: This register is write protected. Refer to SYS_REGLCTL register.</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM odd channel level-detect brake function not affect channel output</description>
+                    <value>#00</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM odd channel output tri-state when level-detect brake happened</description>
+                    <value>#01</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>PWM odd channel output low level when level-detect brake happened</description>
+                    <value>#10</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>PWM odd channel output high level when level-detect brake happened</description>
+                    <value>#11</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register derivedFrom="PWM_BRKCTL0_1">
+          <name>PWM_BRKCTL2_3</name>
+          <displayName>PWM_BRKCTL2_3</displayName>
+          <description>PWM Brake Edge Detect Control Register 2</description>
+          <addressOffset>0xCC</addressOffset>
+       </register>
+       <register derivedFrom="PWM_BRKCTL0_1">
+          <name>PWM_BRKCTL4_5</name>
+          <displayName>PWM_BRKCTL4_5</displayName>
+          <description>PWM Brake Edge Detect Control Register 4</description>
+          <addressOffset>0xD0</addressOffset>
+       </register>
+       <register>
+          <name>PWM_POLCTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_POLCTL</displayName>
+          <description>PWM Pin Polar Inverse Register</description>
+          <addressOffset>0xD4</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>PINVn</name>
+              <description>PWM PIN Polar Inverse Control Bits\nThe register controls polarity state of PWM output. Each bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+         

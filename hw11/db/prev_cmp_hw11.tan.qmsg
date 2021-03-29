@@ -1,0 +1,845 @@
+      <name>0</name>
+                    <description>PWM_CH2 zero point</description>
+                    <value>#0000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_CH2 period point</description>
+                    <value>#0001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>PWM_CH2 zero or period point</description>
+                    <value>#0010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>PWM_CH2 up-count CMPDAT point</description>
+                    <value>#0011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>4</name>
+                    <description>PWM_CH2 down-count CMPDAT point</description>
+                    <value>#0100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>5</name>
+                    <description>PWM_CH3 zero point</description>
+                    <value>#0101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>6</name>
+                    <description>PWM_CH3 period point</description>
+                    <value>#0110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>7</name>
+                    <description>PWM_CH3 zero or period point</description>
+                    <value>#0111</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>8</name>
+                    <description>PWM_CH3 up-count CMPDAT point</description>
+                    <value>#1000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>9</name>
+                    <description>PWM_CH3 down-count CMPDAT point</description>
+                    <value>#1001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>10</name>
+                    <description>PWM_CH0 up-count free CMPDAT point</description>
+                    <value>#1010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>11</name>
+                    <description>PWM_CH0 down-count free CMPDAT point</description>
+                    <value>#1011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>12</name>
+                    <description>PWM_CH2 up-count free CMPDAT point</description>
+                    <value>#1100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>13</name>
+                    <description>PWM_CH2 down-count free CMPDAT point</description>
+                    <value>#1101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>14</name>
+                    <description>PWM_CH4 up-count free CMPDAT point</description>
+                    <value>#1110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>15</name>
+                    <description>PWM_CH4 down-count free CMPDAT point</description>
+                    <value>#1111</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRGEN2</name>
+              <description>PWM_CH2 Trigger EADC Enable Bit</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_CH2 Trigger EADC Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_CH2 Trigger EADC Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRGSEL3</name>
+              <description>PWM_CH3 Trigger EADC Source Select</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_CH2 zero point</description>
+                    <value>#0000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_CH2 period point</description>
+                    <value>#0001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>PWM_CH2 zero or period point</description>
+                    <value>#0010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>PWM_CH2 up-count CMPDAT point</description>
+                    <value>#0011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>4</name>
+                    <description>PWM_CH2 down-count CMPDAT point</description>
+                    <value>#0100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>5</name>
+                    <description>PWM_CH3 zero point</description>
+                    <value>#0101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>6</name>
+                    <description>PWM_CH3 period point</description>
+                    <value>#0110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>7</name>
+                    <description>PWM_CH3 zero or period point</description>
+                    <value>#0111</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>8</name>
+                    <description>PWM_CH3 up-count CMPDAT point</description>
+                    <value>#1000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>9</name>
+                    <description>PWM_CH3 down-count CMPDAT point</description>
+                    <value>#1001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>10</name>
+                    <description>PWM_CH0 up-count free CMPDAT point</description>
+                    <value>#1010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>11</name>
+                    <description>PWM_CH0 down-count free CMPDAT point</description>
+                    <value>#1011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>12</name>
+                    <description>PWM_CH2 up-count free CMPDAT point</description>
+                    <value>#1100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>13</name>
+                    <description>PWM_CH2 down-count free CMPDAT point</description>
+                    <value>#1101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>14</name>
+                    <description>PWM_CH4 up-count free CMPDAT point</description>
+                    <value>#1110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>15</name>
+                    <description>PWM_CH4 down-count free CMPDAT point</description>
+                    <value>#1111</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRGEN3</name>
+              <description>PWM_CH3 Trigger EADC Enable Bit</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_CH3 Trigger EADC Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_CH3 Trigger EADC Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_EADCTS1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_EADCTS1</displayName>
+          <description>PWM Trigger EADC Source Select Register 1</description>
+          <addressOffset>0xFC</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>TRGSEL4</name>
+              <description>PWM_CH4 Trigger EADC Source Select</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_CH4 zero point</description>
+                    <value>#0000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_CH4 period point</description>
+                    <value>#0001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>PWM_CH4 zero or period point</description>
+                    <value>#0010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>PWM_CH4 up-count CMPDAT point</description>
+                    <value>#0011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>4</name>
+                    <description>PWM_CH4 down-count CMPDAT point</description>
+                    <value>#0100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>5</name>
+                    <description>PWM_CH5 zero point</description>
+                    <value>#0101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>6</name>
+                    <description>PWM_CH5 period point</description>
+                    <value>#0110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>7</name>
+                    <description>PWM_CH5 zero or period point</description>
+                    <value>#0111</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>8</name>
+                    <description>PWM_CH5 up-count CMPDAT point</description>
+                    <value>#1000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>9</name>
+                    <description>PWM_CH5 down-count CMPDAT point</description>
+                    <value>#1001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>10</name>
+                    <description>PWM_CH0 up-count free CMPDAT point</description>
+                    <value>#1010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>11</name>
+                    <description>PWM_CH0 down-count free CMPDAT point</description>
+                    <value>#1011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>12</name>
+                    <description>PWM_CH2 up-count free CMPDAT point</description>
+                    <value>#1100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>13</name>
+                    <description>PWM_CH2 down-count free CMPDAT point</description>
+                    <value>#1101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>14</name>
+                    <description>PWM_CH4 up-count free CMPDAT point</description>
+                    <value>#1110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>15</name>
+                    <description>PWM_CH4 down-count free CMPDAT point</description>
+                    <value>#1111</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRGEN4</name>
+              <description>PWM_CH4 Trigger EADC Enable Bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_CH4 Trigger EADC Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_CH4 Trigger EADC Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRGSEL5</name>
+              <description>PWM_CH5 Trigger EADC Source Select</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_CH4 zero point</description>
+                    <value>#0000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_CH4 period point</description>
+                    <value>#0001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>PWM_CH4 zero or period point</description>
+                    <value>#0010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>PWM_CH4 up-count CMPDAT point</description>
+                    <value>#0011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>4</name>
+                    <description>PWM_CH4 down-count CMPDAT point</description>
+                    <value>#0100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>5</name>
+                    <description>PWM_CH5 zero point</description>
+                    <value>#0101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>6</name>
+                    <description>PWM_CH5 period point</description>
+                    <value>#0110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>7</name>
+                    <description>PWM_CH5 zero or period point</description>
+                    <value>#0111</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>8</name>
+                    <description>PWM_CH5 up-count CMPDAT point</description>
+                    <value>#1000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>9</name>
+                    <description>PWM_CH5 down-count CMPDAT point</description>
+                    <value>#1001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>10</name>
+                    <description>PWM_CH0 up-count free CMPDAT point</description>
+                    <value>#1010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>11</name>
+                    <description>PWM_CH0 down-count free CMPDAT point</description>
+                    <value>#1011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>12</name>
+                    <description>PWM_CH2 up-count free CMPDAT point</description>
+                    <value>#1100</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>13</name>
+                    <description>PWM_CH2 down-count free CMPDAT point</description>
+                    <value>#1101</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>14</name>
+                    <description>PWM_CH4 up-count free CMPDAT point</description>
+                    <value>#1110</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>15</name>
+                    <description>PWM_CH4 down-count free CMPDAT point</description>
+                    <value>#1111</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TRGEN5</name>
+              <description>PWM_CH5 Trigger EADC Enable Bit</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM_CH5 Trigger EADC Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM_CH5 Trigger EADC Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_FTCMPDAT0_1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_FTCMPDAT0_1</displayName>
+          <description>PWM Free Trigger Compare Register 0</description>
+          <addressOffset>0x100</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>FTCMP</name>
+              <description>PWM Free Trigger Compare Register\nFTCMP use to compare with even CNTR to trigger EADC. FTCMPDAT0, 2, 4 corresponding complementary pairs PWM_CH0and PWM_CH1, PWM_CH2 and PWM_CH3, PWM_CH4 and PWM_CH5.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register derivedFrom="PWM_FTCMPDAT0_1">
+          <name>PWM_FTCMPDAT2_3</name>
+          <displayName>PWM_FTCMPDAT2_3</displayName>
+          <description>PWM Free Trigger Compare Register 2</description>
+          <addressOffset>0x104</addressOffset>
+       </register>
+       <register derivedFrom="PWM_FTCMPDAT0_1">
+          <name>PWM_FTCMPDAT4_5</name>
+          <displayName>PWM_FTCMPDAT4_5</displayName>
+          <description>PWM Free Trigger Compare Register 4</description>
+          <addressOffset>0x108</addressOffset>
+       </register>
+       <register>
+          <name>PWM_SSCTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_SSCTL</displayName>
+          <description>PWM Synchronous Start Control Register</description>
+          <addressOffset>0x110</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>SSENn</name>
+              <description>PWM Synchronous Start Function Enable Bits\nWhen synchronous start function is enabled, the PWM counter enable register (PWM_CNTEN) can be enabled by writing PWM synchronous start trigger bit (CNTSEN). Each bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM synchronous start function Disabled</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM synchronous start function Enabled</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_SSTRG</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_SSTRG</displayName>
+          <description>PWM Synchronous Start Trigger Register</description>
+          <addressOffset>0x114</addressOffset>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CNTSEN</name>
+              <description>PWM Counter Synchronous Start Enable Bit (Write Only)\nPMW counter synchronous enable function is used to make selected PWM channels (include PWM0_CHx and PWM1_CHx) start counting at the same time.\nWriting this bit to 1 will also set the counter enable bit (CNTENn, n denotes channel 0 to 5) if correlated PWM channel counter synchronous start function is enabled.\nNote: This bit only present in PWM0_BA.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_STATUS</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_STATUS</displayName>
+          <description>PWM Status Register</description>
+          <addressOffset>0x120</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CNTMAXFn</name>
+              <description>Time-base Counter Equal to 0xFFFF Latched Flag\nEach bit n controls the corresponding PWM channel n.\nNote: Write 1 to clear this bit.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The time-base counter never reached its maximum value 0xFFFF</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The time-base counter reached its maximum value</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SYNCINFn</name>
+              <description>Input Synchronization Latched Flag\nEach bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>3</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No SYNC_IN event has occurred</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>An SYNC_IN event has occurred, software can write 1 to clear this bit</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ADCTRGFn</name>
+              <description>EADC Start of Conversion Flag\nEach bit n controls the corresponding PWM channel n.\nNote: Write 1 to clear this bit.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No EADC start of conversion trigger event has occurred</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>An EADC start of conversion trigger event has occurred</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_CAPINEN</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CAPINEN</displayName>
+          <description>PWM Capture Input Enable Register</description>
+          <addressOffset>0x200</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CAPINENn</name>
+              <description>Capture Input Enable Bits\nEach bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM Channel capture input path Disabled. The input of PWM channel capture function is always regarded as 0</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM Channel capture input path Enabled. The input of PWM channel capture function comes from correlative multifunction pin</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_CAPCTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CAPCTL</displayName>
+          <description>PWM Capture Control Register</description>
+          <addressOffset>0x204</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CAPENn</name>
+              <description>Capture Function Enable Bits\nEach bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Capture function Disabled. RCAPDAT/FCAPDAT register will not be updated</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Capture function Enabled. Capture latched the PWM counter value when detected rising or falling edge of input signal and saved to RCAPDAT (Rising latch) and FCAPDAT (Falling latch)</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CAPINVn</name>
+              <description>Capture Inverter Enable Bits\nEach bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Capture source inverter Disabled</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Capture source inverter Enabled. Reverse the input signal from GPIO</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RCRLDENn</name>
+              <description>Rising Capture Reload Enable Bits\nEach bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Rising capture reload counter Disabled</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Rising capture reload counter Enabled</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FCRLDENn</name>
+              <description>Falling Capture Reload Enable Bits\nEach bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Falling capture reload counter Disabled</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Falling capture reload counter Enabled</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_CAPSTS</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CAPSTS</displayName>
+          <description>PWM Capture Status Register</description>
+          <addressOffset>0x208</addressOffset>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CRLIFOVn</name>
+              <description>Capture Rising Latch Interrupt Flag Overrun Status (Read Only)\nThis flag indicates if rising latch happened when the corresponding CRLIF is 1. Each bit n controls the corresponding PWM channel n.\nNote: This bit will be cleared automatically when user clears the corresponding CRLIF.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CFLIFOVn</name>
+              <description>Capture Falling Latch Interrupt Flag Overrun Status (Read Only)\nThis flag indicates if falling latch happened when the corresponding CFLIF is 1. Each bit n controls the corresponding PWM channel n.\nNote: This bit will be cleared automatically when user clears the corresponding CFLIF.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_RCAPDAT0</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_RCAPDAT0</displayName>
+          <description>PWM Rising Capture Data Register 0</description>
+          <addressOffset>0x20C</addressOffset>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>RCAPDAT</name>
+              <description>PWM Rising Capture Data Register (Read Only)\nWhen rising capture condition happened, the PWM counter value will be saved in this register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_FCAPDAT0</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_FCAPDAT0</displayName>
+          <description>PWM Falling Capture Data Register 0</description>
+          <addressOffset>0x210</addressOffset>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>FCAPDAT</name>
+              <description>PWM Falling Capture Data Register (Read Only)\nWhen falling capture condition happened, the PWM counter value will be saved in this register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+       </register>
+       <register derivedFrom="PWM_RCAPDAT0">
+          <name>PWM_RCAPDAT1</name>
+          <displayName>PWM_RCAPDAT1</displayName>
+          <description>PWM Rising Capture Data Register 1</description>
+          <addressOffset>0x214</addressOffset>
+       </register>
+       <register derivedFrom="PWM_FCAPDAT0">
+          <name>PWM_FCAPDAT1</name>
+          <displayName>PWM_FCAPDAT1</displayName>
+          <description>PWM Falling Capture Data Register 1</description>
+          <addressOffset>0x218</addressOffset>
+       </register>
+       <register derivedFrom="PWM_RCAPDAT0">
+          <name>PWM_RCAPDAT2</name>
+          <displayName>PWM_RCAPDAT2</displayName>
+          <description>PWM Rising Capture Data Register 2</description>
+          <addressOffset>0x21C</addressOffset>
+       </register>
+       <register derivedFrom="PWM_FCAPDAT0">
+          <name>PWM_FCAPDAT2</name>
+          <displayName>PWM_FCAPDAT2</displayName>
+          <description>PWM Falling Capture Data Register 2</description>
+          <addressOffset>0x220</addressOffset>
+       </register>
+       <register derivedFrom="PWM_RCAPDAT0">
+          <name>PWM_RCAPDAT3</name>
+          <displayName>PWM_RCAPDAT3</displayName>
+          <description>PWM Rising Capture Data Register 3</description>
+          <addressOffset>0x224</addressOffset>
+       </register>
+       <register derivedFrom="PWM_FCAPDAT0">
+          <name>PWM_FCAPDAT3</name>
+          <displayName>PWM_FCAPDAT3</displayName>
+          <description>PWM Falling Capture Data Register 3</description>
+          <addressOffset>0x228</addressOffset>
+       </register>
+       <register derivedFrom="PWM_RCAPDAT0">
+          <name>PWM_RCAPDAT4</name>
+          <displayName>PWM_RCAPDAT4</displayName>
+          <description>PWM Rising Capture Data Register 4</description>
+          <addressOffset>0x22C</addressOffset>
+       </register>
+       <register derivedFrom="PWM_FCAPDAT0">
+          <name>PWM_FCAPDAT4</name>
+          <displayName>PWM_FCAPDAT4</displayName>
+          <description>PWM Falling Capture Data Register 4</description>
+          <addressOffset>0x230</addressOffset>
+       </register>
+       <register derivedFrom="PWM_RCAPDAT0">
+          <name>PWM_RCAPDAT5</name>
+          <displayName>PWM_RCAPDAT5</displayName>
+          <description>PWM Rising Capture Data Register 5</description>
+          <addressOffset>0x234</addressOffset>
+       </register>
+       <register derivedFrom="PWM_FCAPDAT0">
+          <name>PWM_FCAPDAT5</name>
+          <displayName>PWM_FCAPDAT5</displayName>
+          <description>PWM Falling Capture Data Register 5</description>
+          <addressOffset>0x238</addressOffset>
+       </register>
+       <register>
+          <name>PWM_PDMACTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_PDMACTL</displayName>
+          <description>PWM PDMA Control Register</description>
+          <addressOffset>0x23C</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CHEN0_1</name>
+              <description>Cha

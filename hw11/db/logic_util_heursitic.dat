@@ -1,0 +1,22 @@
+                     /*!< PORT1 PHCR0: PH5 Position               */
+#define PORT1_PHCR0_PH5_Msk                   (0x01UL << PORT1_PHCR0_PH5_Pos)                         /*!< PORT1 PHCR0: PH5 Mask                   */
+
+/* ---------------------------------  PORT1_PDISC  -------------------------------- */
+#define PORT1_PDISC_PDIS0_Pos                 0                                                       /*!< PORT1 PDISC: PDIS0 Position             */
+#define PORT1_PDISC_PDIS0_Msk                 (0x01UL << PORT1_PDISC_PDIS0_Pos)                       /*!< PORT1 PDISC: PDIS0 Mask                 */
+#define PORT1_PDISC_PDIS1_Pos                 1                                                       /*!< PORT1 PDISC: PDIS1 Position             */
+#define PORT1_PDISC_PDIS1_Msk                 (0x01UL << PORT1_PDISC_PDIS1_Pos)                       /*!< PORT1 PDISC: PDIS1 Mask                 */
+#define PORT1_PDISC_PDIS2_Pos                 2                                                       /*!< PORT1 PDISC: PDIS2 Position             */
+#define PORT1_PDISC_PDIS2_Msk                 (0x01UL << PORT1_PDISC_PDIS2_Pos)                       /*!< PORT1 PDISC: PDIS2 Mask                 */
+#define PORT1_PDISC_PDIS3_Pos                 3                                                       /*!< PORT1 PDISC: PDIS3 Position             */
+#define PORT1_PDISC_PDIS3_Msk                 (0x01UL << PORT1_PDISC_PDIS3_Pos)                       /*!< PORT1 PDISC: PDIS3 Mask                 */
+#define PORT1_PDISC_PDIS4_Pos                 4                                                       /*!< PORT1 PDISC: PDIS4 Position             */
+#define PORT1_PDISC_PDIS4_Msk                 (0x01UL << PORT1_PDISC_PDIS4_Pos)                       /*!< PORT1 PDISC: PDIS4 Mask                 */
+#define PORT1_PDISC_PDIS5_Pos                 5                                                       /*!< PORT1 PDISC: PDIS5 Position             */
+#define PORT1_PDISC_PDIS5_Msk                 (0x01UL << PORT1_PDISC_PDIS5_Pos)                       /*!< PORT1 PDISC: PDIS5 Mask                 */
+
+/* ----------------------------------  PORT1_PPS  --------------------------------- */
+#define PORT1_PPS_PPS0_Pos                    0                                                       /*!< PORT1 PPS: PPS0 Position                */
+#define PORT1_PPS_PPS0_Msk                    (0x01UL << PORT1_PPS_PPS0_Pos)                          /*!< PORT1 PPS: PPS0 Mask                    */
+#define PORT1_PPS_PPS1_Pos                    1                                                       /*!< PORT1 PPS: PPS1 Position                */
+#define PORT1_PPS_

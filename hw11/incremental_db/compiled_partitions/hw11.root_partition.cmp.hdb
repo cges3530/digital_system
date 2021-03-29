@@ -1,0 +1,233 @@
+<enumeratedValue>
+                    <name>0</name>
+                    <description>Control PWM counter count decrement after synchronizing</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Control PWM counter count increment after synchronizing</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_SWSYNC</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_SWSYNC</displayName>
+          <description>PWM Software Control Synchronization Register</description>
+          <addressOffset>0xC</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>SWSYNCn</name>
+              <description>Software SYNC Function\nEach bit n controls corresponding PWM channel n.\nWhen SINSRCn (PWM_SYNC[13:8]) is selected to 0, SYNC_OUT source is come from SYNC_IN or this bit.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_CLKSRC</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CLKSRC</displayName>
+          <description>PWM Clock Source Register</description>
+          <addressOffset>0x10</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>ECLKSRC0</name>
+              <description>PWM_CH01 External Clock Source Select</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWMx_CLK, x denotes 0 or 1</description>
+                    <value>#000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>TIMER0 overflow</description>
+                    <value>#001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>TIMER1 overflow</description>
+                    <value>#010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>TIMER2 overflow</description>
+                    <value>#011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>4</name>
+                    <description>TIMER3 overflow</description>
+                    <value>#100</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ECLKSRC2</name>
+              <description>PWM_CH23 External Clock Source Select</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>3</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWMx_CLK, x denotes 0 or 1</description>
+                    <value>#000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>TIMER0 overflow</description>
+                    <value>#001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>TIMER1 overflow</description>
+                    <value>#010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>TIMER2 overflow</description>
+                    <value>#011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>4</name>
+                    <description>TIMER3 overflow</description>
+                    <value>#100</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ECLKSRC4</name>
+              <description>PWM_CH45 External Clock Source Select</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>3</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWMx_CLK, x denotes 0 or 1</description>
+                    <value>#000</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>TIMER0 overflow</description>
+                    <value>#001</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>TIMER1 overflow</description>
+                    <value>#010</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>TIMER2 overflow</description>
+                    <value>#011</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>4</name>
+                    <description>TIMER3 overflow</description>
+                    <value>#100</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_CLKPSC0_1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CLKPSC0_1</displayName>
+          <description>PWM Clock Pre-scale Register 0</description>
+          <addressOffset>0x14</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CLKPSC</name>
+              <description>PWM Counter Clock Pre-scale \nThe clock of PWM counter is decided by clock prescaler. Each PWM pair share one PWM counter clock prescaler. The clock of PWM counter is divided by (CLKPSC+ 1).</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register derivedFrom="PWM_CLKPSC0_1">
+          <name>PWM_CLKPSC2_3</name>
+          <displayName>PWM_CLKPSC2_3</displayName>
+          <description>PWM Clock Pre-scale Register 2</description>
+          <addressOffset>0x18</addressOffset>
+       </register>
+       <register derivedFrom="PWM_CLKPSC0_1">
+          <name>PWM_CLKPSC4_5</name>
+          <displayName>PWM_CLKPSC4_5</displayName>
+          <description>PWM Clock Pre-scale Register 4</description>
+          <addressOffset>0x1C</addressOffset>
+       </register>
+       <register>
+          <name>PWM_CNTEN</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CNTEN</displayName>
+          <description>PWM Counter Enable Register</description>
+          <addressOffset>0x20</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CNTENn</name>
+              <description>PWM Counter Enable Bits\nEach bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM Counter and clock prescaler Stop Running</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM Counter and clock prescaler Start Running</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>PWM_CNTCLR</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CNTCLR</displayName>
+          <description>PWM Clear Counter Register</description>
+          <addressOffset>0x24</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CNTCLRn</name>
+              <description>Clear PWM Counter Control Bit\nIt is automatically cleared by hardware. Each bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <

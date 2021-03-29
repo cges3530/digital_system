@@ -1,0 +1,46 @@
+                                             /*!< BCCU CHOCON: CH3TPE Position            */
+#define BCCU_CHOCON_CH3TPE_Msk                (0x01UL << BCCU_CHOCON_CH3TPE_Pos)                      /*!< BCCU CHOCON: CH3TPE Mask                */
+#define BCCU_CHOCON_CH4TPE_Pos                20                                                      /*!< BCCU CHOCON: CH4TPE Position            */
+#define BCCU_CHOCON_CH4TPE_Msk                (0x01UL << BCCU_CHOCON_CH4TPE_Pos)                      /*!< BCCU CHOCON: CH4TPE Mask                */
+#define BCCU_CHOCON_CH5TPE_Pos                21                                                      /*!< BCCU CHOCON: CH5TPE Position            */
+#define BCCU_CHOCON_CH5TPE_Msk                (0x01UL << BCCU_CHOCON_CH5TPE_Pos)                      /*!< BCCU CHOCON: CH5TPE Mask                */
+#define BCCU_CHOCON_CH6TPE_Pos                22                                                      /*!< BCCU CHOCON: CH6TPE Position            */
+#define BCCU_CHOCON_CH6TPE_Msk                (0x01UL << BCCU_CHOCON_CH6TPE_Pos)                      /*!< BCCU CHOCON: CH6TPE Mask                */
+#define BCCU_CHOCON_CH7TPE_Pos                23                                                      /*!< BCCU CHOCON: CH7TPE Position            */
+#define BCCU_CHOCON_CH7TPE_Msk                (0x01UL << BCCU_CHOCON_CH7TPE_Pos)                      /*!< BCCU CHOCON: CH7TPE Mask                */
+#define BCCU_CHOCON_CH8TPE_Pos                24                                                      /*!< BCCU CHOCON: CH8TPE Position            */
+#define BCCU_CHOCON_CH8TPE_Msk                (0x01UL << BCCU_CHOCON_CH8TPE_Pos)                      /*!< BCCU CHOCON: CH8TPE Mask                */
+
+/* ---------------------------------  BCCU_CHTRIG  -------------------------------- */
+#define BCCU_CHTRIG_ET0_Pos                   0                                                       /*!< BCCU CHTRIG: ET0 Position               */
+#define BCCU_CHTRIG_ET0_Msk                   (0x01UL << BCCU_CHTRIG_ET0_Pos)                         /*!< BCCU CHTRIG: ET0 Mask                   */
+#define BCCU_CHTRIG_ET1_Pos                   1                                                       /*!< BCCU CHTRIG: ET1 Position               */
+#define BCCU_CHTRIG_ET1_Msk                   (0x01UL << BCCU_CHTRIG_ET1_Pos)                         /*!< BCCU CHTRIG: ET1 Mask                   */
+#define BCCU_CHTRIG_ET2_Pos                   2                                                       /*!< BCCU CHTRIG: ET2 Position               */
+#define BCCU_CHTRIG_ET2_Msk                   (0x01UL << BCCU_CHTRIG_ET2_Pos)                         /*!< BCCU CHTRIG: ET2 Mask                   */
+#define BCCU_CHTRIG_ET3_Pos                   3                                                       /*!< BCCU CHTRIG: ET3 Position               */
+#define BCCU_CHTRIG_ET3_Msk                   (0x01UL << BCCU_CHTRIG_ET3_Pos)                         /*!< BCCU CHTRIG: ET3 Mask                   */
+#define BCCU_CHTRIG_ET4_Pos                   4                                                       /*!< BCCU CHTRIG: ET4 Position               */
+#define BCCU_CHTRIG_ET4_Msk                   (0x01UL << BCCU_CHTRIG_ET4_Pos)                         /*!< BCCU CHTRIG: ET4 Mask                   */
+#define BCCU_CHTRIG_ET5_Pos                   5                                                       /*!< BCCU CHTRIG: ET5 Position               */
+#define BCCU_CHTRIG_ET5_Msk                   (0x01UL << BCCU_CHTRIG_ET5_Pos)                         /*!< BCCU CHTRIG: ET5 Mask                   */
+#define BCCU_CHTRIG_ET6_Pos                   6                                                       /*!< BCCU CHTRIG: ET6 Position               */
+#define BCCU_CHTRIG_ET6_Msk                   (0x01UL << BCCU_CHTRIG_ET6_Pos)                         /*!< BCCU CHTRIG: ET6 Mask                   */
+#define BCCU_CHTRIG_ET7_Pos                   7                                                       /*!< BCCU CHTRIG: ET7 Position               */
+#define BCCU_CHTRIG_ET7_Msk                   (0x01UL << BCCU_CHTRIG_ET7_Pos)                         /*!< BCCU CHTRIG: ET7 Mask                   */
+#define BCCU_CHTRIG_ET8_Pos                   8                                                       /*!< BCCU CHTRIG: ET8 Position               */
+#define BCCU_CHTRIG_ET8_Msk                   (0x01UL << BCCU_CHTRIG_ET8_Pos)                         /*!< BCCU CHTRIG: ET8 Mask                   */
+#define BCCU_CHTRIG_TOS0_Pos                  16                                                      /*!< BCCU CHTRIG: TOS0 Position              */
+#define BCCU_CHTRIG_TOS0_Msk                  (0x01UL << BCCU_CHTRIG_TOS0_Pos)                        /*!< BCCU CHTRIG: TOS0 Mask                  */
+#define BCCU_CHTRIG_TOS1_Pos                  17                                                      /*!< BCCU CHTRIG: TOS1 Position              */
+#define BCCU_CHTRIG_TOS1_Msk                  (0x01UL << BCCU_CHTRIG_TOS1_Pos)                        /*!< BCCU CHTRIG: TOS1 Mask                  */
+#define BCCU_CHTRIG_TOS2_Pos                  18                                                      /*!< BCCU CHTRIG: TOS2 Position              */
+#define BCCU_CHTRIG_TOS2_Msk                  (0x01UL << BCCU_CHTRIG_TOS2_Pos)                        /*!< BCCU CHTRIG: TOS2 Mask                  */
+#define BCCU_CHTRIG_TOS3_Pos                  19                                                      /*!< BCCU CHTRIG: TOS3 Position              */
+#define BCCU_CHTRIG_TOS3_Msk                  (0x01UL << BCCU_CHTRIG_TOS3_Pos)                        /*!< BCCU CHTRIG: TOS3 Mask                  */
+#define BCCU_CHTRIG_TOS4_Pos                  20                                                      /*!< BCCU CHTRIG: TOS4 Position              */
+#define BCCU_CHTRIG_TOS4_Msk                  (0x01UL << BCCU_CHTRIG_TOS4_Pos)                        /*!< BCCU CHTRIG: TOS4 Mask                  */
+#define BCCU_CHTRIG_TOS5_Pos                  21                                                      /*!< BCCU CHTRIG: TOS5 Position              */
+#define BCCU_CHTRIG_TOS5_Msk                  (0x01UL << BCCU_CHTRIG_TOS5_Pos)                        /*!< BCCU CHTRIG: TOS5 Mask                  */
+#define BCCU_CHTRIG_TOS6_Pos                  22                                                      /*!< BCCU CHTRIG: TOS6 Position              */
+#define BCCU_CHTRIG_TOS6_Msk                  (0x01UL << BCCU_CHTRIG_TOS6_Pos)                 

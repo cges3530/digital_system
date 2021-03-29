@@ -1,0 +1,16 @@
+RCON_CH2S_Pos)                      /*!< BCCU CHSTRCON: CH2S Mask                */
+#define BCCU_CHSTRCON_CH3S_Pos                3                                                       /*!< BCCU CHSTRCON: CH3S Position            */
+#define BCCU_CHSTRCON_CH3S_Msk                (0x01UL << BCCU_CHSTRCON_CH3S_Pos)                      /*!< BCCU CHSTRCON: CH3S Mask                */
+#define BCCU_CHSTRCON_CH4S_Pos                4                                                       /*!< BCCU CHSTRCON: CH4S Position            */
+#define BCCU_CHSTRCON_CH4S_Msk                (0x01UL << BCCU_CHSTRCON_CH4S_Pos)                      /*!< BCCU CHSTRCON: CH4S Mask                */
+#define BCCU_CHSTRCON_CH5S_Pos                5                                                       /*!< BCCU CHSTRCON: CH5S Position            */
+#define BCCU_CHSTRCON_CH5S_Msk                (0x01UL << BCCU_CHSTRCON_CH5S_Pos)                      /*!< BCCU CHSTRCON: CH5S Mask                */
+#define BCCU_CHSTRCON_CH6S_Pos                6                                                       /*!< BCCU CHSTRCON: CH6S Position            */
+#define BCCU_CHSTRCON_CH6S_Msk                (0x01UL << BCCU_CHSTRCON_CH6S_Pos)                      /*!< BCCU CHSTRCON: CH6S Mask                */
+#define BCCU_CHSTRCON_CH7S_Pos                7                                                       /*!< BCCU CHSTRCON: CH7S Position            */
+#define BCCU_CHSTRCON_CH7S_Msk                (0x01UL << BCCU_CHSTRCON_CH7S_Pos)                      /*!< BCCU CHSTRCON: CH7S Mask                */
+#define BCCU_CHSTRCON_CH8S_Pos                8                                                       /*!< BCCU CHSTRCON: CH8S Position            */
+#define BCCU_CHSTRCON_CH8S_Msk                (0x01UL << BCCU_CHSTRCON_CH8S_Pos)                      /*!< BCCU CHSTRCON: CH8S Mask                */
+#define BCCU_CHSTRCON_CH0A_Pos                16                                                      /*!< BCCU CHSTRCON: CH0A Position            */
+#define BCCU_CHSTRCON_CH0A_Msk                (0x01UL << BCCU_CHSTRCON_CH0A_Pos)                      /*!< BCCU CHSTRCON: CH0A Mask                */
+#define BCC

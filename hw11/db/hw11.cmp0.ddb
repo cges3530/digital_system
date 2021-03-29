@@ -1,0 +1,1503 @@
+bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_IPR6</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_IPR6</displayName>
+          <description>IRQ24 ~ IRQ27 Priority Control Register</description>
+          <addressOffset>0x418</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>PRI_24</name>
+              <description>Priority of IRQ24\n'0' denotes the highest priority and '3' denotes the lowest priority.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PRI_25</name>
+              <description>Priority of IRQ25\n'0' denotes the highest priority and '3' denotes the lowest priority.</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PRI_26</name>
+              <description>Priority of IRQ26\n'0' denotes the highest priority and '3' denotes the lowest priority.</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PRI_27</name>
+              <description>Priority of IRQ27\n'0' denotes the highest priority and '3' denotes the lowest priority.</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_IPR7</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_IPR7</displayName>
+          <description>IRQ28 ~ IRQ31 Priority Control Register</description>
+          <addressOffset>0x41C</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>PRI_28</name>
+              <description>Priority of IRQ28\n'0' denotes the highest priority and '3' denotes the lowest priority.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PRI_29</name>
+              <description>Priority of IRQ29\n'0' denotes the highest priority and '3' denotes the lowest priority.</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PRI_30</name>
+              <description>Priority of IRQ30\n'0' denotes the highest priority and '3' denotes the lowest priority.</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PRI_31</name>
+              <description>Priority of IRQ31\n'0' denotes the highest priority and '3' denotes the lowest priority.</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>CPUID</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>CPUID</displayName>
+          <description>CPUID Register</description>
+          <addressOffset>0xD00</addressOffset>
+          <access>read-only</access>
+          <resetValue>0x410CC200</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>REVISION</name>
+              <description>Revision Number\nRead as 0x0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PARTNO</name>
+              <description>Part Number of the Processor\nRead as 0xC20.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>12</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PART</name>
+              <description>Architecture of the Processor\nRead as 0xC for Armv6-M parts</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>IMPLEMENTER</name>
+              <description>Implementer Code Assigned by Arm</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>ICSR</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>ICSR</displayName>
+          <description>Interrupt Control and State Register</description>
+          <addressOffset>0xD04</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>VECTACTIVE</name>
+              <description>Contains the Active Exception Number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Thread mode</description>
+                    <value>0</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VECTPENDING</name>
+              <description>Indicates the Exception Number of the Highest Priority Pending Enabled Exception:</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No pending exceptions</description>
+                    <value>0</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ISRPENDING</name>
+              <description>Interrupt Pending Flag, Excluding NMI and Faults:\nThis bit is read only.</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Interrupt not pending</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Interrupt pending</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ISRPREEMPT</name>
+              <description>If Set, a Pending Exception Will Be Serviced on Exit From the Debug Halt State\nThis bit is read only.</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PENDSTCLR</name>
+              <description>SysTick Exception Clear-pending Bit\nWrite Operation:\nThis is a write only bit. When you want to clear PENDST bit, you must 'write 0 to PENDSTSET and write 1 to PENDSTCLR' at the same time.</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Removes the pending state from the SysTick exception</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PENDSTSET</name>
+              <description>SysTick Exception Set-pending Bit\nWrite Operation:</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nSysTick exception is not pending</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Changes SysTick exception state to pending.\nSysTick exception is pending</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PENDSVCLR</name>
+              <description>PendSV Clear-pending Bit\nWrite Operation:\nThis is a write only bit. When you want to clear PENDSV bit, you must 'write 0 to PENDSVSET and write 1 to PENDSVCLR' at the same time.</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Removes the pending state from the PendSV exception</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PENDSVSET</name>
+              <description>PendSV Set-pending Bit\nWrite Operation:\nNote: Writing 1 to this bit is the only way to set the PendSV exception state to pending.</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nPendSV exception is not pending</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Changes PendSV exception state to pending.\nPendSV exception is pending</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NMIPENDSET</name>
+              <description>NMI Set-pending Bit\nWrite Operation:\nBecause NMI is the highest-priority exception, normally the processor enters the NMI exception handler as soon as it detects a write of 1 to this bit. Entering the handler then clears this bit to 0. This means a read of this bit by the NMI exception handler returns 1 only if the NMI signal is reasserted while the processor is executing that handler.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nNMI exception not pending</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Changes NMI exception state to pending.\nNMI exception pending</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>AIRCR</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>AIRCR</displayName>
+          <description>Application Interrupt and Reset Control Register</description>
+          <addressOffset>0xD0C</addressOffset>
+          <access>read-write</access>
+          <resetValue>0xFA050000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>VECTCLRACTIVE</name>
+              <description>Exception Active Status Clear Bit\nReserved for debug use. When writing to the register, user must write 0 to this bit, otherwise behavior is unpredictable.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SYSRESETREQ</name>
+              <description>System Reset Request\nWriting this bit 1 will cause a reset signal to be asserted to the chip to indicate a reset is requested.\nThe bit is a write only bit and self-clears as part of the reset sequence.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VECTORKEY</name>
+              <description>Register Access Key\nWrite Operation:\nWhen writing to this register, the VECTORKEY field need to be set to 0x05FA, otherwise the write operation would be ignored. The VECTORKEY filed is used to prevent accidental write to this register from resetting the system or clearing of the exception status.\nRead Operation:\nRead as 0xFA05.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>SCR</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>SCR</displayName>
+          <description>System Control Register</description>
+          <addressOffset>0xD10</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>SLEEPONEXIT</name>
+              <description>Sleep-on-exit Enable Bit\nThis bit indicates sleep-on-exit when returning from Handler mode to Thread mode.\nSetting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application..</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Do not sleep when returning to Thread mode</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Enter Sleep or Deep Sleep when returning from ISR to Thread mode</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLEEPDEEP</name>
+              <description>Processor Deep Sleep and Sleep Mode Selection\nControls whether the processor uses sleep or deep sleep as its low power mode:</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Sleep mode</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Deep Sleep mode</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SEVONPEND</name>
+              <description>Send Event on Pending Bit\nWhen an event or interrupt enters pending state, the event signal wakes up the processor from WFE. If the processor is not waiting for an event, the event is registered and affects the next WFE.\nThe processor also wakes up on execution of an SEV instruction or an external event.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Only enabled interrupts or events can wake-up the processor, disabled interrupts are excluded</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Enabled events and all interrupts, including disabled interrupts, can wake-up the processor</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>SHPR2</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>SHPR2</displayName>
+          <description>System Handler Priority Register 2</description>
+          <addressOffset>0xD1C</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>PRI_11</name>
+              <description>Priority of System Handler 11 - SVCall\n'0' denotes the highest priority and '3' denotes the lowest priority</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>SHPR3</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>SHPR3</displayName>
+          <description>System Handler Priority Register 3</description>
+          <addressOffset>0xD20</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>PRI_14</name>
+              <description>Priority of System Handler 14 - PendSV\n'0' denotes the highest priority and '3' denotes the lowest priority</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PRI_15</name>
+              <description>Priority of System Handler 15 - SysTick\n'0' denotes the highest priority and '3' denotes the lowest priority</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>INT</name>
+      <description>INT Register Map</description>
+      <groupName>INT</groupName>
+      <baseAddress>0x50000300</baseAddress>
+      <!-- the first addressBlock is occupied by registers. The second block is reserved -> no access permission -->
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x84</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+       <register>
+          <name>IRQ0_SRC</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>IRQ0_SRC</displayName>
+          <description>IRQ0 (BOD) Interrupt Source Identity</description>
+          <addressOffset>0x0</addressOffset>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0x00000000</resetMask>
+          <fields>
+            <field>
+              <name>INT_SRC</name>
+              <description>Interrupt Source\nDefine the interrupt sources for interrupt event.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ1_SRC</name>
+          <displayName>IRQ1_SRC</displayName>
+          <description>IRQ1 (WDT) Interrupt Source Identity</description>
+          <addressOffset>0x4</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ2_SRC</name>
+          <displayName>IRQ2_SRC</displayName>
+          <description>IRQ2 (EINT0/2/4) Interrupt Source Identity</description>
+          <addressOffset>0x8</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ3_SRC</name>
+          <displayName>IRQ3_SRC</displayName>
+          <description>IRQ3 (EINT1/3/5) Interrupt Source Identity</description>
+          <addressOffset>0xC</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ4_SRC</name>
+          <displayName>IRQ4_SRC</displayName>
+          <description>IRQ4 (GPA/B) Interrupt Source Identity</description>
+          <addressOffset>0x10</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ5_SRC</name>
+          <displayName>IRQ5_SRC</displayName>
+          <description>IRQ5 (GPC/D/E/F) Interrupt Source Identity</description>
+          <addressOffset>0x14</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ6_SRC</name>
+          <displayName>IRQ6_SRC</displayName>
+          <description>IRQ6 (PWM0) Interrupt Source Identity</description>
+          <addressOffset>0x18</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ7_SRC</name>
+          <displayName>IRQ7_SRC</displayName>
+          <description>IRQ7 (PWM1) Interrupt Source Identity</description>
+          <addressOffset>0x1C</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ8_SRC</name>
+          <displayName>IRQ8_SRC</displayName>
+          <description>IRQ8 (TMR0) Interrupt Source Identity</description>
+          <addressOffset>0x20</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ9_SRC</name>
+          <displayName>IRQ9_SRC</displayName>
+          <description>IRQ9 (TMR1) Interrupt Source Identity</description>
+          <addressOffset>0x24</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ10_SRC</name>
+          <displayName>IRQ10_SRC</displayName>
+          <description>IRQ10 (TMR2) Interrupt Source Identity</description>
+          <addressOffset>0x28</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ11_SRC</name>
+          <displayName>IRQ11_SRC</displayName>
+          <description>IRQ11 (TMR3) Interrupt Source Identity</description>
+          <addressOffset>0x2C</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ12_SRC</name>
+          <displayName>IRQ12_SRC</displayName>
+          <description>IRQ12 (UART0/2) Interrupt Source Identity</description>
+          <addressOffset>0x30</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ13_SRC</name>
+          <displayName>IRQ13_SRC</displayName>
+          <description>IRQ13 (UART1) Interrupt Source Identity</description>
+          <addressOffset>0x34</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ14_SRC</name>
+          <displayName>IRQ14_SRC</displayName>
+          <description>IRQ14 (SPI0) Interrupt Source Identity</description>
+          <addressOffset>0x38</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ15_SRC</name>
+          <displayName>IRQ15_SRC</displayName>
+          <description>IRQ15 (SPI1) Interrupt Source Identity</description>
+          <addressOffset>0x3C</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ16_SRC</name>
+          <displayName>IRQ16_SRC</displayName>
+          <description>Reserved.</description>
+          <addressOffset>0x40</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ17_SRC</name>
+          <displayName>IRQ17_SRC</displayName>
+          <description>Reserved.</description>
+          <addressOffset>0x44</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ18_SRC</name>
+          <displayName>IRQ18_SRC</displayName>
+          <description>IRQ18 (I2C0) Interrupt Source Identity</description>
+          <addressOffset>0x48</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ19_SRC</name>
+          <displayName>IRQ19_SRC</displayName>
+          <description>IRQ19 (I2C1) Interrupt Source Identity</description>
+          <addressOffset>0x4C</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ20_SRC</name>
+          <displayName>IRQ20_SRC</displayName>
+          <description>Reserved.</description>
+          <addressOffset>0x50</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ21_SRC</name>
+          <displayName>IRQ21_SRC</displayName>
+          <description>Reserved.</description>
+          <addressOffset>0x54</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ22_SRC</name>
+          <displayName>IRQ22_SRC</displayName>
+          <description>IRQ22 (USCI0/1/2) Interrupt Source Identity</description>
+          <addressOffset>0x58</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ23_SRC</name>
+          <displayName>IRQ23_SRC</displayName>
+          <description>IRQ23 (USBD) Interrupt Source Identity</description>
+          <addressOffset>0x5C</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ24_SRC</name>
+          <displayName>IRQ24_SRC</displayName>
+          <description>IRQ24 (SC0/1) Interrupt Source Identify</description>
+          <addressOffset>0x60</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ25_SRC</name>
+          <displayName>IRQ25_SRC</displayName>
+          <description>IRQ25 (ACMP) Interrupt Source Identity</description>
+          <addressOffset>0x64</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ26_SRC</name>
+          <displayName>IRQ26_SRC</displayName>
+          <description>IRQ26 (PDMA) Interrupt Source Identity</description>
+          <addressOffset>0x68</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ27_SRC</name>
+          <displayName>IRQ27_SRC</displayName>
+          <description>Reserved.</description>
+          <addressOffset>0x6C</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ28_SRC</name>
+          <displayName>IRQ28_SRC</displayName>
+          <description>IRQ28 (PWRWU) Interrupt Source Identity</description>
+          <addressOffset>0x70</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ29_SRC</name>
+          <displayName>IRQ29_SRC</displayName>
+          <description>IRQ29 (ADC) Interrupt Source Identity</description>
+          <addressOffset>0x74</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ30_SRC</name>
+          <displayName>IRQ30_SRC</displayName>
+          <description>IRQ30 (IRC/CLKD) Interrupt Source Identity</description>
+          <addressOffset>0x78</addressOffset>
+       </register>
+       <register derivedFrom="IRQ0_SRC">
+          <name>IRQ31_SRC</name>
+          <displayName>IRQ31_SRC</displayName>
+          <description>IRQ31 (RTC) Interrupt Source Identity</description>
+          <addressOffset>0x7C</addressOffset>
+       </register>
+       <register>
+          <name>NMI_SEL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NMI_SEL</displayName>
+          <description>NMI Source Interrupt Select Control Register</description>
+          <addressOffset>0x80</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>NMI_SEL</name>
+              <description>NMI Interrupt Source Selection\nThe NMI interrupt to Cortex-M0 can be selected from one of the peripheral interrupt by setting NMI_SEL.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NMI_EN</name>
+              <description>NMI Interrupt Enable Bit (Write Protect)\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>NMI interrupt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>NMI interrupt Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>CLK</name>
+      <description>CLK Register Map</description>
+      <groupName>CLK</groupName>
+      <baseAddress>0x50000200</baseAddress>
+      <!-- the first addressBlock is occupied by registers. The second block is reserved -> no access permission -->
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x28</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x30</offset>
+        <size>0xC</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x40</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x70</offset>
+        <size>0x10</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+       <register>
+          <name>CLK_PWRCTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>CLK_PWRCTL</displayName>
+          <description>System Power-down Control Register</description>
+          <addressOffset>0x0</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00001C10</resetValue>
+          <resetMask>0xFFFFFFF0</resetMask>
+          <fields>
+            <field>
+              <name>HXTEN</name>
+              <description>HXT Enable Bit (Write Protect)\nThe bit default value is set by Flash controller user configuration register CONFIG0 [26:24]. When the default clock source is from HXT, this bit is set to 1 automatically.\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>4~24 MHz External High Speed Crystal (HXT) Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>4~24 MHz External High Speed Crystal (HXT) Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LXTEN</name>
+              <description>LXT Enable Bit (Write Protect)\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>32.768 kHz External Low Speed Crystal (LXT) Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>32.768 kHz External Low Speed Crystal (LXT) Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HIRCEN</name>
+              <description>HIRC Enable Bit (Write Protect)\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>22.1184 MHz internal high speed RC oscillator (HIRC) Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>22.1184 MHz internal high speed RC oscillator (HIRC) Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LIRCEN</name>
+              <description>LIRC Enable Bit (Write Protect)\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>10 kHz internal low speed RC oscillator (LIRC) Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>10 kHz internal low speed RC oscillator (LIRC) Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PDWKDLY</name>
+              <description>Enable the Wake-up Delay Counter (Write Protect)\nWhen the chip wakes up from Power-down mode, the clock control will delay certain clock cycles to wait system clock stable.\nThe delayed clock cycle is 4096 clock cycles when chip work at 4~24 MHz external high speed crystal oscillator (HXT), 256 clock cycles when chip work at 22.1184 MHz internal high speed RC oscillator (HIRC) and 512 clock cycles when chip work at 48 MHz internal high speed RC oscillator (HIRC48).\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Clock cycles delay Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Clock cycles delay Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PDWKIEN</name>
+              <description>Power-down Mode Wake-up Interrupt Enable Bit (Write Protect)\nNote1: The interrupt will occur when both PDWKIF and PDWKIEN are high.\nNote2: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Power-down mode wake-up interrupt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Power-down mode wake-up interrupt Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PDWKIF</name>
+              <description>Power-down Mode Wake-up Interrupt Status\nSet by 'Power-down wake-up event', it indicates that resume from Power-down mode' \nThe flag is set if the EINT0~5, GPIO, USBD, UART0~2, WDT,  ACMP01, BOD, EBOD, RTC, TMR0~3, I2C0~1 or USCI0~2 wake-up occurred.\nNote1: This bit can be cleared by software writing '1'.\nNote2: This bit works only if PDWKIEN (CLK_PWRCTL[5]) set to 1.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PDEN</name>
+              <description>System Power-down Enable (Write Protect)\nWhen this bit is set to 1, Power-down mode is enabled and chip keeps active till the CPU sleep mode is also active and then the chip enters Power-down mode.\nWhen chip wakes up from Power-down mode, this bit is auto cleared. Users need to set this bit again for next Power-down.\nIn Power-down mode, HXT, HIRC and the HIRC48 will be disabled in this mode, but LXT and LIRC  are not controlled by Power-down mode.\nIn Power-down mode, the PLL and system clock are disabled, and ignored the clock source selection. The clocks of peripheral are not controlled by Power-down mode, if the peripheral clock source is from LXT or LIRC.\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Chip operating normally or chip in idle mode because of WFI command</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Chip waits CPU sleep command WFI and then enters Power-down mode</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HXTGAIN</name>
+              <description>HXT Gain Control Bit (Write Protect)\nGain control is used to enlarge the gain of crystal to make sure crystal work normally. If gain control is enabled, crystal will consume more power than gain control off. \nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>HXT frequency is lower than from 8 MHz</description>
+                    <value>#00</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>HXT frequency is from 8 MHz to 12 MHz</description>
+                    <value>#01</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>2</name>
+                    <description>HXT frequency is from 12 MHz to 16 MHz</description>
+                    <value>#10</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>3</name>
+                    <description>HXT frequency is higher than 16 MHz</description>
+                    <value>#11</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HXTSELTYP</name>
+              <description>HXT Crystal Type Select Bit (Write Protect)\nThis is a protected register. Please refer to open lock sequence to program it.\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Select INV type</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Select GM type</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HIRC48EN</name>
+              <description>HIRC48 Enable Bit (Write Protect)\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>48 MHz internal high speed RC oscillator (HIRC48) Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>48 MHz internal high speed RC oscillator (HIRC48) Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>CLK_AHBCLK</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>CLK_AHBCLK</displayName>
+          <description>AHB Devices Clock Enable Control Register</description>
+          <addressOffset>0x4</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x003F8004</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>PDMACKEN</name>
+              <description>PDMA Controller Clock Enable Bit</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PDMA peripheral clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PDMA peripheral clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ISPCKEN</name>
+              <description>Flash ISP Controller Clock Enable Bit</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Flash ISP peripheral clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Flash ISP peripheral clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EBICKEN</name>
+              <description>EBI Controller Clock Enable Bit </description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>EBI peripheral clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>EBI peripheral clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>HDIVCKEN</name>
+              <description>Hardware Divider Controller Clock Enable Bit </description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Hardware divider peripheral clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Hardware divider peripheral clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CRCCKEN</name>
+              <description>CRC Generator Controller Clock Enable Bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>CRC peripheral clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>CRC peripheral clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FMCIDLE</name>
+              <description>Flash Memory Controller Clock Enable Bit in IDLE Mode</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>FMC peripheral clock Disabled when chip operating at IDLE mode</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>FMC peripheral clock Enabled when chip operating at IDLE mode</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GPIOACKEN</name>
+              <description>General Purpose I/O PA Group Clock Enable Bit</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>GPIO PA group clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>GPIO PA group clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GPIOBCKEN</name>
+              <description>General Purpose I/O PB Group Clock Enable Bit</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>GPIO PB group clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>GPIO PB group clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GPIOCCKEN</name>
+              <description>General Purpose I/O PC Group Clock Enable Bit</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>GPIO PC group clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>GPIO PC group clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GPIODCKEN</name>
+              <description>General Purpose I/O PD Group Clock Enable Bit</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>GPIO PD group clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>GPIO PD group clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GPIOECKEN</name>
+              <description>General Purpose I/O PE Group Clock Enable Bit</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>GPIO PE group clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>GPIO PE group clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GPIOFCKEN</name>
+              <description>General Purpose I/O PF Group Clock Enable Bit</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>GPIO PF group clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>GPIO PF group clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>CLK_APBCLK0</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>CLK_APBCLK0</displayName>
+          <description>APB Devices Clock Enable Control Register 0</description>
+          <addressOffset>0x8</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000001</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>WDTCKEN</name>
+              <description>Watchdog Timer Clock Enable Bit (Write Protect)\nNote: This bit is write protected. Refer to the SYS_REGLCTL register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Watchdog Timer Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Watchdog Timer Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RTCCKEN</name>
+              <description>Real-time-clock APB Interface Clock Enable Bit\nThis bit is used to control the RTC APB clock only. The RTC peripheral clock source is selected from RTCSEL(CLK_CLKSEL2[18]). It can be selected to external 32.768 kHz low speed crystal (LXT) or 10 kHz internal low speed RC oscillator (LIRC).</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>RTC Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>RTC Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TMR0CKEN</name>
+              <description>Timer0 Clock Enable Bit</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Timer0 Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Timer0 Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TMR1CKEN</name>
+              <description>Timer1 Clock Enable Bit</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Timer1 Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Timer1 Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TMR2CKEN</name>
+              <description>Timer2 Clock Enable Bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Timer2 Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Timer2 Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TMR3CKEN</name>
+              <description>Timer3 Clock Enable Bit</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Timer3 Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Timer3 Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLKOCKEN</name>
+              <description>CLKO Clock Enable Bit</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>CLKO Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>CLKO Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C0CKEN</name>
+              <description>I2C0 Clock Enable Bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>I2C0 Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>I2C0 Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C1CKEN</name>
+              <description>I2C1 Clock Enable Bit</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>I2C1 Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>I2C1 Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPI0CKEN</name>
+              <description>SPI0 Clock Enable Bit</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>SPI0 Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>SPI0 Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPI1CKEN</name>
+              <description>SPI1 Clock Enable Bit</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>SPI1 Clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>SPI1 Clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART0CKEN</name>
+              <description>UART0 Clock Enable Bit</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>UART0 clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>UART0 clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART1CKEN</name>
+              <description>UART1 Clock Enable Bit</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>UART1 clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>UART1 clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART2CKEN</name>
+              <description>UART2 Clock Enable Bit</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>UART2 clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>UART2 clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM0CKEN</name>
+              <description>PWM0 Clock Enable Bit</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM0 clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM0 clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM1CKEN</name>
+              <description>PWM1 Clock Enable Bit</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PWM1 clock Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PWM1 clock Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>USBDCKEN</name>
+              <description>USB Device Clock Enable Bit</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>USB Device clock Disabled</description>
+                    <value>#0</value>
+  

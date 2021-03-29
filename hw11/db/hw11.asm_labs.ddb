@@ -1,0 +1,315 @@
+     </fields>
+       </register>
+       <register derivedFrom="PWM_PBUF0">
+          <name>PWM_PBUF1</name>
+          <displayName>PWM_PBUF1</displayName>
+          <description>PWM PERIOD1 Buffer</description>
+          <addressOffset>0x308</addressOffset>
+       </register>
+       <register derivedFrom="PWM_PBUF0">
+          <name>PWM_PBUF2</name>
+          <displayName>PWM_PBUF2</displayName>
+          <description>PWM PERIOD2 Buffer</description>
+          <addressOffset>0x30C</addressOffset>
+       </register>
+       <register derivedFrom="PWM_PBUF0">
+          <name>PWM_PBUF3</name>
+          <displayName>PWM_PBUF3</displayName>
+          <description>PWM PERIOD3 Buffer</description>
+          <addressOffset>0x310</addressOffset>
+       </register>
+       <register derivedFrom="PWM_PBUF0">
+          <name>PWM_PBUF4</name>
+          <displayName>PWM_PBUF4</displayName>
+          <description>PWM PERIOD4 Buffer</description>
+          <addressOffset>0x314</addressOffset>
+       </register>
+       <register derivedFrom="PWM_PBUF0">
+          <name>PWM_PBUF5</name>
+          <displayName>PWM_PBUF5</displayName>
+          <description>PWM PERIOD5 Buffer</description>
+          <addressOffset>0x318</addressOffset>
+       </register>
+       <register>
+          <name>PWM_CMPBUF0</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CMPBUF0</displayName>
+          <description>PWM CMPDAT0 Buffer</description>
+          <addressOffset>0x31C</addressOffset>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CMPBUF</name>
+              <description>PWM Comparator Register Buffer (Read Only)\nUsed as CMP active register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+       </register>
+       <register derivedFrom="PWM_CMPBUF0">
+          <name>PWM_CMPBUF1</name>
+          <displayName>PWM_CMPBUF1</displayName>
+          <description>PWM CMPDAT1 Buffer</description>
+          <addressOffset>0x320</addressOffset>
+       </register>
+       <register derivedFrom="PWM_CMPBUF0">
+          <name>PWM_CMPBUF2</name>
+          <displayName>PWM_CMPBUF2</displayName>
+          <description>PWM CMPDAT2 Buffer</description>
+          <addressOffset>0x324</addressOffset>
+       </register>
+       <register derivedFrom="PWM_CMPBUF0">
+          <name>PWM_CMPBUF3</name>
+          <displayName>PWM_CMPBUF3</displayName>
+          <description>PWM CMPDAT3 Buffer</description>
+          <addressOffset>0x328</addressOffset>
+       </register>
+       <register derivedFrom="PWM_CMPBUF0">
+          <name>PWM_CMPBUF4</name>
+          <displayName>PWM_CMPBUF4</displayName>
+          <description>PWM CMPDAT4 Buffer</description>
+          <addressOffset>0x32C</addressOffset>
+       </register>
+       <register derivedFrom="PWM_CMPBUF0">
+          <name>PWM_CMPBUF5</name>
+          <displayName>PWM_CMPBUF5</displayName>
+          <description>PWM CMPDAT5 Buffer</description>
+          <addressOffset>0x330</addressOffset>
+       </register>
+       <register>
+          <name>PWM_FTCBUF0_1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_FTCBUF0_1</displayName>
+          <description>PWM FTCMPDAT0_1 Buffer</description>
+          <addressOffset>0x340</addressOffset>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>FTCMPBUF</name>
+              <description>PWM FTCMPDAT Buffer (Read Only)\nUsed as FTCMPDAT active register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+       </register>
+       <register derivedFrom="PWM_FTCBUF0_1">
+          <name>PWM_FTCBUF2_3</name>
+          <displayName>PWM_FTCBUF2_3</displayName>
+          <description>PWM FTCMPDAT2_3 Buffer</description>
+          <addressOffset>0x344</addressOffset>
+       </register>
+       <register derivedFrom="PWM_FTCBUF0_1">
+          <name>PWM_FTCBUF4_5</name>
+          <displayName>PWM_FTCBUF4_5</displayName>
+          <description>PWM FTCMPDAT4_5 Buffer</description>
+          <addressOffset>0x348</addressOffset>
+       </register>
+       <register>
+          <name>PWM_FTCI</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_FTCI</displayName>
+          <description>PWM FTCMPDAT Indicator Register</description>
+          <addressOffset>0x34C</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>FTCMUn</name>
+              <description>PWM FTCMPDAT Up Indicator</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FTCMDn</name>
+              <description>PWM FTCMPDAT Down Indicator</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>PWM1</name>
+      <description>PWM Register Map</description>
+      <groupName>PWM</groupName>
+      <baseAddress>0x40059000</baseAddress>
+      <!-- the first addressBlock is occupied by registers. The second block is reserved -> no access permission -->
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x2C</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x30</offset>
+        <size>0x18</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x50</offset>
+        <size>0x18</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x70</offset>
+        <size>0xC</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x80</offset>
+        <size>0xC</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x90</offset>
+        <size>0x18</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0xB0</offset>
+        <size>0x44</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0xF8</offset>
+        <size>0x14</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x110</offset>
+        <size>0x8</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x120</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x200</offset>
+        <size>0x4C</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x250</offset>
+        <size>0x8</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x304</offset>
+        <size>0x30</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x340</offset>
+        <size>0x10</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+       <register>
+          <name>PWM_CTL0</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>PWM_CTL0</displayName>
+          <description>PWM Control Register 0</description>
+          <addressOffset>0x0</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CTRLDn</name>
+              <description>Center Re-load\nEach bit n controls the corresponding PWM channel n.\nIn up-down counter type, PERIOD will load to PBUF at the end point of each period. CMPDAT will load to CMPBUF at the center point of a period.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WINLDENn</name>
+              <description>Window Load Enable Bit\nEach bit n controls the corresponding PWM channel n.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PERIOD will load to PBUF at the end point of each period. CMPDAT will load to CMPBUF at the end point or center point of each period by setting CTRLD bit</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PERIOD will load to PBUF at the end point of each period. CMPDAT will load to CMPBUF at the end point of each period when valid reload window is set. The valid reload window is set by software write 1 to PWM_LOAD register and cleared by hardware after load success</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IMMLDENn</name>
+              <description>Immediately Load Enable Bits\nEach bit n controls the corresponding PWM channel n.\nNote: If IMMLDENn Enabled, WINLDENn and CTRLDn will be invalid.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>6</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>PERIOD will load to PBUF at the end point of each period. CMPDAT will load to CMPBUF at the end point or center point of each period by setting CTRLD bit</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>PERIOD/CMPDAT will load to PBUF and CMPBUF immediately when software update PERIOD/CMPDAT</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GROUPEN</name>
+              <description>Group Function Enable Bit</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The output waveform of each PWM channel are independent</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Unify the PWM_CH2 and PWM_CH4 to output the same waveform as PWM_CH0 and unify the PWM_CH3 and PWM_CH5 to output the same waveform as PWM_CH1</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DBGHALT</name>
+              <description>ICE Debug Mode Counter Halt (Write Protect)\nIf counter halt is enabled, PWM all counters will keep current value until exit ICE debug mode. \nNote: This register is write protected. Refer to SYS_REGLCTL register.</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>ICE debug mode counter halt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>ICE debug mode counter halt Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DBGTRIOFF</name>
+              <description>ICE Debug Mode Acknowledge Disable (Write Protect)\nPWM pin will keep output no matter ICE debug mode acknowledged or not.\nNote: This register is write protected. Refer to SYS_REGLCTL register.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>

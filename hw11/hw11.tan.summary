@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.253 ns
+From           : reset
+To             : latch8:u1|_DFF:u5|D_latch:M|Q~10
+From Clock     : --
+To Clock       : bt
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.459 ns
+From           : latch8:u1|_DFF:u1|D_latch:S|Q~1
+To             : led1[5]
+From Clock     : bt
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.406 ns
+From           : reset
+To             : latch8:u1|_DFF:u5|D_latch:M|Q~10
+From Clock     : --
+To Clock       : bt
+Failed Paths   : 0
+
+Type           : Clock Setup: 'bt'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 148.10 MHz ( period = 6.752 ns )
+From           : latch8:u1|_DFF:u2|D_latch:S|Q~1
+To             : latch8:u1|_DFF:u6|D_latch:M|Q~1
+From Clock     : bt
+To Clock       : bt
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
