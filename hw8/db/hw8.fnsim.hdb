@@ -1,0 +1,195 @@
+    (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x10))
+#define HC_INT_DIS          (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x14))
+#define HC_HCCA             (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x18))
+#define HC_PERIOD_CUR_ED    (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x1C))
+#define HC_CTRL_HEAD_ED     (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x20))
+#define HC_CTRL_CUR_ED      (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x24))
+#define HC_BULK_HEAD_ED     (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x28))
+#define HC_BULK_CUR_ED      (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x2C))
+#define HC_DONE_HEAD        (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x30))
+#define HC_FM_INTERVAL      (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x34))
+#define HC_FM_REMAINING     (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x38))
+#define HC_FM_NUMBER        (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x3C))
+#define HC_PERIOD_START     (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x40))
+#define HC_LS_THRHLD        (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x44))
+#define HC_RH_DESCA         (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x48))
+#define HC_RH_DESCB         (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x4C))
+#define HC_RH_STAT          (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x50))
+#define HC_RH_PORT_STAT1    (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x54))
+#define HC_RH_PORT_STAT2    (*(volatile unsigned int *)(USBHC_BASE_ADDR + 0x58))
+
+/* USB OTG Controller */
+#define USBOTG_BASE_ADDR	0xFFE0C100
+#define OTG_INT_STAT        (*(volatile unsigned int *)(USBOTG_BASE_ADDR + 0x00))
+#define OTG_INT_EN          (*(volatile unsigned int *)(USBOTG_BASE_ADDR + 0x04))
+#define OTG_INT_SET         (*(volatile unsigned int *)(USBOTG_BASE_ADDR + 0x08))
+#define OTG_INT_CLR         (*(volatile unsigned int *)(USBOTG_BASE_ADDR + 0x0C))
+#define OTG_STAT_CTRL       (*(volatile unsigned int *)(USBOTG_BASE_ADDR + 0x10))
+#define OTG_TIMER           (*(volatile unsigned int *)(USBOTG_BASE_ADDR + 0x14))
+
+#define USBOTG_I2C_BASE_ADDR	0xFFE0C300
+#define OTG_I2C_RX          (*(volatile unsigned int *)(USBOTG_I2C_BASE_ADDR + 0x00))
+#define OTG_I2C_TX          (*(volatile unsigned int *)(USBOTG_I2C_BASE_ADDR + 0x00))
+#define OTG_I2C_STS         (*(volatile unsigned int *)(USBOTG_I2C_BASE_ADDR + 0x04))
+#define OTG_I2C_CTL         (*(volatile unsigned int *)(USBOTG_I2C_BASE_ADDR + 0x08))
+#define OTG_I2C_CLKHI       (*(volatile unsigned int *)(USBOTG_I2C_BASE_ADDR + 0x0C))
+#define OTG_I2C_CLKLO       (*(volatile unsigned int *)(USBOTG_I2C_BASE_ADDR + 0x10))
+
+#define USBOTG_CLK_BASE_ADDR	0xFFE0CFF0
+#define OTG_CLK_CTRL        (*(volatile unsigned int *)(USBOTG_CLK_BASE_ADDR + 0x04))
+#define OTG_CLK_STAT        (*(volatile unsigned int *)(USBOTG_CLK_BASE_ADDR + 0x08))
+
+
+/* Ethernet MAC (32 bit data bus) -- all registers are RW unless indicated in parentheses */
+#define MAC_BASE_ADDR		0xFFE00000 /* AHB Peripheral # 0 */
+#define MAC_MAC1            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x000)) /* MAC config reg 1 */
+#define MAC_MAC2            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x004)) /* MAC config reg 2 */
+#define MAC_IPGT            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x008)) /* b2b InterPacketGap reg */
+#define MAC_IPGR            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x00C)) /* non b2b InterPacketGap reg */
+#define MAC_CLRT            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x010)) /* CoLlision window/ReTry reg */
+#define MAC_MAXF            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x014)) /* MAXimum Frame reg */
+#define MAC_SUPP            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x018)) /* PHY SUPPort reg */
+#define MAC_TEST            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x01C)) /* TEST reg */
+#define MAC_MCFG            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x020)) /* MII Mgmt ConFiG reg */
+#define MAC_MCMD            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x024)) /* MII Mgmt CoMmanD reg */
+#define MAC_MADR            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x028)) /* MII Mgmt ADdRess reg */
+#define MAC_MWTD            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x02C)) /* MII Mgmt WriTe Data reg (WO) */
+#define MAC_MRDD            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x030)) /* MII Mgmt ReaD Data reg (RO) */
+#define MAC_MIND            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x034)) /* MII Mgmt INDicators reg (RO) */
+
+#define MAC_SA0             (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x040)) /* Station Address 0 reg */
+#define MAC_SA1             (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x044)) /* Station Address 1 reg */
+#define MAC_SA2             (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x048)) /* Station Address 2 reg */
+
+#define MAC_COMMAND         (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x100)) /* Command reg */
+#define MAC_STATUS          (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x104)) /* Status reg (RO) */
+#define MAC_RXDESCRIPTOR    (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x108)) /* Rx descriptor base address reg */
+#define MAC_RXSTATUS        (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x10C)) /* Rx status base address reg */
+#define MAC_RXDESCRIPTORNUM (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x110)) /* Rx number of descriptors reg */
+#define MAC_RXPRODUCEINDEX  (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x114)) /* Rx produce index reg (RO) */
+#define MAC_RXCONSUMEINDEX  (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x118)) /* Rx consume index reg */
+#define MAC_TXDESCRIPTOR    (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x11C)) /* Tx descriptor base address reg */
+#define MAC_TXSTATUS        (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x120)) /* Tx status base address reg */
+#define MAC_TXDESCRIPTORNUM (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x124)) /* Tx number of descriptors reg */
+#define MAC_TXPRODUCEINDEX  (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x128)) /* Tx produce index reg */
+#define MAC_TXCONSUMEINDEX  (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x12C)) /* Tx consume index reg (RO) */
+
+#define MAC_TSV0            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x158)) /* Tx status vector 0 reg (RO) */
+#define MAC_TSV1            (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x15C)) /* Tx status vector 1 reg (RO) */
+#define MAC_RSV             (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x160)) /* Rx status vector reg (RO) */
+
+#define MAC_FLOWCONTROLCNT  (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x170)) /* Flow control counter reg */
+#define MAC_FLOWCONTROLSTS  (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x174)) /* Flow control status reg */
+
+#define MAC_RXFILTERCTRL    (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x200)) /* Rx filter ctrl reg */
+#define MAC_RXFILTERWOLSTS  (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x204)) /* Rx filter WoL status reg (RO) */
+#define MAC_RXFILTERWOLCLR  (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x208)) /* Rx filter WoL clear reg (WO) */
+
+#define MAC_HASHFILTERL     (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x210)) /* Hash filter LSBs reg */
+#define MAC_HASHFILTERH     (*(volatile unsigned int *)(MAC_BASE_ADDR + 0x214)) /* Hash filter MSBs reg */
+
+#define MAC_INTSTATUS       (*(volatile unsigned int *)(MAC_BASE_ADDR + 0xFE0)) /* Interrupt status reg (RO) */
+#define MAC_INTENABLE       (*(volatile unsigned int *)(MAC_BASE_ADDR + 0xFE4)) /* Interrupt enable reg  */
+#define MAC_INTCLEAR        (*(volatile unsigned int *)(MAC_BASE_ADDR + 0xFE8)) /* Interrupt clear reg (WO) */
+#define MAC_INTSET          (*(volatile unsigned int *)(MAC_BASE_ADDR + 0xFEC)) /* Interrupt set reg (WO) */
+
+#define MAC_POWERDOWN       (*(volatile unsigned int *)(MAC_BASE_ADDR + 0xFF4)) /* Power-down reg */
+#define MAC_MODULEID        (*(volatile unsigned int *)(MAC_BASE_ADDR + 0xFFC)) /* Module ID reg (RO) */
+
+
+#endif  /* __LPC23xx_H */
+
+                                                                                                                                                  ;/**************************************************************************//**
+; * @file     startup_NUC1261Series.s
+; * @version  V2.00
+; * $Revision: 2 $
+; * $Date: 16/06/28 1:34p $ 
+; * @brief    NUC1261 Series Startup Source File
+; *
+; * @note
+; * Copyright (C) 2011 Nuvoton Technology Corp. All rights reserved.
+; *
+; ******************************************************************************/
+    IF :LNOT: :DEF: Stack_Size
+Stack_Size      EQU     0x00000400
+    ENDIF
+
+                AREA    STACK, NOINIT, READWRITE, ALIGN=3
+Stack_Mem       SPACE   Stack_Size
+__initial_sp
+
+
+; <h> Heap Configuration
+;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
+; </h>
+    IF :LNOT: :DEF: Heap_Size
+Heap_Size       EQU     0x00000000
+    ENDIF
+                AREA    HEAP, NOINIT, READWRITE, ALIGN=3
+__heap_base
+Heap_Mem        SPACE   Heap_Size
+__heap_limit
+
+
+                PRESERVE8
+                THUMB
+
+
+; Vector Table Mapped to Address 0 at Reset
+                AREA    RESET, DATA, READONLY
+                EXPORT  __Vectors
+
+__Vectors       DCD     __initial_sp              ; Top of Stack
+                DCD     Reset_Handler             ; Reset Handler
+                DCD     NMI_Handler               ; NMI Handler
+                DCD     HardFault_Handler         ; Hard Fault Handler
+                DCD     0                         ; Reserved
+                DCD     0                         ; Reserved
+                DCD     0                         ; Reserved
+                DCD     0                         ; Reserved
+                DCD     0                         ; Reserved
+                DCD     0                         ; Reserved
+                DCD     0                         ; Reserved
+                DCD     SVC_Handler               ; SVCall Handler
+                DCD     0                         ; Reserved
+                DCD     0                         ; Reserved
+                DCD     PendSV_Handler            ; PendSV Handler
+                DCD     SysTick_Handler           ; SysTick Handler
+
+                ; External Interrupts
+                                                  ; maximum of 32 External Interrupts are possible
+                DCD     BOD_IRQHandler  
+                DCD     WDT_IRQHandler  
+                DCD     EINT024_IRQHandler
+                DCD     EINT135_IRQHandler
+                DCD     GPAB_IRQHandler 
+                DCD     GPCDEF_IRQHandler
+                DCD     PWM0_IRQHandler 
+                DCD     PWM1_IRQHandler 
+                DCD     TMR0_IRQHandler 
+                DCD     TMR1_IRQHandler 
+                DCD     TMR2_IRQHandler 
+                DCD     TMR3_IRQHandler 
+                DCD     UART02_IRQHandler
+                DCD     UART1_IRQHandler
+                DCD     SPI0_IRQHandler 
+                DCD     SPI1_IRQHandler 
+                DCD     Default_Handler 
+                DCD     Default_Handler 
+                DCD     I2C0_IRQHandler 
+                DCD     I2C1_IRQHandler 
+                DCD     Default_Handler 
+                DCD     Default_Handler
+                DCD     USCI_IRQHandler 
+                DCD     USBD_IRQHandler  
+                DCD     SC01_IRQHandler  
+                DCD     ACMP01_IRQHandler 
+                DCD     PDMA_IRQHandler
+                DCD     Default_Handler 
+                DCD     PWRWU_IRQHandler
+                DCD     ADC_IRQHandler
+                DCD     CLKDIRC_IRQHandler  
+                DCD     RTC_IRQHandler  
+                
+                                
+                

@@ -1,0 +1,180 @@
+os        (2)                                               /*!< USPI_T::PROTIEN: SLVTOIEN Position     */
+#define USPI_PROTIEN_SLVTOIEN_Msk        (0x1ul << USPI_PROTIEN_SLVTOIEN_Pos)              /*!< USPI_T::PROTIEN: SLVTOIEN Mask         */
+
+#define USPI_PROTIEN_SLVBEIEN_Pos        (3)                                               /*!< USPI_T::PROTIEN: SLVBEIEN Position     */
+#define USPI_PROTIEN_SLVBEIEN_Msk        (0x1ul << USPI_PROTIEN_SLVBEIEN_Pos)              /*!< USPI_T::PROTIEN: SLVBEIEN Mask         */
+
+#define USPI_PROTSTS_TXSTIF_Pos          (1)                                               /*!< USPI_T::PROTSTS: TXSTIF Position       */
+#define USPI_PROTSTS_TXSTIF_Msk          (0x1ul << USPI_PROTSTS_TXSTIF_Pos)                /*!< USPI_T::PROTSTS: TXSTIF Mask           */
+
+#define USPI_PROTSTS_TXENDIF_Pos         (2)                                               /*!< USPI_T::PROTSTS: TXENDIF Position      */
+#define USPI_PROTSTS_TXENDIF_Msk         (0x1ul << USPI_PROTSTS_TXENDIF_Pos)               /*!< USPI_T::PROTSTS: TXENDIF Mask          */
+
+#define USPI_PROTSTS_RXSTIF_Pos          (3)                                               /*!< USPI_T::PROTSTS: RXSTIF Position       */
+#define USPI_PROTSTS_RXSTIF_Msk          (0x1ul << USPI_PROTSTS_RXSTIF_Pos)                /*!< USPI_T::PROTSTS: RXSTIF Mask           */
+
+#define USPI_PROTSTS_RXENDIF_Pos         (4)                                               /*!< USPI_T::PROTSTS: RXENDIF Position      */
+#define USPI_PROTSTS_RXENDIF_Msk         (0x1ul << USPI_PROTSTS_RXENDIF_Pos)               /*!< USPI_T::PROTSTS: RXENDIF Mask          */
+
+#define USPI_PROTSTS_SLVTOIF_Pos         (5)                                               /*!< USPI_T::PROTSTS: SLVTOIF Position      */
+#define USPI_PROTSTS_SLVTOIF_Msk         (0x1ul << USPI_PROTSTS_SLVTOIF_Pos)               /*!< USPI_T::PROTSTS: SLVTOIF Mask          */
+
+#define USPI_PROTSTS_SLVBEIF_Pos         (6)                                               /*!< USPI_T::PROTSTS: SLVBEIF Position      */
+#define USPI_PROTSTS_SLVBEIF_Msk         (0x1ul << USPI_PROTSTS_SLVBEIF_Pos)               /*!< USPI_T::PROTSTS: SLVBEIF Mask          */
+
+#define USPI_PROTSTS_SSINAIF_Pos         (8)                                               /*!< USPI_T::PROTSTS: SSINAIF Position      */
+#define USPI_PROTSTS_SSINAIF_Msk         (0x1ul << USPI_PROTSTS_SSINAIF_Pos)               /*!< USPI_T::PROTSTS: SSINAIF Mask          */
+
+#define USPI_PROTSTS_SSACTIF_Pos         (9)                                               /*!< USPI_T::PROTSTS: SSACTIF Position      */
+#define USPI_PROTSTS_SSACTIF_Msk         (0x1ul << USPI_PROTSTS_SSACTIF_Pos)               /*!< USPI_T::PROTSTS: SSACTIF Mask          */
+
+#define USPI_PROTSTS_SSLINE_Pos          (16)                                              /*!< USPI_T::PROTSTS: SSLINE Position       */
+#define USPI_PROTSTS_SSLINE_Msk          (0x1ul << USPI_PROTSTS_SSLINE_Pos)                /*!< USPI_T::PROTSTS: SSLINE Mask           */
+
+#define USPI_PROTSTS_BUSY_Pos            (17)                                              /*!< USPI_T::PROTSTS: BUSY Position         */
+#define USPI_PROTSTS_BUSY_Msk            (0x1ul << USPI_PROTSTS_BUSY_Pos)                  /*!< USPI_T::PROTSTS: BUSY Mask             */
+
+#define USPI_PROTSTS_SLVUDR_Pos          (18)                                              /*!< USPI_T::PROTSTS: SLVUDR Position       */
+#define USPI_PROTSTS_SLVUDR_Msk          (0x1ul << USPI_PROTSTS_SLVUDR_Pos)                /*!< USPI_T::PROTSTS: SLVUDR Mask           */
+
+/**@}*/ /* USPI_CONST */
+/**@}*/ /* end of USPI register group */
+
+
+/*---------------------- UART Mode of USCI Controller -------------------------*/
+/**
+    @addtogroup UUART UART Mode of USCI Controller(UUART)
+    Memory Mapped Structure for UUART Controller
+@{ */
+
+typedef struct
+{
+
+
+    /**
+     * @var UUART_T::CTL
+     * Offset: 0x00  USCI Control Register
+     * ---------------------------------------------------------------------------------------------------
+     * |Bits    |Field     |Descriptions
+     * | :----: | :----:   | :---- |
+     * |[2:0]   |FUNMODE   |Function Mode
+     * |        |          |This bit field selects the protocol for this USCI controller.
+     * |        |          |Selecting a protocol that is not available or a reserved combination disables the USCI.
+     * |        |          |When switching between two protocols, the USCI has to be disabled before selecting a new protocol.
+     * |        |          |Simultaneously, the USCI will be reset when user write 000 to FUNMODE.
+     * |        |          |000 = The USCI is disabled. All protocol related state machines are set to idle state.
+     * |        |          |001 = The SPI protocol is selected.
+     * |        |          |010 = The UART protocol is selected.
+     * |        |          |100 = The I2C protocol is selected.
+     * |        |          |Note: Other bit combinations are reserved.
+     * @var UUART_T::INTEN
+     * Offset: 0x04  USCI Interrupt Enable Register
+     * ---------------------------------------------------------------------------------------------------
+     * |Bits    |Field     |Descriptions
+     * | :----: | :----:   | :---- |
+     * |[1]     |TXSTIEN   |Transmit Start Interrupt Enable Bit
+     * |        |          |This bit enables the interrupt generation in case of a transmit start event.
+     * |        |          |0 = The transmit start interrupt is disabled.
+     * |        |          |1 = The transmit start interrupt is enabled.
+     * |[2]     |TXENDIEN  |Transmit End Interrupt Enable Bit
+     * |        |          |This bit enables the interrupt generation in case of a transmit finish event.
+     * |        |          |0 = The transmit finish interrupt is disabled.
+     * |        |          |1 = The transmit finish interrupt is enabled.
+     * |[3]     |RXSTIEN   |Receive Start Interrupt Enable Bit
+     * |        |          |This bit enables the interrupt generation in case of a receive start event.
+     * |        |          |0 = The receive start interrupt is disabled.
+     * |        |          |1 = The receive start interrupt is enabled.
+     * |[4]     |RXENDIEN  |Receive End Interrupt Enable Bit
+     * |        |          |This bit enables the interrupt generation in case of a receive finish event.
+     * |        |          |0 = The receive end interrupt is disabled.
+     * |        |          |1 = The receive end interrupt is enabled.
+     * @var UUART_T::BRGEN
+     * Offset: 0x08  USCI Baud Rate Generator Register
+     * ---------------------------------------------------------------------------------------------------
+     * |Bits    |Field     |Descriptions
+     * | :----: | :----:   | :---- |
+     * |[0]     |RCLKSEL   |Reference Clock Source Selection
+     * |        |          |This bit selects the source signal of reference clock (fREF_CLK).
+     * |        |          |0 = Peripheral device clock fPCLK.
+     * |        |          |1 = Reserved.
+     * |[1]     |PTCLKSEL  |Protocol Clock Source Selection
+     * |        |          |This bit selects the source signal of protocol clock (fPROT_CLK).
+     * |        |          |0 = Reference clock fREF_CLK.
+     * |        |          |1 = fREF_CLK2 (its frequency is half of fREF_CLK).
+     * |[3:2]   |SPCLKSEL  |Sample Clock Source Selection
+     * |        |          |This bit field used for the clock source selection of a sample clock (fSAMP_CLK) for the protocol processor.
+     * |        |          |00 = fSAMP_CLK = fDIV_CLK.
+     * |        |          |01 = fSAMP_CLK = fPROT_CLK.
+     * |        |          |10 = fSAMP_CLK = fSCLK.
+     * |        |          |11 = fSAMP_CLK = fREF_CLK.
+     * |[4]     |TMCNTEN   |Timing Measurement Counter Enable Bit
+     * |        |          |This bit enables the 10-bit timing measurement counter.
+     * |        |          |0 = Timing measurement counter is Disabled.
+     * |        |          |1 = Timing measurement counter is Enabled.
+     * |[5]     |TMCNTSRC  |Timing Measurement Counter Clock Source Selection
+     * |        |          |0 = Timing measurement counter with fPROT_CLK.
+     * |        |          |1 = Timing measurement counter with fDIV_CLK.
+     * |[9:8]   |PDSCNT    |Pre-divider for Sample Counter
+     * |        |          |This bit field defines the divide ratio of the clock division from sample clock fSAMP_CLK.
+     * |        |          |The divided frequency fPDS_CNT = fSAMP_CLK / (PDSCNT+1).
+     * |[14:10] |DSCNT     |Denominator for Sample Counter
+     * |        |          |This bit field defines the divide ratio of the sample clock fSAMP_CLK.
+     * |        |          |The divided frequency fDS_CNT = fPDS_CNT / (DSCNT+1).
+     * |        |          |Note: The maximum value of DSCNT is 0xF on UART mode and suggest to set over 4 to confirm the receiver data is sampled in right value
+     * |[25:16] |CLKDIV    |Clock Divider
+     * |        |          |This bit field defines the ratio between the protocol clock frequency fPROT_CLK and the clock divider frequency fDIV_CLK (fDIV_CLK = fPROT_CLK / (CLKDIV+1) ).
+     * |        |          |Note: In UART function, it can be updated by hardware in the 4th falling edge of the input data 0x55 when the auto baud rate function (ABREN(UUART_PROTCTL[6])) is enabled.
+     * |        |          |The revised value is the average bit time between bit 5 and bit 6.
+     * |        |          |The user can use revised CLKDIV and new BRDETITV (UUART_PROTCTL[24:16]) to calculate the precise baud rate.
+     * @var UUART_T::DATIN0
+     * Offset: 0x10  USCI Input Data Signal Configuration Register 0
+     * ---------------------------------------------------------------------------------------------------
+     * |Bits    |Field     |Descriptions
+     * | :----: | :----:   | :---- |
+     * |[0]     |SYNCSEL   |Input Signal Synchronization Selection
+     * |        |          |This bit selects if the un-synchronized input signal (with optionally inverted) or the synchronized (and optionally filtered) signal can be used as input for the data shift unit.
+     * |        |          |0 = The un-synchronized signal can be taken as input for the data shift unit.
+     * |        |          |1 = The synchronized signal can be taken as input for the data shift unit.
+     * |[2]     |ININV     |Input Signal Inverse Selection
+     * |        |          |This bit defines the inverter enable of the input asynchronous signal.
+     * |        |          |0 = The un-synchronized input signal will not be inverted.
+     * |        |          |1 = The un-synchronized input signal will be inverted.
+     * |[4:3]   |EDGEDET   |Input Signal Edge Detection Mode
+     * |        |          |This bit field selects which edge actives the trigger event of input data signal.
+     * |        |          |00 = The trigger event activation is disabled.
+     * |        |          |01 = A rising edge activates the trigger event of input data signal.
+     * |        |          |10 = A falling edge activates the trigger event of input data signal.
+     * |        |          |11 = Both edges activate the trigger event of input data signal.
+     * |        |          |Note: In UART function mode, it is suggested to set this bit field as 10.
+     * @var UUART_T::CTLIN0
+     * Offset: 0x20  USCI Input Control Signal Configuration Register 0
+     * ---------------------------------------------------------------------------------------------------
+     * |Bits    |Field     |Descriptions
+     * | :----: | :----:   | :---- |
+     * |[0]     |SYNCSEL   |Input Synchronization Signal Selection
+     * |        |          |This bit selects if the un-synchronized input signal (with optionally inverted) or the synchronized (and optionally filtered) signal can be used as input for the data shift unit.
+     * |        |          |0 = The un-synchronized signal can be taken as input for the data shift unit.
+     * |        |          |1 = The synchronized signal can be taken as input for the data shift unit.
+     * |[2]     |ININV     |Input Signal Inverse Selection
+     * |        |          |This bit defines the inverter enable of the input asynchronous signal.
+     * |        |          |0 = The un-synchronized input signal will not be inverted.
+     * |        |          |1 = The un-synchronized input signal will be inverted.
+     * @var UUART_T::CLKIN
+     * Offset: 0x28  USCI Input Clock Signal Configuration Register
+     * ---------------------------------------------------------------------------------------------------
+     * |Bits    |Field     |Descriptions
+     * | :----: | :----:   | :---- |
+     * |[0]     |SYNCSEL   |Input Synchronization Signal Selection
+     * |        |          |This bit selects if the un-synchronized input signal or the synchronized (and optionally filtered) signal can be used as input for the data shift unit.
+     * |        |          |0 = The un-synchronized signal can be taken as input for the data shift unit.
+     * |        |          |1 = The synchronized signal can be taken as input for the data shift unit.
+     * @var UUART_T::LINECTL
+     * Offset: 0x2C  USCI Line Control Register
+     * ---------------------------------------------------------------------------------------------------
+     * |Bits    |Field     |Descriptions
+     * | :----: | :----:   | :---- |
+     * |[0]     |LSB       |LSB First Transmission Selection
+     * |        |          |0 = The MSB, which bit of transmit/receive data buffer depends on the setting of DWIDTH, is transmitted/received first.
+     * |        |          |1 = The LSB, the bit 0 of data buffer, will be transmitted/received first.
+     * |[5]     |DATOINV   |Data Output Inverse Selection
+     * |        |          |This bit defines the relation between the internal shift dat

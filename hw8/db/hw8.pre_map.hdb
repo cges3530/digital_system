@@ -1,0 +1,205 @@
+ister>
+          <name>SPI_TX</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>SPI_TX</displayName>
+          <description>Data Transmit Register</description>
+          <addressOffset>0x20</addressOffset>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>TX</name>
+              <description>Data Transmit Register\nThe data transmit registers pass through the transmitted data into the 8-/4-level transmit FIFO buffer. The number of valid bits depends on the setting of DWIDTH (SPI_CTL[12:8]) in SPI mode.\nFor example, if DWIDTH is set to 0x08, the bits TX[7:0] will be transmitted. If DWIDTH is set to 0x00, the SPI controller will perform a 32-bit transfer.\nNote: In Master mode, SPI controller will start to transfer after 1 APB clock cycle and 6 peripheral clock cycles after user writes to this register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>SPI_RX</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>SPI_RX</displayName>
+          <description>Data Receive Register</description>
+          <addressOffset>0x30</addressOffset>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>RX</name>
+              <description>Data Receive Register\nThere are 8-/4-level FIFO buffers in this controller. The data receive register holds the data received from SPI data input pin. If the RXEMPTY (SPI_STATUS[8]) is not set to 1, the receive FIFO buffers can be accessed through software by reading this register. This is a read only register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+       </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>SPI1</name>
+      <description>SPI Register Map</description>
+      <groupName>SPI</groupName>
+      <baseAddress>0x40061000</baseAddress>
+      <!-- the first addressBlock is occupied by registers. The second block is reserved -> no access permission -->
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x18</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x20</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x30</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+       <register>
+          <name>SPI_CTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>SPI_CTL</displayName>
+          <description>SPI Control Register</description>
+          <addressOffset>0x0</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000034</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>SPIEN</name>
+              <description>SPI Transfer Control Enable Bit\nIn Master mode, the transfer will start when there is a data in the FIFO buffer after this is set to 1. In Slave mode, this device is ready to receive data when this bit is set to 1.\nNote: Before changing the configurations of SPI_CTL, SPI_CLKDIV, SPI_SSCTL and SPI_FIFOCTL registers, user shall clear the SPIEN (SPI_CTL[0]) and confirm the SPIENSTS (SPI_STATUS[15]) is 0.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Transfer control Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Transfer control Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXNEG</name>
+              <description>Receive on Negative Edge</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Received data input signal is latched on the rising edge of SPI bus clock</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Received data input signal is latched on the falling edge of SPI bus clock</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXNEG</name>
+              <description>Transmit on Negative Edge</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Transmitted data output signal is changed on the rising edge of SPI bus clock</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Transmitted data output signal is changed on the falling edge of SPI bus clock</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLKPOL</name>
+              <description>Clock Polarity</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>SPI bus clock is idle low</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>SPI bus clock is idle high</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SUSPITV</name>
+              <description>Suspend Interval (Master Only)\nThe four bits provide configurable suspend interval between two successive transmit/receive transaction in a transfer. The definition of the suspend interval is the interval between the last clock edge of the preceding transaction word and the first clock edge of the following transaction word. The default value is 0x3. The period of the suspend interval is obtained according to the following equation.\n (SUSPITV[3:0] + 0.5) * period of SPICLK clock cycle\nExample:</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DWIDTH</name>
+              <description>Data Width\nThis field specifies how many bits can be transmitted/received in one transaction. The minimum bit length is 8 bits and can up to 32 bits.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LSB</name>
+              <description>Send LSB First</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The MSB, which bit of transmit/receive register depends on the setting of DWIDTH, is transmitted/received first</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The LSB, bit 0 of the SPI TX register, is sent first to the SPI data output pin, and the first bit received from the SPI data input pin will be put in the LSB position of the RX register (bit 0 of SPI_RX)</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TWOBIT</name>
+              <description>2-bit Transfer Mode Enable Bit (Only Supported in SPI0)\nNote: When 2-Bit Transfer mode is enabled, the first serial transmitted bit data is from the first FIFO buffer data, and the 2nd serial transmitted bit data is from the second FIFO buffer data. As the same as transmitted function, the first received bit data is stored into the first FIFO buffer and the 2nd received bit data is stored into the second FIFO buffer at the same time.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>2-Bit Transfer mode Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>2-Bit Transfer mode Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UNITIEN</name>
+              <description>Unit Transfer Interrupt Enable Bit</description>
+              <bitOffset>17</bitOffset>
+              <bitWidt

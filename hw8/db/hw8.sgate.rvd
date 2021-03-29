@@ -1,0 +1,58 @@
+         */
+#define BCCU_GLOBCLK_BCS_Pos                  15                                                      /*!< BCCU GLOBCLK: BCS Position              */
+#define BCCU_GLOBCLK_BCS_Msk                  (0x01UL << BCCU_GLOBCLK_BCS_Pos)                        /*!< BCCU GLOBCLK: BCS Mask                  */
+#define BCCU_GLOBCLK_DCLK_PS_Pos              16                                                      /*!< BCCU GLOBCLK: DCLK_PS Position          */
+#define BCCU_GLOBCLK_DCLK_PS_Msk              (0x00000fffUL << BCCU_GLOBCLK_DCLK_PS_Pos)              /*!< BCCU GLOBCLK: DCLK_PS Mask              */
+
+/* -----------------------------------  BCCU_ID  ---------------------------------- */
+#define BCCU_ID_MOD_REV_Pos                   0                                                       /*!< BCCU ID: MOD_REV Position               */
+#define BCCU_ID_MOD_REV_Msk                   (0x000000ffUL << BCCU_ID_MOD_REV_Pos)                   /*!< BCCU ID: MOD_REV Mask                   */
+#define BCCU_ID_MOD_TYPE0_Pos                 8                                                       /*!< BCCU ID: MOD_TYPE0 Position             */
+#define BCCU_ID_MOD_TYPE0_Msk                 (0x000000ffUL << BCCU_ID_MOD_TYPE0_Pos)                 /*!< BCCU ID: MOD_TYPE0 Mask                 */
+#define BCCU_ID_MOD_NUMBER_Pos                16                                                      /*!< BCCU ID: MOD_NUMBER Position            */
+#define BCCU_ID_MOD_NUMBER_Msk                (0x0000ffffUL << BCCU_ID_MOD_NUMBER_Pos)                /*!< BCCU ID: MOD_NUMBER Mask                */
+
+/* ----------------------------------  BCCU_CHEN  --------------------------------- */
+#define BCCU_CHEN_ECH0_Pos                    0                                                       /*!< BCCU CHEN: ECH0 Position                */
+#define BCCU_CHEN_ECH0_Msk                    (0x01UL << BCCU_CHEN_ECH0_Pos)                          /*!< BCCU CHEN: ECH0 Mask                    */
+#define BCCU_CHEN_ECH1_Pos                    1                                                       /*!< BCCU CHEN: ECH1 Position                */
+#define BCCU_CHEN_ECH1_Msk                    (0x01UL << BCCU_CHEN_ECH1_Pos)                          /*!< BCCU CHEN: ECH1 Mask                    */
+#define BCCU_CHEN_ECH2_Pos                    2                                                       /*!< BCCU CHEN: ECH2 Position                */
+#define BCCU_CHEN_ECH2_Msk                    (0x01UL << BCCU_CHEN_ECH2_Pos)                          /*!< BCCU CHEN: ECH2 Mask                    */
+#define BCCU_CHEN_ECH3_Pos                    3                                                       /*!< BCCU CHEN: ECH3 Position                */
+#define BCCU_CHEN_ECH3_Msk                    (0x01UL << BCCU_CHEN_ECH3_Pos)                          /*!< BCCU CHEN: ECH3 Mask                    */
+#define BCCU_CHEN_ECH4_Pos                    4                                                       /*!< BCCU CHEN: ECH4 Position                */
+#define BCCU_CHEN_ECH4_Msk                    (0x01UL << BCCU_CHEN_ECH4_Pos)                          /*!< BCCU CHEN: ECH4 Mask                    */
+#define BCCU_CHEN_ECH5_Pos                    5                                                       /*!< BCCU CHEN: ECH5 Position                */
+#define BCCU_CHEN_ECH5_Msk                    (0x01UL << BCCU_CHEN_ECH5_Pos)                          /*!< BCCU CHEN: ECH5 Mask                    */
+#define BCCU_CHEN_ECH6_Pos                    6                                                       /*!< BCCU CHEN: ECH6 Position                */
+#define BCCU_CHEN_ECH6_Msk                    (0x01UL << BCCU_CHEN_ECH6_Pos)                          /*!< BCCU CHEN: ECH6 Mask                    */
+#define BCCU_CHEN_ECH7_Pos                    7                                                       /*!< BCCU CHEN: ECH7 Position                */
+#define BCCU_CHEN_ECH7_Msk                    (0x01UL << BCCU_CHEN_ECH7_Pos)                          /*!< BCCU CHEN: ECH7 Mask                    */
+#define BCCU_CHEN_ECH8_Pos                    8                                                       /*!< BCCU CHEN: ECH8 Position                */
+#define BCCU_CHEN_ECH8_Msk                    (0x01UL << BCCU_CHEN_ECH8_Pos)                          /*!< BCCU CHEN: ECH8 Mask                    */
+
+/* ---------------------------------  BCCU_CHOCON  -------------------------------- */
+#define BCCU_CHOCON_CH0OP_Pos                 0                                                       /*!< BCCU CHOCON: CH0OP Position             */
+#define BCCU_CHOCON_CH0OP_Msk                 (0x01UL << BCCU_CHOCON_CH0OP_Pos)                       /*!< BCCU CHOCON: CH0OP Mask                 */
+#define BCCU_CHOCON_CH1OP_Pos                 1                                                       /*!< BCCU CHOCON: CH1OP Position             */
+#define BCCU_CHOCON_CH1OP_Msk                 (0x01UL << BCCU_CHOCON_CH1OP_Pos)                       /*!< BCCU CHOCON: CH1OP Mask                 */
+#define BCCU_CHOCON_CH2OP_Pos                 2                                                       /*!< BCCU CHOCON: CH2OP Position             */
+#define BCCU_CHOCON_CH2OP_Msk                 (0x01UL << BCCU_CHOCON_CH2OP_Pos)                       /*!< BCCU CHOCON: CH2OP Mask                 */
+#define BCCU_CHOCON_CH3OP_Pos                 3                                                       /*!< BCCU CHOCON: CH3OP Position             */
+#define BCCU_CHOCON_CH3OP_Msk                 (0x01UL << BCCU_CHOCON_CH3OP_Pos)                       /*!< BCCU CHOCON: CH3OP Mask                 */
+#define BCCU_CHOCON_CH4OP_Pos                 4                                                       /*!< BCCU CHOCON: CH4OP Position             */
+#define BCCU_CHOCON_CH4OP_Msk                 (0x01UL << BCCU_CHOCON_CH4OP_Pos)                       /*!< BCCU CHOCON: CH4OP Mask                 */
+#define BCCU_CHOCON_CH5OP_Pos                 5                                                       /*!< BCCU CHOCON: CH5OP Position             */
+#define BCCU_CHOCON_CH5OP_Msk                 (0x01UL << BCCU_CHOCON_CH5OP_Pos)                       /*!< BCCU CHOCON: CH5OP Mask                 */
+#define BCCU_CHOCON_CH6OP_Pos                 6                                                       /*!< BCCU CHOCON: CH6OP Position             */
+#define BCCU_CHOCON_CH6OP_Msk                 (0x01UL << BCCU_CHOCON_CH6OP_Pos)                       /*!< BCCU CHOCON: CH6OP Mask                 */
+#define BCCU_CHOCON_CH7OP_Pos                 7                                                       /*!< BCCU CHOCON: CH7OP Position             */
+#define BCCU_CHOCON_CH7OP_Msk                 (0x01UL << BCCU_CHOCON_CH7OP_Pos)                       /*!< BCCU CHOCON: CH7OP Mask                 */
+#define BCCU_CHOCON_CH8OP_Pos                 8                                                       /*!< BCCU CHOCON: CH8OP Position             */
+#define BCCU_CHOCON_CH8OP_Msk                 (0x01UL << BCCU_CHOCON_CH8OP_Pos)                       /*!< BCCU CHOCON: CH8OP Mask                 */
+#define BCCU_CHOCON_CH0TPE_Pos                16                                                      /*!< BCCU CHOCON: CH0TPE Position            */
+#define BCCU_CHOCON_CH0TPE_Msk                (0x01UL << BCCU_CHOCON_CH0TPE_Pos)                      /*!< BCCU CHOCON: CH0TPE Mask                */
+#define BCCU_CHOCON_CH1TPE_Pos                17                                                      /*!< BCCU CHOCON: CH1TPE Position            */
+#define BCCU_CHOCON_CH1TPE_Msk                (0x01UL << BCCU_CHOCON_CH1TPE_Pos)                      /*!< BCCU CHOCON: CH1TPE Mask                */
+#define BCCU_CHOCON_CH2TPE_Pos                18                                                      /*!< BCCU CHOCON: CH2TPE Position     

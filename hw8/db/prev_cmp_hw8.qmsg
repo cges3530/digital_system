@@ -1,0 +1,656 @@
+irstly or enable both functions simultaneously.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Transmit PDMA function Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Transmit PDMA function Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXPDMAEN</name>
+              <description>Receive PDMA Enable Bit</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Receive PDMA function Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Receive PDMA function Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PDMARST</name>
+              <description>PDMA Reset</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Reset the PDMA control logic of the SPI controller. This bit will be automatically cleared to 0</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>SPI_FIFOCTL</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>SPI_FIFOCTL</displayName>
+          <description>SPI FIFO Control Register</description>
+          <addressOffset>0x10</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x44000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>RXRST</name>
+              <description>Receive Reset\nNote: If there is slave receive time-out event, the RXRST will be set 1 when the SLVTORST (SPI_SSCTL[6]) is enabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Reset receive FIFO pointer and receive circuit. The RXFULL bit will be cleared to 0 and the RXEMPTY bit will be set to 1. This bit will be cleared to 0 by hardware about 3 system clock cycles + 2 peripheral clock cycles after it is set to 1. User can read TXRXRST (SPI_STATUS[23]) to check if reset is accomplished or not</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXRST</name>
+              <description>Transmit Reset\nNote: If there is slave receive time-out event, the TXRST will be set to 1 when the SLVTORST (SPI_SSCTL[6]) is enabled.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Reset transmit FIFO pointer and transmit circuit. The TXFULL bit will be cleared to 0 and the TXEMPTY bit will be set to 1. This bit will be cleared to 0 by hardware about 3 system clock cycles + 2 peripheral clock cycles after it is set to 1. User can read TXRXRST (SPI_STATUS[23]) to check if reset is accomplished or not</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXTHIEN</name>
+              <description>Receive FIFO Threshold Interrupt Enable Bit</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>RX FIFO threshold interrupt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>RX FIFO threshold interrupt Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXTHIEN</name>
+              <description>Transmit FIFO Threshold Interrupt Enable Bit</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>TX FIFO threshold interrupt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>TX FIFO threshold interrupt Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXTOIEN</name>
+              <description>Slave Receive Time-out Interrupt Enable Bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Receive time-out interrupt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Receive time-out interrupt Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXOVIEN</name>
+              <description>Receive FIFO Overrun Interrupt Enable Bit</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Receive FIFO overrun interrupt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Receive FIFO overrun interrupt Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXUFPOL</name>
+              <description>TX Underflow Data Polarity\nNote 1: The TX underflow event occurs if there is not any data in TX FIFO when the slave selection signal is active.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The SPI data out is kept 0 if there is TX underflow event in Slave mode</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The SPI data out is kept 1 if there is TX underflow event in Slave mode</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXUFIEN</name>
+              <description>TX Underflow Interrupt Enable Bit\nIn Slave mode, when TX underflow event occurs, this interrupt flag will be set to 1.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Slave TX underflow interrupt Disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Slave TX underflow interrupt Enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXFBCLR</name>
+              <description>Receive FIFO Buffer Clear\nNote: The RX shift register will not be cleared.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Clear receive FIFO pointer. The RXFULL bit will be cleared to 0 and the RXEMPTY bit will be set to 1. This bit will be cleared to 0 by hardware about 1 system clock after it is set to 1</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXFBCLR</name>
+              <description>Transmit FIFO Buffer Clear\nNote: The TX shift register will not be cleared.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Clear transmit FIFO pointer. The TXFULL bit will be cleared to 0 and the TXEMPTY bit will be set to 1. This bit will be cleared to 0 by hardware about 1 system clock after it is set to 1</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXTH</name>
+              <description>Receive FIFO Threshold\nIf the valid data count of the receive FIFO buffer is larger than the RXTH setting, the RXTHIF bit will be set to 1, else the RXTHIF bit will be cleared to 0. In SPI0, RXTH is a 3-bit wide configuration; in SPI1, 2-bit wide only (SPI_FIFOCTL[25:24]).</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXTH</name>
+              <description>Transmit FIFO Threshold\nIf the valid data count of the transmit FIFO buffer is less than or equal to the TXTH setting, the TXTHIF bit will be set to 1, else the TXTHIF bit will be cleared to 0. In SPI0, TXTH is a 3-bit wide configuration; in SPI1, 2-bit wide only (SPI_FIFOCTL[29:28]).</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>SPI_STATUS</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>SPI_STATUS</displayName>
+          <description>SPI Status Register</description>
+          <addressOffset>0x14</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00050110</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>BUSY</name>
+              <description>Busy Status (Read Only)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>SPI controller is in idle state</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>SPI controller is in busy state</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UNITIF</name>
+              <description>Unit Transfer Interrupt Flag\nNote: This bit will be cleared by writing 1 to it.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No transaction has been finished since this bit was cleared to 0</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>SPI controller has finished one unit transfer</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SSACTIF</name>
+              <description>Slave Select Active Interrupt Flag\nNote: Only available in Slave mode. This bit will be cleared by writing 1 to it.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Slave select active interrupt be cleared or not occurrs</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Slave select active interrupt event occurrs</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SSINAIF</name>
+              <description>Slave Select Inactive Interrupt Flag\nNote: Only available in Slave mode. This bit will be cleared by writing 1 to it.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Slave select inactive interrupt be cleared or not occurrs</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Slave select inactive interrupt event occurrs</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SSLINE</name>
+              <description>Slave Select Line Bus Status (Read Only)\nNote: This bit is only available in Slave mode. If SSACTPOL (SPI_SSCTL[2]) is set 0, and the SSLINE is 1, the SPI slave select is in inactive status.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The slave select line status is 0</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The slave select line status is 1</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SLVTOIF</name>
+              <description>Slave Time-out Interrupt Flag (Only Supported in SPI0)\nWhen the slave select is active and the value of SLVTOCNT is not 0, as the bus clock is detected, the slave time-out counter in SPI controller logic will be started. When the value of time-out counter is greater than or equal to the value of SLVTOCNT (SPI_SSCTL[31:16]) before one transaction is done, the slave time-out interrupt event will be asserted.\nNote: This bit will be cleared by writing 1 to it.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Slave time-out is not active</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Slave time-out is active</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLVBEIF</name>
+              <description>Slave Mode Bit Count Error Interrupt Flag\nIn Slave mode, when the slave select line goes to inactive state, if bit counter is mismatch with DWIDTH, this interrupt flag will be set to 1.\nNote: If the slave select active but there is no any bus clock input, the SLVBCEIF also be set when the slave select goes to inactive state. This bit will be cleared by writing 1 to it.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No Slave mode bit count error event</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Slave mode bit count error event occurs</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLVURIF</name>
+              <description>Slave Mode TX Under Run Interrupt Flag\nIn Slave mode, if TX underflow event occurs and the slave select line goes to inactive state, this interrupt flag will be set to 1.\nNote: This bit will be cleared by writing 1 to it.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No Slave TX under run event</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Slave TX under run event occurs</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXEMPTY</name>
+              <description>Receive FIFO Buffer Empty Indicator (Read Only)</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Receive FIFO buffer is not empty</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Receive FIFO buffer is empty</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RXFULL</name>
+              <description>Receive FIFO Buffer Full Indicator (Read Only)</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Receive FIFO buffer is not full</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Receive FIFO buffer is full</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RXTHIF</name>
+              <description>Receive FIFO Threshold Interrupt Flag (Read Only)</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The valid data count within the RX FIFO buffer is smaller than or equal to the setting value of RXTH</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The valid data count within the receive FIFO buffer is larger than the setting value of RXTH</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RXOVIF</name>
+              <description>Receive FIFO Overrun Interrupt Flag\nWhen the receive FIFO buffer is full, the follow-up data will be dropped and this bit will be set to 1.\nNote: This bit will be cleared by writing 1 to it.</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Receive FIFO does not over run</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Receive FIFO over run</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXTOIF</name>
+              <description>Receive Time-out Interrupt Flag\nNote: This bit will be cleared by writing 1 to it.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No receive FIFO time-out event</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Receive FIFO buffer is not empty and no read operation on receive FIFO buffer over 64 SPI clock period in Master mode or over 576 peripheral clock period in Slave mode. When the received FIFO buffer is read by software, the time-out status will be cleared automatically</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPIENSTS</name>
+              <description>SPI Enable Status (Read Only)\nNote: The SPI peripheral clock is asynchronous with the system clock. In order to make sure the SPI control logic is disabled, this bit indicates the real status of SPI controller.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The SPI controller is disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The SPI controller is enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TXEMPTY</name>
+              <description>Transmit FIFO Buffer Empty Indicator (Read Only)</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Transmit FIFO buffer is not empty</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Transmit FIFO buffer is empty</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TXFULL</name>
+              <description>Transmit FIFO Buffer Full Indicator (Read Only)</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>Transmit FIFO buffer is not full</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Transmit FIFO buffer is full</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TXTHIF</name>
+              <description>Transmit FIFO Threshold Interrupt Flag (Read Only)</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The valid data count within the transmit FIFO buffer is larger than the setting value of TXTH</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The valid data count within the transmit FIFO buffer is less than or equal to the setting value of TXTH</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TXUFIF</name>
+              <description>TX Underflow Interrupt Flag\nWhen the TX underflow event occurs, this bit will be set to 1, the state of data output pin depends on the setting of TXUFPOL.\nNote 1: This bit will be cleared by writing 1 to it.\nNote 2: If reset slave's transmission circuit when slave selection signal is active, this flag will be set to 1 after 3 system clock cycles + 2 peripheral clock cycles since the reset operation is done.</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>No data in Transmit FIFO and TX shift register when the slave selection signal is active</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXRXRST</name>
+              <description>TX or RX Reset Status (Read Only)\nNote: Both the reset operations of TXRST and RXRST need 3 system clock cycles + 2 peripheral clock cycles. User can check the status of this bit to monitor the reset function is doing or done.</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The reset function of TXRST or RXRST is done</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Doing the reset function of TXRST or RXRST</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RXCNT</name>
+              <description>Receive FIFO Data Count (Read Only)\nThis bit field indicates the valid data count of receive FIFO buffer.</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TXCNT</name>
+              <description>Transmit FIFO Data Count (Read Only)\nThis bit field indicates the valid data count of transmit FIFO buffer.</description>
+              <bitOffset>28</bitOffset>
+   

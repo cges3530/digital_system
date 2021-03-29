@@ -1,0 +1,213 @@
+a Bit 3 */
+    byte DB4         :1;                                       /* Data Bit 4 */
+    byte DB5         :1;                                       /* Data Bit 5 */
+    byte DB6         :1;                                       /* Data Bit 6 */
+    byte DB7         :1;                                       /* Data Bit 7 */
+  } Bits;
+  struct {
+    byte grpDB   :8;
+  } MergedBits;
+} CANRXDSR2STR;
+extern volatile CANRXDSR2STR _CANRXDSR2 @(REG_BASE + 0x00000166);
+#define CANRXDSR2 _CANRXDSR2.Byte
+#define CANRXDSR2_DB0 _CANRXDSR2.Bits.DB0
+#define CANRXDSR2_DB1 _CANRXDSR2.Bits.DB1
+#define CANRXDSR2_DB2 _CANRXDSR2.Bits.DB2
+#define CANRXDSR2_DB3 _CANRXDSR2.Bits.DB3
+#define CANRXDSR2_DB4 _CANRXDSR2.Bits.DB4
+#define CANRXDSR2_DB5 _CANRXDSR2.Bits.DB5
+#define CANRXDSR2_DB6 _CANRXDSR2.Bits.DB6
+#define CANRXDSR2_DB7 _CANRXDSR2.Bits.DB7
+#define CANRXDSR2_DB _CANRXDSR2.MergedBits.grpDB
+
+
+/*** CANRXDSR3 - MSCAN Receive Data Segment Register 3; 0x00000167 ***/
+typedef union {
+  byte Byte;
+  struct {
+    byte DB0         :1;                                       /* Data Bit 0 */
+    byte DB1         :1;                                       /* Data Bit 1 */
+    byte DB2         :1;                                       /* Data Bit 2 */
+    byte DB3         :1;                                       /* Data Bit 3 */
+    byte DB4         :1;                                       /* Data Bit 4 */
+    byte DB5         :1;                                       /* Data Bit 5 */
+    byte DB6         :1;                                       /* Data Bit 6 */
+    byte DB7         :1;                                       /* Data Bit 7 */
+  } Bits;
+  struct {
+    byte grpDB   :8;
+  } MergedBits;
+} CANRXDSR3STR;
+extern volatile CANRXDSR3STR _CANRXDSR3 @(REG_BASE + 0x00000167);
+#define CANRXDSR3 _CANRXDSR3.Byte
+#define CANRXDSR3_DB0 _CANRXDSR3.Bits.DB0
+#define CANRXDSR3_DB1 _CANRXDSR3.Bits.DB1
+#define CANRXDSR3_DB2 _CANRXDSR3.Bits.DB2
+#define CANRXDSR3_DB3 _CANRXDSR3.Bits.DB3
+#define CANRXDSR3_DB4 _CANRXDSR3.Bits.DB4
+#define CANRXDSR3_DB5 _CANRXDSR3.Bits.DB5
+#define CANRXDSR3_DB6 _CANRXDSR3.Bits.DB6
+#define CANRXDSR3_DB7 _CANRXDSR3.Bits.DB7
+#define CANRXDSR3_DB _CANRXDSR3.MergedBits.grpDB
+
+
+/*** CANRXDSR4 - MSCAN Receive Data Segment Register 4; 0x00000168 ***/
+typedef union {
+  byte Byte;
+  struct {
+    byte DB0         :1;                                       /* Data Bit 0 */
+    byte DB1         :1;                                       /* Data Bit 1 */
+    byte DB2         :1;                                       /* Data Bit 2 */
+    byte DB3         :1;                                       /* Data Bit 3 */
+    byte DB4         :1;                                       /* Data Bit 4 */
+    byte DB5         :1;                                       /* Data Bit 5 */
+    byte DB6         :1;                                       /* Data Bit 6 */
+    byte DB7         :1;                                       /* Data Bit 7 */
+  } Bits;
+  struct {
+    byte grpDB   :8;
+  } MergedBits;
+} CANRXDSR4STR;
+extern volatile CANRXDSR4STR _CANRXDSR4 @(REG_BASE + 0x00000168);
+#define CANRXDSR4 _CANRXDSR4.Byte
+#define CANRXDSR4_DB0 _CANRXDSR4.Bits.DB0
+#define CANRXDSR4_DB1 _CANRXDSR4.Bits.DB1
+#define CANRXDSR4_DB2 _CANRXDSR4.Bits.DB2
+#define CANRXDSR4_DB3 _CANRXDSR4.Bits.DB3
+#define CANRXDSR4_DB4 _CANRXDSR4.Bits.DB4
+#define CANRXDSR4_DB5 _CANRXDSR4.Bits.DB5
+#define CANRXDSR4_DB6 _CANRXDSR4.Bits.DB6
+#define CANRXDSR4_DB7 _CANRXDSR4.Bits.DB7
+#define CANRXDSR4_DB _CANRXDSR4.MergedBits.grpDB
+
+
+/*** CANRXDSR5 - MSCAN Receive Data Segment Register 5; 0x00000169 ***/
+typedef union {
+  byte Byte;
+  struct {
+    byte DB0         :1;                                       /* Data Bit 0 */
+    byte DB1         :1;                                       /* Data Bit 1 */
+    byte DB2         :1;                                       /* Data Bit 2 */
+    byte DB3         :1;                                       /* Data Bit 3 */
+    byte DB4         :1;                                       /* Data Bit 4 */
+    byte DB5         :1;                                       /* Data Bit 5 */
+    byte DB6         :1;                                       /* Data Bit 6 */
+    byte DB7         :1;                                       /* Data Bit 7 */
+  } Bits;
+  struct {
+    byte grpDB   :8;
+  } MergedBits;
+} CANRXDSR5STR;
+extern volatile CANRXDSR5STR _CANRXDSR5 @(REG_BASE + 0x00000169);
+#define CANRXDSR5 _CANRXDSR5.Byte
+#define CANRXDSR5_DB0 _CANRXDSR5.Bits.DB0
+#define CANRXDSR5_DB1 _CANRXDSR5.Bits.DB1
+#define CANRXDSR5_DB2 _CANRXDSR5.Bits.DB2
+#define CANRXDSR5_DB3 _CANRXDSR5.Bits.DB3
+#define CANRXDSR5_DB4 _CANRXDSR5.Bits.DB4
+#define CANRXDSR5_DB5 _CANRXDSR5.Bits.DB5
+#define CANRXDSR5_DB6 _CANRXDSR5.Bits.DB6
+#define CANRXDSR5_DB7 _CANRXDSR5.Bits.DB7
+#define CANRXDSR5_DB _CANRXDSR5.MergedBits.grpDB
+
+
+/*** CANRXDSR6 - MSCAN Receive Data Segment Register 6; 0x0000016A ***/
+typedef union {
+  byte Byte;
+  struct {
+    byte DB0         :1;                                       /* Data Bit 0 */
+    byte DB1         :1;                                       /* Data Bit 1 */
+    byte DB2         :1;                                       /* Data Bit 2 */
+    byte DB3         :1;                                       /* Data Bit 3 */
+    byte DB4         :1;                                       /* Data Bit 4 */
+    byte DB5         :1;                                       /* Data Bit 5 */
+    byte DB6         :1;                                       /* Data Bit 6 */
+    byte DB7         :1;                                       /* Data Bit 7 */
+  } Bits;
+  struct {
+    byte grpDB   :8;
+  } MergedBits;
+} CANRXDSR6STR;
+extern volatile CANRXDSR6STR _CANRXDSR6 @(REG_BASE + 0x0000016A);
+#define CANRXDSR6 _CANRXDSR6.Byte
+#define CANRXDSR6_DB0 _CANRXDSR6.Bits.DB0
+#define CANRXDSR6_DB1 _CANRXDSR6.Bits.DB1
+#define CANRXDSR6_DB2 _CANRXDSR6.Bits.DB2
+#define CANRXDSR6_DB3 _CANRXDSR6.Bits.DB3
+#define CANRXDSR6_DB4 _CANRXDSR6.Bits.DB4
+#define CANRXDSR6_DB5 _CANRXDSR6.Bits.DB5
+#define CANRXDSR6_DB6 _CANRXDSR6.Bits.DB6
+#define CANRXDSR6_DB7 _CANRXDSR6.Bits.DB7
+#define CANRXDSR6_DB _CANRXDSR6.MergedBits.grpDB
+
+
+/*** CANRXDSR7 - MSCAN Receive Data Segment Register 7; 0x0000016B ***/
+typedef union {
+  byte Byte;
+  struct {
+    byte DB0         :1;                                       /* Data Bit 0 */
+    byte DB1         :1;                                       /* Data Bit 1 */
+    byte DB2         :1;                                       /* Data Bit 2 */
+    byte DB3         :1;                                       /* Data Bit 3 */
+    byte DB4         :1;                                       /* Data Bit 4 */
+    byte DB5         :1;                                       /* Data Bit 5 */
+    byte DB6         :1;                                       /* Data Bit 6 */
+    byte DB7         :1;                                       /* Data Bit 7 */
+  } Bits;
+  struct {
+    byte grpDB   :8;
+  } MergedBits;
+} CANRXDSR7STR;
+extern volatile CANRXDSR7STR _CANRXDSR7 @(REG_BASE + 0x0000016B);
+#define CANRXDSR7 _CANRXDSR7.Byte
+#define CANRXDSR7_DB0 _CANRXDSR7.Bits.DB0
+#define CANRXDSR7_DB1 _CANRXDSR7.Bits.DB1
+#define CANRXDSR7_DB2 _CANRXDSR7.Bits.DB2
+#define CANRXDSR7_DB3 _CANRXDSR7.Bits.DB3
+#define CANRXDSR7_DB4 _CANRXDSR7.Bits.DB4
+#define CANRXDSR7_DB5 _CANRXDSR7.Bits.DB5
+#define CANRXDSR7_DB6 _CANRXDSR7.Bits.DB6
+#define CANRXDSR7_DB7 _CANRXDSR7.Bits.DB7
+#define CANRXDSR7_DB _CANRXDSR7.MergedBits.grpDB
+
+
+/*** CANRXDLR - MSCAN Receive Data Length Register; 0x0000016C ***/
+typedef union {
+  byte Byte;
+  struct {
+    byte DLC0        :1;                                       /* Data Length Code Bit 0 */
+    byte DLC1        :1;                                       /* Data Length Code Bit 1 */
+    byte DLC2        :1;                                       /* Data Length Code Bit 2 */
+    byte DLC3        :1;                                       /* Data Length Code Bit 3 */
+    byte             :1; 
+    byte             :1; 
+    byte             :1; 
+    byte             :1; 
+  } Bits;
+  struct {
+    byte grpDLC  :4;
+    byte         :1;
+    byte         :1;
+    byte         :1;
+    byte         :1;
+  } MergedBits;
+} CANRXDLRSTR;
+extern volatile CANRXDLRSTR _CANRXDLR @(REG_BASE + 0x0000016C);
+#define CANRXDLR _CANRXDLR.Byte
+#define CANRXDLR_DLC0 _CANRXDLR.Bits.DLC0
+#define CANRXDLR_DLC1 _CANRXDLR.Bits.DLC1
+#define CANRXDLR_DLC2 _CANRXDLR.Bits.DLC2
+#define CANRXDLR_DLC3 _CANRXDLR.Bits.DLC3
+#define CANRXDLR_DLC _CANRXDLR.MergedBits.grpDLC
+
+
+/*** CANTXIDR0 - MSCAN Transmit Identifier Register 0; 0x00000170 ***/
+typedef union {
+  byte Byte;
+  struct {
+    byte ID21        :1;                                       /* Extended format identifier Bit 21 */
+    byte ID22        :1;                                       /* Extended format identifier Bit 22 */
+    byte ID23        :1;                                       /* Extended format identifier Bit 23 */
+    byte ID24        :1;                                       /* Extended format identifier Bit 24 */
+    byte ID25        :1;                                       /* Extended format identifier Bit 25 */
+  
