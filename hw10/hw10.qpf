@@ -1,0 +1,9 @@
+                                                 /*!< PORT0 OMR: PS6 Position                 */
+#define PORT0_OMR_PS6_Msk                     (0x01UL << PORT0_OMR_PS6_Pos)                           /*!< PORT0 OMR: PS6 Mask                     */
+#define PORT0_OMR_PS7_Pos                     7                                                       /*!< PORT0 OMR: PS7 Position                 */
+#define PORT0_OMR_PS7_Msk                     (0x01UL << PORT0_OMR_PS7_Pos)                           /*!< PORT0 OMR: PS7 Mask                     */
+#define PORT0_OMR_PS8_Pos                     8                                                       /*!< PORT0 OMR: PS8 Position                 */
+#define PORT0_OMR_PS8_Msk                     (0x01UL << PORT0_OMR_PS8_Pos)                           /*!< PORT0 OMR: PS8 Mask                     */
+#define PORT0_OMR_PS9_Pos                     9                                                       /*!< PORT0 OMR: PS9 Position                 */
+#define PORT0_OMR_PS9_Msk                     (0x01UL << PORT0_OMR_PS9_Pos)                           /*!< PORT0 OMR: PS9 Mask                     */
+#define PORT0_OMR_PS10_Pos                    10                                                      /*!< PORT0 OMR:

@@ -1,0 +1,191 @@
+ge>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x80</offset>
+        <size>0x8</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x100</offset>
+        <size>0x8</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x180</offset>
+        <size>0x8</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x200</offset>
+        <size>0x8</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x300</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0x33C</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <addressBlock>
+        <offset>0xE00</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+       <register>
+          <name>NVIC_ISER1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_ISER1</displayName>
+          <description>IRQ0 ~ IRQ63 Set-enable Control Register</description>
+          <addressOffset>0x0</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>SETENA</name>
+              <description>Interrupt Set Enable Bit\nThe NVIC_ISER0-NVIC_ISER3 registers enable interrupts, and show which interrupts are enabled\nWrite Operation:</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nInterrupt Disabled</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Interrupt Enabled</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_ISER2</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_ISER2</displayName>
+          <description>IRQ0 ~ IRQ63 Set-enable Control Register</description>
+          <addressOffset>0x4</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>SETENA</name>
+              <description>Interrupt Set Enable Bit\nThe NVIC_ISER0-NVIC_ISER3 registers enable interrupts, and show which interrupts are enabled\nWrite Operation:</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nInterrupt Disabled</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Interrupt Enabled</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_ICER1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_ICER1</displayName>
+          <description>IRQ0 ~ IRQ63 Clear-enable Control Register</description>
+          <addressOffset>0x80</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CALENA</name>
+              <description>Interrupt Clear Enable Bit\nThe NVIC_ICER0-NVIC_ICER3 registers disable interrupts, and show which interrupts are enabled.\nWrite Operation:</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nInterrupt Disabled</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Interrupt Disabled.\nInterrupt Enabled</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_ICER2</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_ICER2</displayName>
+          <description>IRQ0 ~ IRQ63 Clear-enable Control Register</description>
+          <addressOffset>0x84</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CALENA</name>
+              <description>Interrupt Clear Enable Bit\nThe NVIC_ICER0-NVIC_ICER3 registers disable interrupts, and show which interrupts are enabled.\nWrite Operation:</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nInterrupt Disabled</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Interrupt Disabled.\nInterrupt Enabled</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_ISPR1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_ISPR1</displayName>
+          <description>IRQ0 ~ IRQ63 Set-pending Control Register</description>
+          <addressOffset>0x100</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>SETPEND</name>
+              <description>Interrupt Set-pending \nThe NVIC_ISPR0-NVIC_ISPR3 registers force interrupts into the pending state, and show which interrupts are pending\nWrite Operation:</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nInterrupt is not pending</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Changes interrupt state to pending.\nInterrupt is pending</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+          

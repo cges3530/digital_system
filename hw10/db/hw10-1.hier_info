@@ -1,0 +1,25 @@
+|_DFF
+D => D~0.IN1
+clk => clk~0.IN1
+Q <= D_latch:S.port2
+_Q <= D_latch:S.port3
+
+
+|_DFF|D_latch:M
+D => S~0.IN0
+D => R~0.IN0
+clk => S~0.IN1
+clk => R~0.IN1
+Q <= Q~1.DB_MAX_OUTPUT_PORT_TYPE
+_Q <= _Q~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_DFF|D_latch:S
+D => S~0.IN0
+D => R~0.IN0
+clk => S~0.IN1
+clk => R~0.IN1
+Q <= Q~1.DB_MAX_OUTPUT_PORT_TYPE
+_Q <= _Q~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

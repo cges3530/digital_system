@@ -1,0 +1,133 @@
+register.</description>										
+				<bitRange>[5:5]</bitRange>										
+			</field>											
+			<field>											
+				<name>WFR</name>										
+				<description>Wake-up Frame Received This register field can be read by the application (Read), can be set to 1 by the Ethernet core on a certain internal event (Self Set), and is automatically cleared to 0 on a register read. A register write of 0 has no effect on this field.   When set, this bit indicates the power management event was generated due to reception of a wake-up frame. This bit is cleared by a Read into this register.</description>										
+				<bitRange>[6:6]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[8:7]</bitRange>										
+			</field>											
+			<field>											
+				<name>GU</name>										
+				<description>Global Unicast When set, enables any unicast packet filtered by the MAC (DAF) address recognition to be a wake-up frame.</description>										
+				<bitRange>[9:9]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[30:10]</bitRange>										
+			</field>											
+			<field>											
+				<name>WFFRPR</name>										
+				<description>Wake-up Frame Filter Register Pointer Reset This register field can be read by the application (Read), can be set to 1 by the application with a register write of 1 (Write Set), and is cleared to 0 by the core (Self Clear). The application cannot clear this type of field, and a register write of 0 to this bit has no effect on this field.  When set, resets the Remote Wake-up Frame Filter register pointer to 000. It is automatically cleared after 1 clock cycle.</description>										
+				<bitRange>[31:31]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_INTR</name>												
+		<description>Interrupt status register</description>												
+		<addressOffset>0x0038</addressOffset>												
+		<access>read-only</access>												
+		<resetValue>0x00000000</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved.</description>										
+				<bitRange>[2:0]</bitRange>										
+			</field>											
+			<field>											
+				<name>PMT</name>										
+				<description>PMT Interrupt Status  This bit is set whenever a Magic packet or Wake-on-LAN frame is received in Power- Down mode (See bits 5 and 6 in Table 560). This bit is cleared when both bits[6:5] are cleared because of a read operation to the PMT Control and Status register.</description>										
+				<bitRange>[3:3]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved.</description>										
+				<bitRange>[8:4]</bitRange>										
+			</field>											
+			<field>											
+				<name>TS</name>										
+				<description>Timestamp interrupt status When Advanced Timestamp feature is enabled, this bit is set when any of the following conditions is true:  - The system time value equals or exceeds the value specified in the Target Time High and Low registers  - There is an overflow in the seconds register  This bit is cleared on reading the byte 0 of the Timestamp Status register (Table 576).  Otherwise, when default Time stamping is enabled, this bit when set indicates that the system time value equals or exceeds the value specified in the Target Time registers. In this mode, this bit is cleared after the completion of the read of this Interrupt Status Register[9]. In all other modes, this bit is reserved.</description>										
+				<bitRange>[9:9]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved.</description>										
+				<bitRange>[10:10]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[31:11]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_INTR_MASK</name>												
+		<description>Interrupt mask register</description>												
+		<addressOffset>0x003C</addressOffset>												
+		<access>read-write</access>												
+		<resetValue>0x00000000</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[2:0]</bitRange>										
+			</field>											
+			<field>											
+				<name>PMTIM</name>										
+				<description>PMT Interrupt Mask  This bit when set, will disable the assertion of the interrupt signal due to the setting of PMT Interrupt Status bit in Table 561.</description>										
+				<bitRange>[3:3]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved.</description>										
+				<bitRange>[8:4]</bitRange>										
+			</field>											
+			<field>											
+				<name>TSIM</name>										
+				<description>Timestamp interrupt mask When set, this bit disables the assertion of the interrupt signal because of the setting of Timestamp Interrupt Status bit in Table 561</description>										
+				<bitRange>[9:9]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved.</description>										
+				<bitRange>[10:10]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_ADDR0_HIGH</name>												
+		<description>MAC address 0 high register</description>												
+		<addressOffset>0x0040</addressOffset>												
+		<access>read-write</access>												
+		<resetValue>0x8000FFFF</resetValue>												
+		<resetMask>0xFFFFFFFF</resetMask>												
+		<fields>												
+			<field>											
+				<name>A47_32</name>										
+				<description>MAC Address0 [47:32]  This field contains the upper 16 bits (47:32) of the 6-byte first MAC address. This is used by the MAC for filtering for received frames and for inserting the MAC address in the Transmit Flow Control (PAUSE) Frames.</description>										
+				<bitRange>[15:0]</bitRange>										
+			</field>											
+			<field>											
+				<name>RESERVED</name>										
+				<description>Reserved</description>										
+				<bitRange>[30:16]</bitRange>										
+			</field>											
+			<field>											
+				<name>MO</name>										
+				<description>Always 1</description>										
+				<bitRange>[31:31]</bitRange>										
+			</field>											
+		</fields>												
+	</register>													
+	<register>													
+		<name>MAC_ADDR0_LOW</name>												
+		<description>MAC

@@ -1,0 +1,150 @@
+fine RTCOCAL6               (0x0040)       /* RTC Offset Calibration Bit 6 */
+#define RTCOCAL5               (0x0020)       /* RTC Offset Calibration Bit 5 */
+#define RTCOCAL4               (0x0010)       /* RTC Offset Calibration Bit 4 */
+#define RTCOCAL3               (0x0008)       /* RTC Offset Calibration Bit 3 */
+#define RTCOCAL2               (0x0004)       /* RTC Offset Calibration Bit 2 */
+#define RTCOCAL1               (0x0002)       /* RTC Offset Calibration Bit 1 */
+#define RTCOCAL0               (0x0001)       /* RTC Offset Calibration Bit 0 */
+
+/* RTCOCAL Control Bits */
+#define RTCOCAL7_L             (0x0080)       /* RTC Offset Calibration Bit 7 */
+#define RTCOCAL6_L             (0x0040)       /* RTC Offset Calibration Bit 6 */
+#define RTCOCAL5_L             (0x0020)       /* RTC Offset Calibration Bit 5 */
+#define RTCOCAL4_L             (0x0010)       /* RTC Offset Calibration Bit 4 */
+#define RTCOCAL3_L             (0x0008)       /* RTC Offset Calibration Bit 3 */
+#define RTCOCAL2_L             (0x0004)       /* RTC Offset Calibration Bit 2 */
+#define RTCOCAL1_L             (0x0002)       /* RTC Offset Calibration Bit 1 */
+#define RTCOCAL0_L             (0x0001)       /* RTC Offset Calibration Bit 0 */
+
+/* RTCOCAL Control Bits */
+#define RTCOCALS_H             (0x0080)       /* RTC Offset Calibration Sign */
+
+/* RTCTCMP Control Bits */
+#define RTCTCMPS               (0x8000)       /* RTC Temperature Compensation Sign */
+#define RTCTCRDY               (0x4000)       /* RTC Temperature compensation ready */
+#define RTCTCOK                (0x2000)       /* RTC Temperature compensation write OK */
+#define RTCTCMP7               (0x0080)       /* RTC Temperature Compensation Bit 7 */
+#define RTCTCMP6               (0x0040)       /* RTC Temperature Compensation Bit 6 */
+#define RTCTCMP5               (0x0020)       /* RTC Temperature Compensation Bit 5 */
+#define RTCTCMP4               (0x0010)       /* RTC Temperature Compensation Bit 4 */
+#define RTCTCMP3               (0x0008)       /* RTC Temperature Compensation Bit 3 */
+#define RTCTCMP2               (0x0004)       /* RTC Temperature Compensation Bit 2 */
+#define RTCTCMP1               (0x0002)       /* RTC Temperature Compensation Bit 1 */
+#define RTCTCMP0               (0x0001)       /* RTC Temperature Compensation Bit 0 */
+
+/* RTCTCMP Control Bits */
+#define RTCTCMP7_L             (0x0080)       /* RTC Temperature Compensation Bit 7 */
+#define RTCTCMP6_L             (0x0040)       /* RTC Temperature Compensation Bit 6 */
+#define RTCTCMP5_L             (0x0020)       /* RTC Temperature Compensation Bit 5 */
+#define RTCTCMP4_L             (0x0010)       /* RTC Temperature Compensation Bit 4 */
+#define RTCTCMP3_L             (0x0008)       /* RTC Temperature Compensation Bit 3 */
+#define RTCTCMP2_L             (0x0004)       /* RTC Temperature Compensation Bit 2 */
+#define RTCTCMP1_L             (0x0002)       /* RTC Temperature Compensation Bit 1 */
+#define RTCTCMP0_L             (0x0001)       /* RTC Temperature Compensation Bit 0 */
+
+/* RTCTCMP Control Bits */
+#define RTCTCMPS_H             (0x0080)       /* RTC Temperature Compensation Sign */
+#define RTCTCRDY_H             (0x0040)       /* RTC Temperature compensation ready */
+#define RTCTCOK_H              (0x0020)       /* RTC Temperature compensation write OK */
+
+#define RTCAE                  (0x80)         /* Real Time Clock Alarm enable */
+
+/* RTCPS0CTL Control Bits */
+//#define Reserved          (0x8000)
+//#define Reserved          (0x4000)
+#define RT0PSDIV2              (0x2000)       /* RTC Prescale Timer 0 Clock Divide Bit: 2 */
+#define RT0PSDIV1              (0x1000)       /* RTC Prescale Timer 0 Clock Divide Bit: 1 */
+#define RT0PSDIV0              (0x0800)       /* RTC Prescale Timer 0 Clock Divide Bit: 0 */
+//#define Reserved          (0x0400)
+//#define Reserved          (0x0200)
+#define RT0PSHOLD              (0x0100)       /* RTC Prescale Timer 0 Hold */
+//#define Reserved          (0x0080)
+//#define Reserved          (0x0040)
+//#define Reserved          (0x0020)
+#define RT0IP2                 (0x0010)       /* RTC Prescale Timer 0 Interrupt Interval Bit: 2 */
+#define RT0IP1                 (0x0008)       /* RTC Prescale Timer 0 Interrupt Interval Bit: 1 */
+#define RT0IP0                 (0x0004)       /* RTC Prescale Timer 0 Interrupt Interval Bit: 0 */
+#define RT0PSIE                (0x0002)       /* RTC Prescale Timer 0 Interrupt Enable Flag */
+#define RT0PSIFG               (0x0001)       /* RTC Prescale Timer 0 Interrupt Flag */
+
+/* RTCPS0CTL Control Bits */
+//#define Reserved          (0x8000)
+//#define Reserved          (0x4000)
+//#define Reserved          (0x0400)
+//#define Reserved          (0x0200)
+//#define Reserved          (0x0080)
+//#define Reserved          (0x0040)
+//#define Reserved          (0x0020)
+#define RT0IP2_L               (0x0010)       /* RTC Prescale Timer 0 Interrupt Interval Bit: 2 */
+#define RT0IP1_L               (0x0008)       /* RTC Prescale Timer 0 Interrupt Interval Bit: 1 */
+#define RT0IP0_L               (0x0004)       /* RTC Prescale Timer 0 Interrupt Interval Bit: 0 */
+#define RT0PSIE_L              (0x0002)       /* RTC Prescale Timer 0 Interrupt Enable Flag */
+#define RT0PSIFG_L             (0x0001)       /* RTC Prescale Timer 0 Interrupt Flag */
+
+/* RTCPS0CTL Control Bits */
+//#define Reserved          (0x8000)
+//#define Reserved          (0x4000)
+#define RT0PSDIV2_H            (0x0020)       /* RTC Prescale Timer 0 Clock Divide Bit: 2 */
+#define RT0PSDIV1_H            (0x0010)       /* RTC Prescale Timer 0 Clock Divide Bit: 1 */
+#define RT0PSDIV0_H            (0x0008)       /* RTC Prescale Timer 0 Clock Divide Bit: 0 */
+//#define Reserved          (0x0400)
+//#define Reserved          (0x0200)
+#define RT0PSHOLD_H            (0x0001)       /* RTC Prescale Timer 0 Hold */
+//#define Reserved          (0x0080)
+//#define Reserved          (0x0040)
+//#define Reserved          (0x0020)
+
+#define RT0IP_0                (0x0000)       /* RTC Prescale Timer 0 Interrupt Interval /2 */
+#define RT0IP_1                (0x0004)       /* RTC Prescale Timer 0 Interrupt Interval /4 */
+#define RT0IP_2                (0x0008)       /* RTC Prescale Timer 0 Interrupt Interval /8 */
+#define RT0IP_3                (0x000C)       /* RTC Prescale Timer 0 Interrupt Interval /16 */
+#define RT0IP_4                (0x0010)       /* RTC Prescale Timer 0 Interrupt Interval /32 */
+#define RT0IP_5                (0x0014)       /* RTC Prescale Timer 0 Interrupt Interval /64 */
+#define RT0IP_6                (0x0018)       /* RTC Prescale Timer 0 Interrupt Interval /128 */
+#define RT0IP_7                (0x001C)       /* RTC Prescale Timer 0 Interrupt Interval /256 */
+
+/* RTCPS1CTL Control Bits */
+#define RT1SSEL1               (0x8000)       /* RTC Prescale Timer 1 Source Select Bit 1 */
+#define RT1SSEL0               (0x4000)       /* RTC Prescale Timer 1 Source Select Bit 0 */
+#define RT1PSDIV2              (0x2000)       /* RTC Prescale Timer 1 Clock Divide Bit: 2 */
+#define RT1PSDIV1              (0x1000)       /* RTC Prescale Timer 1 Clock Divide Bit: 1 */
+#define RT1PSDIV0              (0x0800)       /* RTC Prescale Timer 1 Clock Divide Bit: 0 */
+//#define Reserved          (0x0400)
+//#define Reserved          (0x0200)
+#define RT1PSHOLD              (0x0100)       /* RTC Prescale Timer 1 Hold */
+//#define Reserved          (0x0080)
+//#define Reserved          (0x0040)
+//#define Reserved          (0x0020)
+#define RT1IP2                 (0x0010)       /* RTC Prescale Timer 1 Interrupt Interval Bit: 2 */
+#define RT1IP1                 (0x0008)       /* RTC Prescale Timer 1 Interrupt Interval Bit: 1 */
+#define RT1IP0                 (0x0004)       /* RTC Prescale Timer 1 Interrupt Interval Bit: 0 */
+#define RT1PSIE                (0x0002)       /* RTC Prescale Timer 1 Interrupt Enable Flag */
+#define RT1PSIFG               (0x0001)       /* RTC Prescale Timer 1 Interrupt Flag */
+
+/* RTCPS1CTL Control Bits */
+//#define Reserved          (0x0400)
+//#define Reserved          (0x0200)
+//#define Reserved          (0x0080)
+//#define Reserved          (0x0040)
+//#define Reserved          (0x0020)
+#define RT1IP2_L               (0x0010)       /* RTC Prescale Timer 1 Interrupt Interval Bit: 2 */
+#define RT1IP1_L               (0x0008)       /* RTC Prescale Timer 1 Interrupt Interval Bit: 1 */
+#define RT1IP0_L               (0x0004)       /* RTC Prescale Timer 1 Interrupt Interval Bit: 0 */
+#define RT1PSIE_L              (0x0002)       /* RTC Prescale Timer 1 Interrupt Enable Flag */
+#define RT1PSIFG_L             (0x0001)       /* RTC Prescale Timer 1 Interrupt Flag */
+
+/* RTCPS1CTL Control Bits */
+#define RT1SSEL1_H             (0x0080)       /* RTC Prescale Timer 1 Source Select Bit 1 */
+#define RT1SSEL0_H             (0x0040)       /* RTC Prescale Timer 1 Source Select Bit 0 */
+#define RT1PSDIV2_H            (0x0020)       /* RTC Prescale Timer 1 Clock Divide Bit: 2 */
+#define RT1PSDIV1_H            (0x0010)       /* RTC Prescale Timer 1 Clock Divide Bit: 1 */
+#define RT1PSDIV0_H            (0x0008)       /* RTC Prescale Timer 1 Clock Divide Bit: 0 */
+//#define Reserved          (0x0400)
+//#define Reserved          (0x0200)
+#define RT1PSHOLD_H            (0x0001)       /* RTC Prescale Timer 1 Hold */
+//#define Reserved          (0x0080)
+//#define Reserved          (0x0040)
+//#define Reserved          (0x0020)
+
+#define RT1IP_0                (0x0000)       /* RTC Prescale Timer 1 Interrupt Interval /2 */
+#define R

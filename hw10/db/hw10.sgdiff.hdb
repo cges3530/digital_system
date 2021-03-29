@@ -1,0 +1,181 @@
+ble. 0 = Cursor is not displayed. 1 = Cursor is displayed.</description>
+							<bitRange>[0:0]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[3:1]</bitRange>
+						</field>
+						<field>
+							<name>CRSRNUM1_0</name>
+							<description>Cursor image number. If the selected cursor size is 6x64, this field has no effect. If the selected cursor size is 32x32: 00 = Cursor0. 01 = Cursor1. 10 = Cursor2. 11 = Cursor3.</description>
+							<bitRange>[5:4]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:6]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CRSR_CFG</name>
+					<description>Cursor Configuration register</description>
+					<addressOffset>0xC04</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>CrsrSize</name>
+							<description>Cursor size selection. 0 = 32x32 pixel cursor. Allows for 4 defined cursors. 1 = 64x64 pixel cursor.</description>
+							<bitRange>[0:0]</bitRange>
+						</field>
+						<field>
+							<name>FRAMESYNC</name>
+							<description>Cursor frame synchronization type. 0 = Cursor coordinates are asynchronous. 1 = Cursor coordinates are synchronized to the frame synchronization pulse.</description>
+							<bitRange>[1:1]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:2]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CRSR_PAL0</name>
+					<description>Cursor Palette register 0</description>
+					<addressOffset>0xC08</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>RED</name>
+							<description>Red color component</description>
+							<bitRange>[7:0]</bitRange>
+						</field>
+						<field>
+							<name>GREEN</name>
+							<description>Green color component</description>
+							<bitRange>[15:8]</bitRange>
+						</field>
+						<field>
+							<name>BLUE</name>
+							<description>Blue color component.</description>
+							<bitRange>[23:16]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:24]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CRSR_PAL1</name>
+					<description>Cursor Palette register 1</description>
+					<addressOffset>0xC0C</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>RED</name>
+							<description>Red color component</description>
+							<bitRange>[7:0]</bitRange>
+						</field>
+						<field>
+							<name>GREEN</name>
+							<description>Green color component</description>
+							<bitRange>[15:8]</bitRange>
+						</field>
+						<field>
+							<name>BLUE</name>
+							<description>Blue color component.</description>
+							<bitRange>[23:16]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:24]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CRSR_XY</name>
+					<description>Cursor XY Position register</description>
+					<addressOffset>0xC10</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>CRSRX</name>
+							<description>X ordinate of the cursor origin measured in pixels. When 0, the left edge of the cursor is at the left of the display.</description>
+							<bitRange>[9:0]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[15:10]</bitRange>
+						</field>
+						<field>
+							<name>CRSRY</name>
+							<description>Y ordinate of the cursor origin measured in pixels. When 0, the top edge of the cursor is at the top of the display.</description>
+							<bitRange>[25:16]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:26]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CRSR_CLIP</name>
+					<description>Cursor Clip Position register</description>
+					<addressOffset>0xC14</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>CRSRCLIPX</name>
+							<description>Cursor clip position for X direction. Distance from the left edge of the cursor image to the first displayed pixel in the cursor. When 0, the first pixel of the cursor line is displayed.</description>
+							<bitRange>[5:0]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[7:6]</bitRange>
+						</field>
+						<field>
+							<name>CRSRCLIPY</name>
+							<description>Cursor clip position for Y direction. Distance from the top of the cursor image to the first displayed pixel in the cursor. When 0, the first displayed pixel is from the top line of the cursor image.</description>
+							<bitRange>[13:8]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description>
+							<bitRange>[31:14]</bitRange>
+						</field>
+					</fields>
+				</register>
+				<register>
+					<name>CRSR_INTMSK</name>
+					<description>Cursor Interrupt Mask register</description>
+					<addressOffset>0xC20</addressOffset>
+					<access>read-write</access>
+					<resetValue>0x0</resetValue>
+					<resetMask>0xFFFFFFFF</resetMask>
+					<fields>
+						<field>
+							<name>CRSRIM</name>
+							<description>Cursor interrupt mask. When clear, the cursor never interrupts the processor. When set, the cursor interrupts the processor immediately after reading of the last word of cursor image.</description>
+							<bitRange>[0:0]</bitRange>
+						</field>
+						<field>
+							<name>RESERVED</name>
+							<description>Reserved, user software should not write ones to reserved bits. The value read from a reserved bit is not defined.</description

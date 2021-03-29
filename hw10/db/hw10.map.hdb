@@ -1,0 +1,83 @@
+</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIN15</name>
+              <description>Port [A/B/C/D/ F] Pin Values\nEach bit of the register reflects the actual status of the respective GPIO pin If bit is 1,  it indicates the corresponding pin status is high, else the pin status is low\nNote: \nGPIOA: valid n are 15~10. Others are reserved.\nGPIOB: valid n are 15~12, 10~0. Others are reserved.\nGPIOC: valid n are 13~8, 5~0. Others are reserved.\nGPIOD: valid n are 11~8, 5~0. Others are reserved.\nGPIOF: valid n are 3~0. Others are reserved.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>GPIOA_DBEN</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>GPIOA_DBEN</displayName>
+          <description>GPIO Port A De-bounce Enable</description>
+          <addressOffset>0x14</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>DBEN10</name>
+              <description>Port [A/B/C/D/ F] Input Signal De-bounce Enable\nDBEN[n]used to enable the de-bounce function for each corresponding bit. If the input signal pulse width can't be sampled by continuous two de-bounce sample cycle The input signal transition is seen as the signal bounce and will not trigger the interrupt. The de-bounce clock  source is controlled by DBNCECON[4], one de-bounce sample cycle is controlled by DBNCECON[3:0]\nThe DBEN[n] is used for "edge-trigger" interrupt only, and ignored for "level trigger" interrupt\nThe de-bounce function is valid for edge triggered interrupt. If the interrupt mode is level triggered, the de-bounce enable bit is ignored.\nNote: \nGPIOA: valid n are 15~10. Others are reserved.\nGPIOB: valid n are 15~12, 10~0. Others are reserved.\nGPIOC: valid n are 13~8, 5~0. Others are reserved.\nGPIOD: valid n are 11~8, 5~0. Others are reserved.\nGPIOF: valid n are 3~0. Others are reserved.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The bit[n] de-bounce function is disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The bit[n] de-bounce function is enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DBEN11</name>
+              <description>Port [A/B/C/D/ F] Input Signal De-bounce Enable\nDBEN[n]used to enable the de-bounce function for each corresponding bit. If the input signal pulse width can't be sampled by continuous two de-bounce sample cycle The input signal transition is seen as the signal bounce and will not trigger the interrupt. The de-bounce clock  source is controlled by DBNCECON[4], one de-bounce sample cycle is controlled by DBNCECON[3:0]\nThe DBEN[n] is used for "edge-trigger" interrupt only, and ignored for "level trigger" interrupt\nThe de-bounce function is valid for edge triggered interrupt. If the interrupt mode is level triggered, the de-bounce enable bit is ignored.\nNote: \nGPIOA: valid n are 15~10. Others are reserved.\nGPIOB: valid n are 15~12, 10~0. Others are reserved.\nGPIOC: valid n are 13~8, 5~0. Others are reserved.\nGPIOD: valid n are 11~8, 5~0. Others are reserved.\nGPIOF: valid n are 3~0. Others are reserved.</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The bit[n] de-bounce function is disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The bit[n] de-bounce function is enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DBEN12</name>
+              <description>Port [A/B/C/D/ F] Input Signal De-bounce Enable\nDBEN[n]used to enable the de-bounce function for each corresponding bit. If the input signal pulse width can't be sampled by continuous two de-bounce sample cycle The input signal transition is seen as the signal bounce and will not trigger the interrupt. The de-bounce clock  source is controlled by DBNCECON[4], one de-bounce sample cycle is controlled by DBNCECON[3:0]\nThe DBEN[n] is used for "edge-trigger" interrupt only, and ignored for "level trigger" interrupt\nThe de-bounce function is valid for edge triggered interrupt. If the interrupt mode is level triggered, the de-bounce enable bit is ignored.\nNote: \nGPIOA: valid n are 15~10. Others are reserved.\nGPIOB: valid n are 15~12, 10~0. Others are reserved.\nGPIOC: valid n are 13~8, 5~0. Others are reserved.\nGPIOD: valid n are 11~8, 5~0. Others are reserved.\nGPIOF: valid n are 3~0. Others are reserved.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>The bit[n] de-bounce function is disabled</description>
+                    <value>#0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>The bit[n] de-bounce function is enabled</description>
+                    <value>#1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DBEN13</name>
+              <description>Port [A/B/C/D/ F] Input Signal De-bounce Enable\nDBEN[n]used to enable the de-bounce function for each corresponding bit. If the input signal pulse width can't be sampled by continuous two de-bounce sample cycle The input signal transition is seen as the signal bounce and will not trigger the interrupt. The de-bounce clock  source is controlled by DBNCECON[4], one de-bounce sample cycle is controlled by DBNCECON[3:0]\nThe DBEN[n] is used for "edge-trigger" interrupt only, and ignored for "level trigger" interrupt\nThe de-bounce function is valid for edge triggered interrupt. If the interrupt mode is level triggered, the de-bounce enable bit is ignored.\nNote: \nGPIOA: valid n are 15~10. Others are reserved.\nGPIOB: valid n are 15~12, 10~0. Others are reserved.\nGPIOC: valid n are 13~8, 5~0. Others are reserved.\nGPIOD: val

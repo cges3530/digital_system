@@ -1,0 +1,166 @@
+-pending Control Register</description>
+          <addressOffset>0x104</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>SETPEND</name>
+              <description>Interrupt Set-pending \nThe NVIC_ISPR0-NVIC_ISPR3 registers force interrupts into the pending state, and show which interrupts are pending\nWrite Operation:</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nInterrupt is not pending</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Changes interrupt state to pending.\nInterrupt is pending</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_ICPR1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_ICPR1</displayName>
+          <description>IRQ0 ~ IRQ63 Clear-pending Control Register</description>
+          <addressOffset>0x180</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CALPEND</name>
+              <description>Interrupt Clear-pending\nThe NVIC_ICPR0-NVIC_ICPR2 registers remove the pending state from interrupts, and show which interrupts are pending\nWrite Operation:</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nInterrupt is not pending</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Removes pending state an interrupt.\nInterrupt is pending</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_ICPR2</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_ICPR2</displayName>
+          <description>IRQ0 ~ IRQ63 Clear-pending Control Register</description>
+          <addressOffset>0x184</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>CALPEND</name>
+              <description>Interrupt Clear-pending\nThe NVIC_ICPR0-NVIC_ICPR2 registers remove the pending state from interrupts, and show which interrupts are pending\nWrite Operation:</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>No effect.\nInterrupt is not pending</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>Removes pending state an interrupt.\nInterrupt is pending</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_IABR1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_IABR1</displayName>
+          <description>IRQ0 ~ IRQ63 Active Bit Register</description>
+          <addressOffset>0x200</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>ACTIVE</name>
+              <description>Interrupt Active Flags\nThe NVIC_IABR0-NVIC_IABR3 registers indicate which interrupts are active. </description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>interrupt not active</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>interrupt active</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_IABR2</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_IABR2</displayName>
+          <description>IRQ0 ~ IRQ63 Active Bit Register</description>
+          <addressOffset>0x204</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>ACTIVE</name>
+              <description>Interrupt Active Flags\nThe NVIC_IABR0-NVIC_IABR3 registers indicate which interrupts are active. </description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <enumeratedValues>
+                 <enumeratedValue>
+                    <name>0</name>
+                    <description>interrupt not active</description>
+                    <value>0</value>
+                 </enumeratedValue>
+                 <enumeratedValue>
+                    <name>1</name>
+                    <description>interrupt active</description>
+                    <value>1</value>
+                 </enumeratedValue>
+              </enumeratedValues>
+              <access>read-write</access>
+            </field>
+          </fields>
+       </register>
+       <register>
+          <name>NVIC_IPR1</name>
+          <!-- the display name is an unrestricted string. -->
+          <displayName>NVIC_IPR1</displayName>
+          <description>IRQ0 ~ IRQ63 Priority Control Register</description>
+          <addressOffset>0x300</addressOffset>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>PRI_4n_0</name>
+              <description>Priority of IRQ_4n+0\n'0' denotes the highest priority and '15' denotes the lowest priority</description>
+              <bitOffset>4</bitOffset>
+              <bit
